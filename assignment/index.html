@@ -7,14 +7,32 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="bg-glow glow-left"></div>
+    <div class="bg-glow glow-right"></div>
+
     <div class="container">
-        <header>
+        <header class="hero-header">
+            <p class="hero-kicker">Portfolio</p>
             <h1>Assignment Portal</h1>
-            <p>Welcome to my assignment showcase. Explore my journey through web development.</p>
+            <p class="hero-subtitle">Welcome to my assignment showcase. Explore my journey through web development with clean structure, modern styling, and practical project builds.</p>
+
+            <div class="hero-meta">
+                <div class="meta-item">
+                    <span class="meta-value">3</span>
+                    <span class="meta-label">Tracks</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-value">2026</span>
+                    <span class="meta-label">Batch</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-value">Responsive</span>
+                    <span class="meta-label">Focus</span>
+                </div>
+            </div>
         </header>
-        
-        <div class="grid">
-            <!-- HTML Card -->
+
+        <main class="grid" aria-label="Assignment categories">
             <a href="./html/index.html" class="card">
                 <span class="badge html">CORE</span>
                 <div class="card-icon">
@@ -23,11 +41,10 @@
                     </svg>
                 </div>
                 <h2>HTML Assignments</h2>
-                <p>Structure and semantics. A collection of my work focusing on clean, accessible HTML layout.</p>
+                <p>Structure and semantics with accessible markup, forms, links, and content-first layouts.</p>
                 <div class="card-link">View Collection <span>→</span></div>
             </a>
 
-            <!-- CSS Card -->
             <a href="./css/index.html" class="card">
                 <span class="badge css">STYLING</span>
                 <div class="card-icon">
@@ -39,14 +56,29 @@
                     </svg>
                 </div>
                 <h2>CSS Assignments</h2>
-                <p>Design and responsiveness. Exploring styles, layouts, animations, and modern CSS techniques.</p>
+                <p>Design systems, responsive layouts, utility classes, grid/flex usage, and modern UI polish.</p>
                 <div class="card-link">View Collection <span>→</span></div>
             </a>
-        </div>
+
+            <a href="./marketing/index.html" class="card">
+                <span class="badge marketing">PROJECT</span>
+                <div class="card-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 3h18v6H3z"/>
+                        <path d="M3 13h8v8H3z"/>
+                        <path d="M15 13h6v3h-6z"/>
+                        <path d="M15 20h6"/>
+                    </svg>
+                </div>
+                <h2>Marketing Project</h2>
+                <p>Complete landing page implementation with sections, components, and responsive behavior.</p>
+                <div class="card-link">View Project <span>→</span></div>
+            </a>
+        </main>
 
         <footer>
-            &copy; 2026 Muiz. All rights reserved. <br>
-            <span style="font-size: 0.8em; opacity: 0.7;">Designed with passion.</span>
+            <p>© 2026 Muiz. All rights reserved.</p>
+            <p class="footer-note">Designed with focus on usability and responsive UI.</p>
         </footer>
     </div>
 </body>
