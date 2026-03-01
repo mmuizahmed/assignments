@@ -89,18 +89,19 @@ h1 {
 }
 
 .hero-meta {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px;
   margin-top: 24px;
+  max-width: 420px;
 }
 
 .meta-item {
-  min-width: 126px;
+  min-width: 0;
   background: rgba(124, 139, 255, 0.12);
   border: 1px solid rgba(124, 139, 255, 0.24);
   border-radius: 12px;
-  padding: 11px 13px;
+  padding: 12px 14px;
   display: flex;
   flex-direction: column;
 }
@@ -249,12 +250,21 @@ footer {
   }
 
   .hero-meta {
+    grid-template-columns: 1fr;
     gap: 10px;
+    max-width: 100%;
   }
 
   .meta-item {
-    min-width: 0;
-    flex: 1;
+    padding: 12px;
+  }
+
+  .meta-value {
+    font-size: 0.96rem;
+  }
+
+  .meta-label {
+    font-size: 0.72rem;
   }
 
   .grid {
