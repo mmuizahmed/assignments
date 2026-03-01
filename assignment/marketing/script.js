@@ -25,29 +25,15 @@ if (hamburger && navMenu) {
         }
     });
 
-    document.addEventListener('keydown', (event) => {
-        if (event.key === 'Escape' && navMenu.classList.contains('active')) {
-            setMenuState(false);
-            hamburger.focus();
-        }
-    });
-
-    window.addEventListener('resize', () => {
-        if (window.innerWidth > 768 && navMenu.classList.contains('active')) {
-            setMenuState(false);
-        }
-    });
-
+    // Close menu when a link is clicked
     navMenu.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
             setMenuState(false);
         });
     });
 
-    document.addEventListener('click', (event) => {
-        const clickedInsideMenu = navMenu.contains(event.target);
-        const clickedHamburger = hamburger.contains(event.target);
-        if (!clickedInsideMenu && !clickedHamburger && navMenu.classList.contains('active')) {
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768 && navMenu.classList.contains('active')) {
             setMenuState(false);
         }
     });
@@ -59,12 +45,6 @@ if (hamburger && navMenu) {
 const accordionItems = document.querySelectorAll('.accordion-item');
 
 accordionItems.forEach(item => {
-    const header = item.querySelector('.accordion-header');
-    if (header) {
-        header.setAttribute('role', 'button');
-        header.setAttribute('tabindex', '0');
-    }
-
     item.addEventListener('click', () => {
         // Close all other items
         accordionItems.forEach(other => {
@@ -75,33 +55,15 @@ accordionItems.forEach(item => {
         // Toggle current item
         item.classList.toggle('active');
     });
-
-    item.addEventListener('keydown', (event) => {
-        if (event.key === 'Enter' || event.key === ' ') {
-            event.preventDefault();
-            item.click();
-        }
-    });
 });
 
 // Swiper initialization
-const initTestimonialsSwiper = () => {
-    const swiperElement = document.querySelector('.mySwiper');
-
-    if (!swiperElement || typeof Swiper === 'undefined' || swiperElement.dataset.swiperInitialized === 'true') {
-        return;
-    }
-
-    const totalSlides = swiperElement.querySelectorAll('.swiper-wrapper > .swiper-slide').length;
-    const mobilePrev = document.getElementById('mobile-prev');
-    const mobileNext = document.getElementById('mobile-next');
-    const mobileCount = document.getElementById('mobile-slide-count');
-
-    const swiperInstance = new Swiper('.mySwiper', {
+if (typeof Swiper !== 'undefined' && document.querySelector('.mySwiper')) {
+    new Swiper('.mySwiper', {
         slidesPerView: 1,
-        spaceBetween: 20,
-        loop: false,
-        centeredSlides: false,
+        spaceBetween: 24,
+        loop: true,
+        centeredSlides: true,
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
@@ -111,52 +73,10 @@ const initTestimonialsSwiper = () => {
             prevEl: '.swiper-button-prev',
         },
         breakpoints: {
-            768: {
-                spaceBetween: 24,
-            },
             1024: {
                 slidesPerView: 1.5,
                 spaceBetween: 30,
             }
         }
     });
-
-    const updateMobileCount = () => {
-        if (!mobileCount || totalSlides === 0) {
-            return;
-        }
-
-        const visibleSlide = swiperInstance.activeIndex + 1;
-        mobileCount.textContent = `${visibleSlide} / ${totalSlides}`;
-    };
-
-    if (mobilePrev) {
-        mobilePrev.addEventListener('click', () => {
-            swiperInstance.slidePrev();
-        });
-    }
-
-    if (mobileNext) {
-        mobileNext.addEventListener('click', () => {
-            swiperInstance.slideNext();
-        });
-    }
-
-    swiperInstance.on('slideChange', updateMobileCount);
-    swiperInstance.on('resize', updateMobileCount);
-    updateMobileCount();
-    swiperElement.dataset.swiperInitialized = 'true';
-};
-
-initTestimonialsSwiper();
-window.addEventListener('load', initTestimonialsSwiper);
-
-const allImages = document.querySelectorAll('img');
-allImages.forEach((image, index) => {
-    if (index > 0 && !image.hasAttribute('loading')) {
-        image.setAttribute('loading', 'lazy');
-    }
-    if (!image.hasAttribute('decoding')) {
-        image.setAttribute('decoding', 'async');
-    }
-});
+}
