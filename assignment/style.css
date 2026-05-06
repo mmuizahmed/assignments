@@ -260,6 +260,12 @@ h1 {
   border: 1px solid rgba(192, 132, 252, 0.35);
 }
 
+.badge.nasa {
+  background: rgba(16, 91, 216, 0.16);
+  color: #9bdaf1;
+  border: 1px solid rgba(96, 165, 250, 0.38);
+}
+
 footer {
   margin-top: 26px;
   padding: 18px 12px 4px;
