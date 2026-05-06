@@ -1,0 +1,593 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="./assets/nasa-logo.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="NASA is a space agency that explores the unknown in air and space, innovates for the benefit of humanity, and inspires the world through discovery." />
+  <title>NASA · Space, Science &amp; Exploration</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+
+      <div class="site-header__start">
+        
+        <a href="#" class="site-header__explore">
+          <span class="site-header__explore-label">Explore</span>
+          <svg class="site-header__explore-icon" width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+            <path d="M1 1.5l4 3 4-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </a>
+
+        <div class="search-field">
+          <input type="search" placeholder="Search" class="search-field__input" autocomplete="off" />
+        </div>
+      </div>
+
+      <div class="site-header__brand">
+        
+        <img src="./assets/nasa-logo.svg" alt="NASA" class="site-header__logo" width="110" height="92" decoding="async" />
+      </div>
+
+      <ul class="site-header__menu" id="primary-menu">
+        <li><a href="#">News &amp; Events </a></li>
+        <li><a href="#">Multimedia </a></li>
+        <li class="site-header__item--broadcast">
+          <a href="#">NASA+</a>
+          <button type="button" class="live-pill">LIVE</button>
+        </li>
+      </ul>
+
+      <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+  </header>
+
+  <main>
+
+    <section class="live-banner" aria-labelledby="live-banner-heading">
+      <div class="live-banner__container">
+
+        <p class="live-banner__time">
+          LIVE Monday, April 27, 7:15 p.m. EDT ( 2315 UTC)
+        </p>
+
+        <hr />
+
+        <div class="live-banner__divider"></div>
+
+        <div class="live-banner__row">
+
+          <div class="live-banner__primary">
+            <div class="live-banner__thumb">
+              <img src="./assets/iss-docking-thumb.jpg" alt="Spacecraft" />
+            </div>
+
+            <h1 class="live-banner__title" id="live-banner-heading">
+              Roscosmos Progress 95
+            </h1>
+          </div>
+
+          <div class="live-banner__body">
+            <p>
+              Live coverage of the rendezvous and docking of the Roscosmos
+              Progress 95 cargo spacecraft to the International Space Station
+            </p>
+          </div>
+
+          <a href="#" class="live-banner__link" aria-label="Open live event">
+            <svg class="live-banner__link-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="hero-section">
+      <img src="./assets/hero-fullbleed.jpg" alt="Space Background" class="hero-section__image" />
+
+      <div class="hero-section__scrim" aria-hidden="true"></div>
+
+      <div class="hero-section__content">
+        
+        <h1>Humans in Space</h1>
+
+        <p>
+          NASA astronauts Jessica Watkins and Luke Delaney, CSA astronaut Joshua Kutryk,
+          and Roscosmos cosmonaut Sergey Teteraynikov are set to launch no earlier than
+          mid-September as part of NASA’s SpaceX Crew-13 mission.
+        </p>
+
+        <a href="#" class="button-primary">NASA’s SpaceX Crew-13</a>
+      </div>
+
+      <div class="hero-section__highlights">
+
+        <article class="hero-stat">
+          <hr class="hero-stat__rule" />
+          <span>YOUR ORBITING LABORATORY</span>
+          <h3>Space Station Updates →</h3>
+        </article>
+
+        <article class="hero-stat">
+          <hr class="hero-stat__rule" />
+          <span>CURRENT MISSION</span>
+          <h3>Expedition 74 →</h3>
+        </article>
+
+        <article class="hero-stat">
+          <hr class="hero-stat__rule" />
+          <span>BENEFITS FOR HUMANITY</span>
+          <h3>Space Station Science →</h3>
+        </article>
+
+      </div>
+
+    </section>
+
+    <section class="section-news" aria-labelledby="featured-news-title">
+      <div class="section-news__container">
+        <header class="section-news__header">
+          <div class="section-news__title-wrap">
+            <h2 id="featured-news-title">Featured News</h2>
+            <p class="section-news__tagline">Latest stories from missions &amp; science</p>
+          </div>
+          <a href="#" class="section-news__archive-link">Recently Published →</a>
+        </header>
+
+        <div class="news-grid">
+          <article class="news-card news-card--feature">
+            <div class="news-card__media news-card__media--tall">
+              <img src="./assets/featured-progress-docking.png" alt="Featured NASA story" />
+              <div class="news-card__scrim">
+                <span class="news-card__label">BLOG</span>
+                <div class="news-card__body">
+                  <span class="news-card__read-time">1 MIN READ</span>
+                  <h3>Progress 95 Cargo Craft Docks to Station with Food, Fuel, and Supplies</h3>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <div class="news-stack news-stack--center">
+            <article class="news-card news-card--sidebar">
+              <div class="news-card__media">
+                <img src="./assets/featured-roman-telescope.png" alt="NASA funding news" />
+                <div class="news-card__scrim">
+                  <span class="news-card__label news-card__label--photo">IMAGE ARTICLE</span>
+                  <div class="news-card__body">
+                    <span class="news-card__read-time">2 MIN READ</span>
+                    <h3>NASA Targets Early September for Roman Space Telescope Launch</h3>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="news-stack news-stack--end">
+            <article class="news-card news-card--sidebar">
+              <div class="news-card__media">
+                <img src="./assets/featured-dragonfly-mission.png" alt="SpaceX Dragon Crew launch" />
+                <div class="news-card__scrim">
+                  <span class="news-card__label">BLOG</span>
+                  <div class="news-card__body">
+                    <span class="news-card__read-time">4 MIN READ</span>
+                    <h3>NASA's Dragonfly Rotorcraft Gets Decked Out, Tested</h3>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="news-card news-card--sidebar">
+              <div class="news-card__media">
+                <img src="./assets/topic-dragonfly-still.png" alt="NASA article" />
+                <div class="news-card__scrim">
+                  <span class="news-card__label news-card__label--article">ARTICLE</span>
+                  <div class="news-card__body">
+                    <span class="news-card__read-time">4 MIN READ</span>
+                    <h3>Liquid Lifeline: NASA Tech Could Create IV Fluid In Space</h3>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="news-teasers">
+          <article class="news-teaser">
+            <div class="news-teaser__thumb">
+              <img src="./assets/teaser-earth-from-space.png" alt="New NASA Views of Earth" />
+            </div>
+            <span class="news-teaser__read-time">1 MIN READ</span>
+            <h4>New NASA Views of Earth, From (S)PACE</h4>
+            <span class="news-teaser__type">ARTICLE</span>
+          </article>
+          <article class="news-teaser">
+            <div class="news-teaser__thumb">
+              <img src="./assets/teaser-mars-organics.png" alt="NASA’s Curiosity Finds Organic Molecules" />
+            </div>
+            <span class="news-teaser__read-time">5 MIN READ</span>
+            <h4>NASA’s Curiosity Finds Organic Molecules Never Seen Before on Mars</h4>
+            <span class="news-teaser__type">ARTICLE</span>
+          </article>
+          <article class="news-teaser">
+            <div class="news-teaser__thumb">
+              <img src="./assets/teaser-artemis-jordan.png" alt="NASA Welcomes Jordan" />
+            </div>
+            <span class="news-teaser__read-time">3 MIN READ</span>
+            <h4>NASA Welcomes Jordan as 63rd Artemis Accords Signatory</h4>
+            <span class="news-teaser__type">ARTICLE</span>
+          </article>
+          <article class="news-teaser">
+            <div class="news-teaser__thumb">
+              <img src="./assets/teaser-artemis-latvia.png" alt="NASA Welcomes Latvia" />
+            </div>
+            <span class="news-teaser__read-time">3 MIN READ</span>
+            <h4>NASA Welcomes Latvia as Newest Artemis Accords Signatory</h4>
+            <span class="news-teaser__type">NEWS RELEASE</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="split-feature">
+      <div class="split-feature__grid">
+        <div class="split-feature__copy">
+          <h2>Capturing Two Sides of Mars</h2>
+          <p>NASA's latest rover has made groundbreaking discoveries on the Martian surface, revealing evidence of past water activity and providing crucial insights into the planet's geological evolution. Advanced imaging technology allows unprecedented exploration of ancient riverbeds and complex crater formations.</p>
+          <a href="#" class="button-primary">Learn More →</a>
+        </div>
+        <div class="split-feature__embed">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/Q_P0swqaZDk?si=uEwP8K6V35zVLhGz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="science-section" aria-labelledby="science-heading">
+      <div class="science-section__container">
+        <header class="science-section__head">
+          <h2 id="science-heading">NASA Science</h2>
+          <p class="science-section__more">Discover More →</p>
+        </header>
+
+        <div class="science-grid">
+          <article class="science-card">
+            <div class="science-card__figure">
+              <img src="./assets/science-mars-exploration.png" alt="Mars Exploration" />
+            </div>
+            <h3>Mars Exploration</h3>
+            <div class="science-card__cta">→</div>
+          </article>
+          <article class="science-card">
+            <div class="science-card__figure">
+              <img src="./assets/science-perseverance.png" alt="Perseverance Rover" />
+            </div>
+            <h3>Perseverance Rover</h3>
+            <div class="science-card__cta">→</div>
+          </article>
+          <article class="science-card">
+            <div class="science-card__figure">
+              <img src="./assets/science-mars-goals.png" alt="Mars Exploration Goals" />
+            </div>
+            <h3>Mars Exploration Goals</h3>
+            <div class="science-card__cta">→</div>
+          </article>
+          <article class="science-card">
+            <div class="science-card__figure">
+              <img src="./assets/science-rover-basics.png" alt="Rover Basics" />
+            </div>
+            <h3>Rover Basics</h3>
+            <div class="science-card__cta">→</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="spotlight-section" aria-labelledby="spotlight-heading">
+      <div class="spotlight-section__grid">
+        <div class="spotlight-section__content">
+          <header class="spotlight-section__head">
+            <h2 id="spotlight-heading">Image Of The Day</h2>
+          </header>
+
+          <div class="spotlight-section__article">
+            <h3>Aurora of the Indian Ocean #250</h3>
+            <p>A spectacular aurora display captured from the International Space Station over the Indian Ocean. The vibrant curtains of light showcase Earth's magnetosphere interacting with solar wind particles in our upper atmosphere, creating this natural light show.</p>
+            <a href="#" class="link-accent">Browse Image Archive →</a>
+          </div>
+        </div>
+
+        <aside class="spotlight-section__aside">
+          <div class="spotlight-frame">
+            <img src="./assets/iotd-aurora-indian-ocean.png" alt="Image of the day" />
+          </div>
+          <a href="#" class="spotlight-section__action">View image</a>
+        </aside>
+      </div>
+    </section>
+
+    <section class="gallery-section" aria-labelledby="gallery-heading">
+      <div class="gallery-section__container">
+        <h2 id="gallery-heading">More NASA Images</h2>
+
+        <div class="gallery-grid">
+          <article class="gallery-album">
+            <div class="gallery-album__layout">
+              <div class="gallery-cell gallery-cell--large">
+                <img src="./assets/gallery-splashdown-hero.png" alt="Artemis Splashdown" />
+              </div>
+              <div class="gallery-rail">
+                <div class="gallery-cell gallery-cell--small">
+                  <img src="./assets/gallery-splashdown-detail.png" alt="Artemis Detail" />
+                </div>
+                <div class="gallery-cell gallery-cell--small">
+                  <img src="./assets/gallery-splashdown-team.png" alt="Artemis Team" />
+                </div>
+              </div>
+            </div>
+            <h3>Artemis II Splashdown and Recovery Gallery</h3>
+            <p class="gallery-album__meta">70 IMAGES</p>
+          </article>
+
+          <article class="gallery-album">
+            <div class="gallery-album__layout">
+              <div class="gallery-cell gallery-cell--large">
+                <img src="./assets/gallery-lunar-still.png" alt="Artemis Lunar" />
+              </div>
+              <div class="gallery-rail">
+                <div class="gallery-cell gallery-cell--small">
+                  <img src="./assets/gallery-lunar-detail-a.png" alt="Lunar Mission" />
+                </div>
+                <div class="gallery-cell gallery-cell--small">
+                  <img src="./assets/gallery-lunar-detail-b.png" alt="Lunar Orbit" />
+                </div>
+              </div>
+            </div>
+            <h3>Artemis II Lunar Flyby Gallery</h3>
+            <p class="gallery-album__meta">86 IMAGES</p>
+          </article>
+
+          <article class="gallery-album">
+            <div class="gallery-album__layout">
+              <div class="gallery-cell gallery-cell--large">
+                <img src="./assets/gallery-launch-hero.png" alt="Artemis Launch" />
+              </div>
+              <div class="gallery-rail">
+                <div class="gallery-cell gallery-cell--small">
+                  <img src="./assets/gallery-launch-pad.png" alt="Launch Vehicle" />
+                </div>
+                <div class="gallery-cell gallery-cell--small">
+                  <img src="./assets/gallery-launch-crowd.png" alt="Launch Crowd" />
+                </div>
+              </div>
+            </div>
+            <h3>Artemis II Launch Gallery</h3>
+            <p class="gallery-album__meta">27 IMAGES  1 VIDEOS</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="signup-banner">
+      <div class="signup-banner__bg">
+        <img src="./assets/gallery-lunar-still.png" alt="" role="presentation" />
+      </div>
+      <div class="signup-banner__inner">
+        <div class="signup-banner__copy">
+          <h2>Explore the Universe from your Inbox</h2>
+          <p>Stay up-to-date on the latest news from NASA–from Earth to the Moon, the Solar System and beyond.</p>
+          <p>We will never share your email address. <a href="#" class="link-muted">Privacy Policy</a></p>
+          <a href="#" class="signup-banner__btn">Sign Up </a><a href="#" class="signup-banner__btn-icon">→</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="feature-spotlight">
+      <div class="feature-spotlight__grid">
+        <div class="feature-spotlight__article">
+          <span class="feature-spotlight__kicker">Freedom 250</span>
+          <h2>NASA Celebrates <br /> America’s 250th Birthday</h2>
+          <p class="feature-spotlight__lede">Our spirit of adventure and innovation will raise our nation to new heights.</p>
+          <p>From the earliest days of exploration, to the first steps on the Moon and the missions shaping our future, NASA represents the spirit of discovery that defines our nation. As the United States approaches its semiquincentennial, Freedom 250 highlights how innovation, courage, and scientific leadership have carried America forward — and how NASA continues to expand the frontier for the next generation.</p>
+          <a href="#" class="feature-spotlight__link">Learn More </a><a href="#" class="feature-spotlight__link-icon">→</a>
+        </div>
+
+        <div class="feature-spotlight__media">
+          <div class="feature-spotlight__figure">
+            <img src="./assets/spotlight-freedom250-x59.png" alt="NASA 250th Anniversary" />
+          </div>
+          <p class="feature-spotlight__note">NASA’s X-59 is helping the nation celebrate the 250th anniversary of its independence with an updated livery and special Freedom 250 markings.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="topic-directory" aria-labelledby="topics-heading">
+      <h2 id="topics-heading">More Topics from NASA</h2>
+
+      <div class="topic-directory__grid">
+
+        <article class="topic-tile">
+          <img src="./assets/topic-missions.png" alt="" />
+          <div class="topic-tile__bar">
+            <h3>Missions</h3>
+            <div class="topic-tile__arrow">→</div>
+          </div>
+        </article>
+
+        <article class="topic-tile">
+          <img src="./assets/topic-humans-in-space.png" alt="" />
+          <div class="topic-tile__bar">
+            <h3>Humans In Space</h3>
+            <div class="topic-tile__arrow">→</div>
+          </div>
+        </article>
+
+        <article class="topic-tile">
+          <img src="./assets/topic-earth.png" alt="" />
+          <div class="topic-tile__bar">
+            <h3>Earth</h3>
+            <div class="topic-tile__arrow">→</div>
+          </div>
+        </article>
+
+        <article class="topic-tile">
+          <img src="./assets/topic-dragonfly-still.png" alt="" />
+          <div class="topic-tile__bar">
+            <h3>Our Solar System</h3>
+            <div class="topic-tile__arrow">→</div>
+          </div>
+        </article>
+
+        <article class="topic-tile">
+          <img src="./assets/topic-universe.png" alt="" />
+          <div class="topic-tile__bar">
+            <h3>Universe</h3>
+            <div class="topic-tile__arrow">→</div>
+          </div>
+        </article>
+
+        <article class="topic-tile">
+          <img src="./assets/topic-science-missions.png" alt="" />
+          <div class="topic-tile__bar">
+            <h3>Science Missions</h3>
+            <div class="topic-tile__arrow">→</div>
+          </div>
+        </article>
+
+        <article class="topic-tile">
+          <img src="./assets/topic-aeronautics.png" alt="" />
+          <div class="topic-tile__bar">
+            <h3>Aeronautics</h3>
+            <div class="topic-tile__arrow">→</div>
+          </div>
+        </article>
+
+        <article class="topic-tile">
+          <img src="./assets/topic-technology.png" alt="" />
+          <div class="topic-tile__bar">
+            <h3>Technology</h3>
+            <div class="topic-tile__arrow">→</div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__main">
+
+      <div class="site-footer__about">
+        <img src="./assets/nasa-logo.svg" alt="NASA" class="site-footer__logo" width="110" height="92" decoding="async" />
+
+        <h2>National Aeronautics and Space Administration</h2>
+
+        <p>
+          NASA explores the unknown in air and space, innovates for the benefit
+          of humanity, and inspires the world through discovery.
+        </p>
+
+        <a href="#" class="site-footer__mission">About NASA's Mission</a>
+
+        <a href="#" class="site-footer__join">
+          Join Us <span>→</span>
+        </a>
+      </div>
+
+      <nav class="site-footer__nav" aria-label="Footer">
+        <div class="site-footer__column">
+          <a href="#">Home</a>
+          <a href="#">News &amp; Events</a>
+          <a href="#">Multimedia</a>
+          <a href="#">NASA+ <span class="status-live">LIVE</span></a>
+          <a href="#">Missions</a>
+        </div>
+
+        <div class="site-footer__column">
+          <a href="#">Humans in Space</a>
+          <a href="#">Earth</a>
+          <a href="#">The Solar System</a>
+          <a href="#">The Universe</a>
+          <a href="#">Science</a>
+        </div>
+
+        <div class="site-footer__column">
+          <a href="#">Aeronautics</a>
+          <a href="#">Technology</a>
+          <a href="#">Learning Resources</a>
+          <a href="#">About NASA</a>
+          <a href="#">NASA en Español</a>
+        </div>
+      </nav>
+
+      <div class="site-footer__social">
+        <h4>Follow NASA</h4>
+
+        <div class="social-icons">
+          <span>f</span>
+          <span>ig</span>
+          <span>x</span>
+          <span>▶</span>
+        </div>
+
+        <a href="#">More NASA Social Accounts</a>
+        <a href="#">NASA Newsletters</a>
+      </div>
+
+    </div>
+
+    <div class="site-footer__legal">
+      <div class="legal-links">
+        <a href="#">Sitemap</a>
+        <a href="#">For Media</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">FOIA</a>
+        <a href="#">No FEAR Act</a>
+        <a href="#">Office of the IG</a>
+        <a href="#">Budget &amp; Annual Reports</a>
+        <a href="#">Agency Financial Reports</a>
+        <a href="#">Contact NASA</a>
+        <a href="#">Accessibility</a>
+      </div>
+
+      <div class="legal-meta">
+        <span>Page Last Updated: <strong>Apr 29, 2026</strong></span>
+        <span>Page Editor: <strong>Dacia Massengill</strong></span>
+        <span>Responsible NASA Official: <strong>Abigail Bowman</strong></span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const primaryMenu = document.getElementById('primary-menu');
+
+    menuToggle.addEventListener('click', () => {
+      primaryMenu.classList.toggle('is-open');
+      menuToggle.classList.toggle('is-open');
+    });
+
+    document.querySelectorAll('.site-header__menu a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        primaryMenu.classList.remove('is-open');
+        menuToggle.classList.remove('is-open');
+      });
+    });
+  </script>
+
+</body>
+</html>
+
