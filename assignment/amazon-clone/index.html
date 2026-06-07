@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amazon</title>
+  <link rel="icon" type="image/png" href="../../logos.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="mobile-overlay" id="mobileOverlay" hidden></div>
+
+  <header class="amz-header" id="amzHeader">
+    <div class="amz-header__primary">
+      <button class="amz-header__menu-btn" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <a href="#" class="amz-header__logo" aria-label="Amazon home">
+        <img src="images/Navlogo.png" alt="Amazon" width="100" height="30" />
+      </a>
+
+      <div class="amz-header__deliver amz-hover" tabindex="0">
+        <span class="amz-header__label">Deliver to</span>
+        <span class="amz-header__value"><i class="fa-solid fa-location-dot"></i> Pakistan</span>
+      </div>
+
+      <form class="amz-search" role="search" aria-label="Site search">
+        <div class="amz-search__category amz-hover" id="categoryBtn" tabindex="0">
+          <span id="categoryLabel">All</span>
+          <i class="fa-solid fa-caret-down"></i>
+          <ul class="amz-dropdown" id="categoryMenu" hidden>
+            <li data-value="All">All Departments</li>
+            <li data-value="Electronics">Electronics</li>
+            <li data-value="Fashion">Fashion</li>
+            <li data-value="Home">Home & Kitchen</li>
+            <li data-value="Books">Books</li>
+            <li data-value="Beauty">Beauty</li>
+            <li data-value="Sports">Sports</li>
+            <li data-value="Deals">Today's Deals</li>
+          </ul>
+        </div>
+        <input class="amz-search__input" type="search" placeholder="Search Amazon" aria-label="Search" />
+        <button class="amz-search__submit" type="submit" aria-label="Search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </form>
+
+      <div class="amz-header__actions">
+        <div class="amz-header__lang amz-hover" id="langBtn" tabindex="0">
+          <img src="https://flagcdn.com/us.svg" alt="" width="20" height="14" />
+          <span id="langLabel">EN</span>
+          <i class="fa-solid fa-caret-down"></i>
+          <ul class="amz-dropdown amz-dropdown--right" id="langMenu" hidden>
+            <li data-value="EN">EN - English</li>
+            <li data-value="UR">UR - Urdu</li>
+            <li data-value="AR">AR - Arabic</li>
+          </ul>
+        </div>
+
+        <div class="amz-header__account amz-hover" id="accountBtn" tabindex="0">
+          <span class="amz-header__label">Hello, sign in</span>
+          <span class="amz-header__value">Account & Lists <i class="fa-solid fa-caret-down"></i></span>
+          <ul class="amz-dropdown amz-dropdown--right" id="accountMenu" hidden>
+            <li>Your Account</li>
+            <li>Your Orders</li>
+            <li>Your Wish List</li>
+            <li>Sign Out</li>
+          </ul>
+        </div>
+
+        <a href="#" class="amz-header__orders amz-hover">
+          <span class="amz-header__label">Returns</span>
+          <span class="amz-header__value">& Orders</span>
+        </a>
+
+        <a href="#" class="amz-header__cart amz-hover" aria-label="Cart, 3 items">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="amz-header__cart-count" id="cartCount">3</span>
+          <span class="amz-header__value">Cart</span>
+        </a>
+      </div>
+    </div>
+
+    <nav class="amz-header__secondary" aria-label="Departments">
+      <div class="amz-header__all amz-hover" id="allMenuBtn" tabindex="0">
+        <i class="fa-solid fa-bars"></i>
+        <span>All</span>
+        <ul class="amz-dropdown amz-dropdown--wide" id="allMenu" hidden>
+          <li>Prime Video</li>
+          <li>Amazon Music</li>
+          <li>Gaming</li>
+          <li>Electronics</li>
+          <li>Fashion</li>
+          <li>Home</li>
+          <li>Books</li>
+        </ul>
+      </div>
+      <a href="#" class="amz-hover">Today's Deals</a>
+      <a href="#" class="amz-hover">Customer Service</a>
+      <a href="#" class="amz-hover">Registry</a>
+      <a href="#" class="amz-hover">Gift Cards</a>
+      <a href="#" class="amz-hover">Sell</a>
+      <a href="#" class="amz-hover amz-header__prime">Prime <i class="fa-solid fa-crown"></i></a>
+    </nav>
+  </header>
+
+  <aside class="amz-sidebar" id="mobileSidebar" aria-hidden="true">
+    <div class="amz-sidebar__head">
+      <i class="fa-solid fa-user"></i>
+      <span>Hello, sign in</span>
+      <button class="amz-sidebar__close" id="sidebarClose" aria-label="Close menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <nav class="amz-sidebar__nav">
+      <h3>Shop by Department</h3>
+      <a href="#">Electronics</a>
+      <a href="#">Computers</a>
+      <a href="#">Smart Home</a>
+      <a href="#">Fashion</a>
+      <a href="#">Home & Kitchen</a>
+      <a href="#">Books</a>
+      <a href="#">Sports & Outdoors</a>
+      <h3>Programs & Features</h3>
+      <a href="#">Today's Deals</a>
+      <a href="#">Gift Cards</a>
+      <a href="#">Amazon Prime</a>
+      <a href="#">Customer Service</a>
+    </nav>
+  </aside>
+
+  <main>
+    <section class="amz-hero" aria-label="Featured promotions">
+      <div class="amz-hero__viewport">
+        <div class="amz-hero__track" id="heroTrack">
+          <article class="amz-hero__slide is-active">
+            <img src="images/slider/Hero-slider-1.jpeg" alt="Shop spring essentials" />
+          </article>
+          <article class="amz-hero__slide">
+            <img src="images/slider/Hero-slider-2.png" alt="Electronics deals" />
+          </article>
+          <article class="amz-hero__slide">
+            <img src="images/slider/Hero-slider-3.png" alt="Home and kitchen" />
+          </article>
+          <article class="amz-hero__slide">
+            <img src="images/slider/Hero-slider-4.png" alt="Fashion collection" />
+          </article>
+        </div>
+        <button class="amz-hero__arrow amz-hero__arrow--prev" id="heroPrev" aria-label="Previous slide">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button class="amz-hero__arrow amz-hero__arrow--next" id="heroNext" aria-label="Next slide">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+        <div class="amz-hero__dots" id="heroDots" role="tablist" aria-label="Hero slides"></div>
+      </div>
+      <div class="amz-hero__fade"></div>
+    </section>
+
+    <div class="amz-page">
+      <section class="amz-grid amz-reveal" aria-label="Featured categories">
+        <article class="amz-card">
+          <h2>Get your game on</h2>
+          <div class="amz-card__media amz-card__media--single">
+            <img src="images/1.png" alt="Gaming setup" loading="lazy" />
+          </div>
+          <a href="#" class="amz-card__link">Shop gaming</a>
+        </article>
+
+        <article class="amz-card">
+          <h2>New home arrivals under $50</h2>
+          <div class="amz-card__media amz-card__media--quad">
+            <figure><img src="images/2.png" alt="Kitchen" loading="lazy" /><figcaption>Kitchen & Dining</figcaption></figure>
+            <figure><img src="images/3.png" alt="Home improvement" loading="lazy" /><figcaption>Home Improvement</figcaption></figure>
+            <figure><img src="images/4.png" alt="Decor" loading="lazy" /><figcaption>Decor</figcaption></figure>
+            <figure><img src="images/5.png" alt="Bedding" loading="lazy" /><figcaption>Bedding & Bath</figcaption></figure>
+          </div>
+          <a href="#" class="amz-card__link">Shop the latest from Home</a>
+        </article>
+
+        <article class="amz-card">
+          <h2>Top categories in Kitchen appliances</h2>
+          <div class="amz-card__media amz-card__media--split">
+            <figure class="amz-card__featured">
+              <img src="images/6.png" alt="Cooking appliances" loading="lazy" />
+              <figcaption>For cooking</figcaption>
+            </figure>
+            <div class="amz-card__media--triple">
+              <figure><img src="images/7.png" alt="Coffee" loading="lazy" /><figcaption>Coffee</figcaption></figure>
+              <figure><img src="images/8.png" alt="Pots" loading="lazy" /><figcaption>Pots & Pans</figcaption></figure>
+              <figure><img src="images/9.png" alt="Kettles" loading="lazy" /><figcaption>Kettles</figcaption></figure>
+            </div>
+          </div>
+          <a href="#" class="amz-card__link">Explore all products in Kitchen</a>
+        </article>
+
+        <article class="amz-card">
+          <h2>Shop Fashion for less</h2>
+          <div class="amz-card__media amz-card__media--quad">
+            <figure><img src="images/10.png" alt="Jeans" loading="lazy" /><figcaption>Jeans under $50</figcaption></figure>
+            <figure><img src="images/11.png" alt="Tops" loading="lazy" /><figcaption>Tops under $25</figcaption></figure>
+            <figure><img src="images/12.png" alt="Dresses" loading="lazy" /><figcaption>Dresses under $30</figcaption></figure>
+            <figure><img src="images/13.png" alt="Shoes" loading="lazy" /><figcaption>Shoes under $50</figcaption></figure>
+          </div>
+          <a href="#" class="amz-card__link">See all deals</a>
+        </article>
+      </section>
+
+      <section class="amz-row-slider amz-reveal" data-slider="clothing">
+        <h2>Best Sellers in Clothing, Shoes & Jewelry</h2>
+        <div class="amz-row-slider__wrap">
+          <button class="amz-row-slider__btn amz-row-slider__btn--prev" aria-label="Scroll left"><i class="fa-solid fa-chevron-left"></i></button>
+          <div class="amz-row-slider__track">
+            <img src="images/14.png" alt="Product" loading="lazy" />
+            <img src="images/15.png" alt="Product" loading="lazy" />
+            <img src="images/16.png" alt="Product" loading="lazy" />
+            <img src="images/17.png" alt="Product" loading="lazy" />
+            <img src="images/18.png" alt="Product" loading="lazy" />
+            <img src="images/19.png" alt="Product" loading="lazy" />
+            <img src="images/20.png" alt="Product" loading="lazy" />
+          </div>
+          <button class="amz-row-slider__btn amz-row-slider__btn--next" aria-label="Scroll right"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+      </section>
+
+      <section class="amz-row-slider amz-reveal" data-slider="beauty">
+        <h2>Popular products in Beauty internationally</h2>
+        <div class="amz-row-slider__wrap">
+          <button class="amz-row-slider__btn amz-row-slider__btn--prev" aria-label="Scroll left"><i class="fa-solid fa-chevron-left"></i></button>
+          <div class="amz-row-slider__track">
+            <img src="images/21.png" alt="Product" loading="lazy" />
+            <img src="images/22.png" alt="Product" loading="lazy" />
+            <img src="images/23.png" alt="Product" loading="lazy" />
+            <img src="images/24.png" alt="Product" loading="lazy" />
+            <img src="images/25.png" alt="Product" loading="lazy" />
+            <img src="images/26.png" alt="Product" loading="lazy" />
+            <img src="images/27.png" alt="Product" loading="lazy" />
+          </div>
+          <button class="amz-row-slider__btn amz-row-slider__btn--next" aria-label="Scroll right"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+      </section>
+
+      <section class="amz-grid amz-grid--duo amz-reveal">
+        <article class="amz-card">
+          <h2>Favorite watches</h2>
+          <div class="amz-card__media amz-card__media--quad">
+            <figure><img src="images/28.png" alt="Women watches" loading="lazy" /><figcaption>Women</figcaption></figure>
+            <figure><img src="images/29.png" alt="Men watches" loading="lazy" /><figcaption>Men</figcaption></figure>
+            <figure><img src="images/30.png" alt="Girls watches" loading="lazy" /><figcaption>Girls</figcaption></figure>
+            <figure><img src="images/31.png" alt="Children watches" loading="lazy" /><figcaption>Children</figcaption></figure>
+          </div>
+          <a href="#" class="amz-card__link">Find out more</a>
+        </article>
+
+        <article class="amz-card">
+          <h2>Level up your fitness</h2>
+          <div class="amz-card__media amz-card__media--quad">
+            <figure><img src="images/32.png" alt="Clothing" loading="lazy" /><figcaption>Clothing</figcaption></figure>
+            <figure><img src="images/33.png" alt="Trackers" loading="lazy" /><figcaption>Trackers</figcaption></figure>
+            <figure><img src="images/34.png" alt="Team sports" loading="lazy" /><figcaption>Team Sports</figcaption></figure>
+            <figure><img src="images/35.png" alt="Exercise" loading="lazy" /><figcaption>Exercise Offers</figcaption></figure>
+          </div>
+          <a href="#" class="amz-card__link">See more</a>
+        </article>
+
+        <article class="amz-card">
+          <h2>Enhance your beauty routine</h2>
+          <div class="amz-card__media amz-card__media--quad">
+            <figure><img src="images/36.png" alt="Makeup" loading="lazy" /><figcaption>Makeup</figcaption></figure>
+            <figure><img src="images/37.png" alt="Brushes" loading="lazy" /><figcaption>Brushes</figcaption></figure>
+            <figure><img src="images/38.png" alt="Sponges" loading="lazy" /><figcaption>Sponges</figcaption></figure>
+            <figure><img src="images/39.png" alt="Mirrors" loading="lazy" /><figcaption>Mirrors</figcaption></figure>
+          </div>
+          <a href="#" class="amz-card__link">Learn more</a>
+        </article>
+
+        <article class="amz-card">
+          <h2>Upgrade your PC here</h2>
+          <div class="amz-card__media amz-card__media--quad">
+            <figure><img src="images/40.png" alt="Laptops" loading="lazy" /><figcaption>Laptops</figcaption></figure>
+            <figure><img src="images/41.png" alt="PC equipment" loading="lazy" /><figcaption>PC Equipment</figcaption></figure>
+            <figure><img src="images/42.png" alt="Hard drives" loading="lazy" /><figcaption>Hard Drives</figcaption></figure>
+            <figure><img src="images/43.png" alt="Monitors" loading="lazy" /><figcaption>Monitors</figcaption></figure>
+          </div>
+          <a href="#" class="amz-card__link">See more</a>
+        </article>
+      </section>
+
+      <section class="amz-banner amz-reveal">
+        <div class="amz-banner__content">
+          <p class="amz-banner__eyebrow">Limited time offer</p>
+          <h2>Prime Day is coming</h2>
+          <p>Exclusive deals across electronics, home, fashion, and more. Join Prime for early access.</p>
+          <a href="#" class="amz-banner__cta">Explore Prime benefits</a>
+        </div>
+        <img src="images/44.png" alt="Prime Day deals" class="amz-banner__img" loading="lazy" />
+      </section>
+
+      <section class="amz-row-slider amz-reveal" data-slider="pakistan">
+        <h2>Top picks for Pakistan</h2>
+        <div class="amz-row-slider__wrap">
+          <button class="amz-row-slider__btn amz-row-slider__btn--prev" aria-label="Scroll left"><i class="fa-solid fa-chevron-left"></i></button>
+          <div class="amz-row-slider__track">
+            <img src="images/45.png" alt="Product" loading="lazy" />
+            <img src="images/46.png" alt="Product" loading="lazy" />
+            <img src="images/47.png" alt="Product" loading="lazy" />
+            <img src="images/48.png" alt="Product" loading="lazy" />
+            <img src="images/49.png" alt="Product" loading="lazy" />
+            <img src="images/50.png" alt="Product" loading="lazy" />
+            <img src="images/51.png" alt="Product" loading="lazy" />
+          </div>
+          <button class="amz-row-slider__btn amz-row-slider__btn--next" aria-label="Scroll right"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+      </section>
+
+      <section class="amz-grid amz-grid--trio amz-reveal">
+        <article class="amz-card amz-card--wide">
+          <h2>Level up your gaming</h2>
+          <div class="amz-card__media amz-card__media--row">
+            <figure><img src="images/52.png" alt="PC gaming" loading="lazy" /><figcaption>PC Gaming</figcaption></figure>
+            <figure><img src="images/53.png" alt="Xbox" loading="lazy" /><figcaption>Xbox</figcaption></figure>
+            <figure><img src="images/54.png" alt="PlayStation" loading="lazy" /><figcaption>PlayStation</figcaption></figure>
+            <figure><img src="images/55.png" alt="Nintendo" loading="lazy" /><figcaption>Nintendo Switch</figcaption></figure>
+          </div>
+          <a href="#" class="amz-card__link">Shop the latest in gaming</a>
+        </article>
+
+        <article class="amz-card">
+          <h2>Finds for Home</h2>
+          <div class="amz-card__media amz-card__media--quad">
+            <figure><img src="images/56.png" alt="Kitchen" loading="lazy" /><figcaption>Kitchen</figcaption></figure>
+            <figure><img src="images/57.png" alt="Decor" loading="lazy" /><figcaption>Home Decor</figcaption></figure>
+            <figure><img src="images/58.png" alt="Dining" loading="lazy" /><figcaption>Dining</figcaption></figure>
+            <figure><img src="images/59.png" alt="Smart home" loading="lazy" /><figcaption>Smart Home</figcaption></figure>
+          </div>
+          <a href="#" class="amz-card__link">See more</a>
+        </article>
+
+        <article class="amz-card">
+          <h2>Wireless Tech</h2>
+          <div class="amz-card__media amz-card__media--quad">
+            <figure><img src="images/60.png" alt="Smartphones" loading="lazy" /><figcaption>Smartphones</figcaption></figure>
+            <figure><img src="images/61.png" alt="Watches" loading="lazy" /><figcaption>Watches</figcaption></figure>
+            <figure><img src="images/62.png" alt="Headphones" loading="lazy" /><figcaption>Headphones</figcaption></figure>
+            <figure><img src="images/63.png" alt="Tablets" loading="lazy" /><figcaption>Tablets</figcaption></figure>
+          </div>
+          <a href="#" class="amz-card__link">Discover more</a>
+        </article>
+      </section>
+
+      <section class="amz-signin amz-reveal">
+        <div class="amz-signin__box">
+          <h2>See personalized recommendations</h2>
+          <a href="#" class="amz-signin__btn">Sign in</a>
+          <p>New customer? <a href="#">Start here.</a></p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="amz-footer">
+    <a href="#" class="amz-footer__top" id="backToTop">Back to top</a>
+
+    <div class="amz-footer__links">
+      <div>
+        <h3>Get to Know Us</h3>
+        <a href="#">Careers</a>
+        <a href="#">Blog</a>
+        <a href="#">About Amazon</a>
+        <a href="#">Investor Relations</a>
+        <a href="#">Amazon Devices</a>
+      </div>
+      <div>
+        <h3>Make Money with Us</h3>
+        <a href="#">Sell products on Amazon</a>
+        <a href="#">Sell on Amazon Business</a>
+        <a href="#">Become an Affiliate</a>
+        <a href="#">Advertise Your Products</a>
+        <a href="#">Self-Publish with Us</a>
+      </div>
+      <div>
+        <h3>Amazon Payment Products</h3>
+        <a href="#">Amazon Business Card</a>
+        <a href="#">Shop with Points</a>
+        <a href="#">Reload Your Balance</a>
+        <a href="#">Amazon Currency Converter</a>
+      </div>
+      <div>
+        <h3>Let Us Help You</h3>
+        <a href="#">Your Account</a>
+        <a href="#">Your Orders</a>
+        <a href="#">Shipping Rates & Policies</a>
+        <a href="#">Returns & Replacements</a>
+        <a href="#">Help</a>
+      </div>
+    </div>
+
+    <div class="amz-footer__brand">
+      <img src="images/logo.png" alt="Amazon" width="90" />
+      <div class="amz-footer__locale">
+        <button type="button"><i class="fa-solid fa-globe"></i> English</button>
+        <button type="button"><i class="fa-solid fa-dollar-sign"></i> USD - U.S. Dollar</button>
+        <button type="button"><img src="https://flagcdn.com/us.svg" alt="" width="18" /> United States</button>
+      </div>
+    </div>
+
+    <div class="amz-footer__legal">
+      <nav>
+        <a href="#">Conditions of Use</a>
+        <a href="#">Privacy Notice</a>
+        <a href="#">Consumer Health Data Privacy Disclosure</a>
+        <a href="#">Your Ads Privacy Choices</a>
+      </nav>
+      <p>&copy; 1996–2026, Amazon.com, Inc. or its affiliates.</p>
+    </div>
+  </footer>
+</body>
+</html>
