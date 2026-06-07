@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Tracker</title>
+    <link rel="icon" type="image/png" href="../../logos.png">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script defer src="./script.js"></script>
+</head>
+<body>
+
+<div class="page">
+
+    <div class="top-row">
+        <div class="card">
+            <h2 class="card-title">Budget</h2>
+            <input
+                type="number"
+                id="budgetInput"
+                class="text-input"
+                placeholder="Enter Total Amount"
+                min="0"
+            >
+            <button class="btn-blue" onclick="setBudget()">Set Budget</button>
+        </div>
+
+        <div class="card">
+            <h2 class="card-title">Expenses</h2>
+            <input
+                type="text"
+                id="expenseTitle"
+                class="text-input"
+                placeholder="Enter Title of Product"
+            >
+            <input
+                type="number"
+                id="expenseCost"
+                class="text-input"
+                placeholder="Enter Cost of Product"
+                min="0"
+            >
+            <button class="btn-blue" onclick="addExpense()">Check Amount</button>
+        </div>
+
+    </div>
+
+    <div class="stats-banner">
+        <div class="stat-col">
+            <p class="stat-label">Total Budget</p>
+            <p class="stat-value" id="displayBudget">0</p>
+        </div>
+        <div class="stat-col">
+            <p class="stat-label">Expenses</p>
+            <p class="stat-value" id="displayExpenses">0</p>
+        </div>
+        <div class="stat-col stat-col--right">
+            <p class="stat-label">Balance</p>
+            <p class="stat-value" id="displayBalance">0</p>
+        </div>
+    </div>
+
+    <div class="card list-card">
+        <h2 class="card-title">Expense List</h2>
+        <div id="expenseList"></div>
+    </div>
+
+</div>
+
+</body>
+</html>
