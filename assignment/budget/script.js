@@ -34,6 +34,23 @@ function saveData() {
 }
 
 
+function setBudgetAmount(amount, silent) {
+    var val = parseFloat(amount);
+
+    if (isNaN(val) || val <= 0) {
+        if (!silent) alert("Budget must be greater than zero.");
+        return { ok: false, error: "Budget must be greater than zero." };
+    }
+
+    totalBudget = val;
+    var input = document.getElementById("budgetInput");
+    if (input) input.value = "";
+
+    saveData();
+    updateDisplay();
+    return { ok: true };
+}
+
 function setBudget() {
     var val = document.getElementById("budgetInput").value;
 
@@ -41,46 +58,135 @@ function setBudget() {
         alert("Please enter a budget amount.");
         return;
     }
-    if (parseFloat(val) <= 0) {
-        alert("Budget must be greater than zero.");
-        return;
-    }
 
-    totalBudget = parseFloat(val);
-    document.getElementById("budgetInput").value = "";
-
-    saveData();
-    updateDisplay();
+    setBudgetAmount(val);
 }
 
 
-function addExpense() {
-    var title = document.getElementById("expenseTitle").value;
-    var cost  = document.getElementById("expenseCost").value;
+function findExpenseIndex(title) {
+    var search = (title || "").trim().toLowerCase();
+    if (!search) return -1;
 
-    if (title === "" || cost === "") {
-        alert("Please fill in both the title and cost.");
-        return;
+    for (var i = 0; i < expenses.length; i++) {
+        if (expenses[i].name.toLowerCase() === search) return i;
     }
-    if (parseFloat(cost) <= 0) {
-        alert("Cost must be greater than zero.");
-        return;
+    for (var j = 0; j < expenses.length; j++) {
+        if (expenses[j].name.toLowerCase().indexOf(search) !== -1) return j;
+    }
+    return -1;
+}
+
+function addExpenseItem(title, cost, silent) {
+    var name = (title || "").trim();
+    var price = parseFloat(cost);
+
+    if (!name || isNaN(price)) {
+        if (!silent) alert("Please fill in both the title and cost.");
+        return { ok: false, error: "Please fill in both the title and cost." };
+    }
+    if (price <= 0) {
+        if (!silent) alert("Cost must be greater than zero.");
+        return { ok: false, error: "Cost must be greater than zero." };
     }
     if (totalBudget === 0) {
-        alert("Please set a budget first.");
-        return;
+        if (!silent) alert("Please set a budget first.");
+        return { ok: false, error: "Please set a budget first." };
     }
 
-    expenses.push({ name: title, price: cost });
+    expenses.push({ name: name, price: String(price) });
 
-    document.getElementById("expenseTitle").value = "";
-    document.getElementById("expenseCost").value  = "";
+    var titleInput = document.getElementById("expenseTitle");
+    var costInput = document.getElementById("expenseCost");
+    if (titleInput) titleInput.value = "";
+    if (costInput) costInput.value = "";
 
     saveData();
     updateDisplay();
     renderList();
+    return { ok: true };
 }
 
+function addExpenseItems(items, silent) {
+    if (!items || !items.length) {
+        if (!silent) alert("No expenses to add.");
+        return { ok: false, error: "No expenses to add." };
+    }
+    if (totalBudget === 0) {
+        if (!silent) alert("Please set a budget first.");
+        return { ok: false, error: "Please set a budget first." };
+    }
+
+    var added = [];
+    var pending = [];
+
+    for (var i = 0; i < items.length; i++) {
+        var name = (items[i].title || "").trim();
+        var price = parseFloat(items[i].amount);
+
+        if (!name || isNaN(price) || price <= 0) {
+            if (!silent) alert("Please fill in both the title and cost.");
+            return { ok: false, error: "Invalid item: " + (name || "unknown"), added: added };
+        }
+
+        pending.push({ name: name, price: String(price) });
+        added.push({ title: name, amount: price });
+    }
+
+    for (var j = 0; j < pending.length; j++) {
+        expenses.push(pending[j]);
+    }
+
+    var titleInput = document.getElementById("expenseTitle");
+    var costInput = document.getElementById("expenseCost");
+    if (titleInput) titleInput.value = "";
+    if (costInput) costInput.value = "";
+
+    saveData();
+    updateDisplay();
+    renderList();
+    return { ok: true, added: added, count: added.length };
+}
+
+function addExpense() {
+    var title = document.getElementById("expenseTitle").value;
+    var cost  = document.getElementById("expenseCost").value;
+    addExpenseItem(title, cost);
+}
+
+function editExpenseItem(currentTitle, newTitle, newAmount, silent) {
+    var idx = findExpenseIndex(currentTitle);
+    if (idx === -1) {
+        if (!silent) alert("Expense not found.");
+        return { ok: false, error: "Could not find \"" + currentTitle + "\"." };
+    }
+
+    var name = expenses[idx].name;
+    var price = parseFloat(expenses[idx].price);
+
+    if (newTitle != null && String(newTitle).trim() !== "") {
+        name = String(newTitle).trim();
+    }
+    if (newAmount != null && newAmount !== "") {
+        price = parseFloat(newAmount);
+    }
+
+    if (!name) {
+        if (!silent) alert("Title cannot be empty.");
+        return { ok: false, error: "Title cannot be empty." };
+    }
+    if (isNaN(price) || price <= 0) {
+        if (!silent) alert("Please enter a valid cost.");
+        return { ok: false, error: "Cost must be greater than zero." };
+    }
+
+    expenses[idx].name = name;
+    expenses[idx].price = String(price);
+
+    saveData();
+    updateDisplay();
+    renderList();
+    return { ok: true, old_title: currentTitle, new_title: name, new_amount: price };
+}
 
 function deleteExpense(index) {
     if (confirm("Delete \"" + expenses[index].name + "\"?")) {
@@ -95,21 +201,11 @@ function deleteExpense(index) {
 function editExpense(index) {
     var newName = prompt("Edit title:", expenses[index].name);
     if (newName === null) { return; }
-    if (newName === "") { alert("Title cannot be empty."); return; }
 
     var newPrice = prompt("Edit cost:", expenses[index].price);
     if (newPrice === null) { return; }
-    if (newPrice === "" || parseFloat(newPrice) <= 0) {
-        alert("Please enter a valid cost.");
-        return;
-    }
 
-    expenses[index].name  = newName;
-    expenses[index].price = newPrice;
-
-    saveData();
-    updateDisplay();
-    renderList();
+    editExpenseItem(expenses[index].name, newName, newPrice);
 }
 
 
@@ -203,3 +299,45 @@ function renderList() {
         container.appendChild(row);
     }
 }
+
+function getSummary() {
+    var spent = calcTotalExpenses();
+    var balance = totalBudget - spent;
+    var items = expenses.map(function (e, i) {
+        return {
+            index: i + 1,
+            name: e.name,
+            amount: parseFloat(e.price)
+        };
+    });
+    var list = items.map(function (e) {
+        return e.name + " (" + e.amount + ")";
+    }).join(", ");
+
+    return {
+        budget: totalBudget,
+        expenses: spent,
+        balance: balance,
+        expenseList: list || "none",
+        expenseCount: expenses.length,
+        items: items,
+        hasBudget: totalBudget > 0,
+        overBudget: balance < 0,
+        remainingPercent: totalBudget > 0 ? Math.round((balance / totalBudget) * 100) : 0
+    };
+}
+
+function saveAndRefresh() {
+    saveData();
+    updateDisplay();
+    renderList();
+}
+
+window.BudgetApp = {
+    setBudgetAmount: setBudgetAmount,
+    addExpenseItem: addExpenseItem,
+    addExpenseItems: addExpenseItems,
+    editExpenseItem: editExpenseItem,
+    getSummary: getSummary,
+    saveAndRefresh: saveAndRefresh
+};
