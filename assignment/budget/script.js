@@ -35,7 +35,7 @@ function saveData() {
 
 
 function setBudgetAmount(amount, silent) {
-    var val = parseFloat(amount);
+    var val = parseFloat(String(amount).replace(/,/g, ""));
 
     if (isNaN(val) || val <= 0) {
         if (!silent) alert("Budget must be greater than zero.");
@@ -52,11 +52,17 @@ function setBudgetAmount(amount, silent) {
 }
 
 function setBudget() {
-    var val = document.getElementById("budgetInput").value;
+    var input = document.getElementById("budgetInput");
+    if (!input) return;
 
-    if (val === "") {
+    var val = input.value;
+    if (val === "" || val === null) {
         alert("Please enter a budget amount.");
         return;
+    }
+
+    if (!isNaN(input.valueAsNumber) && input.valueAsNumber > 0) {
+        val = input.valueAsNumber;
     }
 
     setBudgetAmount(val);
@@ -332,6 +338,11 @@ function saveAndRefresh() {
     updateDisplay();
     renderList();
 }
+
+window.setBudget = setBudget;
+window.addExpense = addExpense;
+window.editExpense = editExpense;
+window.deleteExpense = deleteExpense;
 
 window.BudgetApp = {
     setBudgetAmount: setBudgetAmount,

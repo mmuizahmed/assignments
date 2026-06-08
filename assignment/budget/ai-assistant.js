@@ -177,6 +177,7 @@
             "STYLE:",
             "- Understand casual speech: 'bought chai for 40', 'how much left', 'change samosa price to 15'",
             "- Always use tools for actions. Never fake updates.",
+            "- Use the tools API only. Never output <tool_call> XML in your reply.",
             "- Spoken reply: max 12 words, max 70 characters.",
             "",
             "LIVE DATA:",
@@ -209,7 +210,8 @@
         var summary;
 
         if (name === "set_budget") {
-            var budgetResult = window.BudgetApp.setBudgetAmount(args.amount, true);
+            var budgetVal = args.amount != null ? args.amount : args.budget_amount;
+            var budgetResult = window.BudgetApp.setBudgetAmount(budgetVal, true);
             summary = window.BudgetApp.getSummary();
             if (!budgetResult.ok) {
                 return { success: false, error: budgetResult.error };
@@ -335,6 +337,61 @@
         return message;
     }
 
+    function normalizeToolArgs(name, args) {
+        if (name === "set_budget" && args.budget_amount != null && args.amount == null) {
+            args.amount = parseFloat(args.budget_amount);
+        }
+        if (name === "add_expense") {
+            if (args.cost != null && args.amount == null) args.amount = parseFloat(args.cost);
+            if (args.name != null && args.title == null) args.title = args.name;
+        }
+        return args;
+    }
+
+    function parseContentToolCalls(content) {
+        if (!content || content.indexOf("<tool_call>") === -1) return null;
+
+        var calls = [];
+        var blockRe = /<tool_call>\s*([\w_]+)\s*([\s\S]*?)<\/tool_call>/gi;
+        var block;
+        var n = 0;
+
+        while ((block = blockRe.exec(content)) !== null) {
+            var fnName = block[1].trim();
+            var body = block[2];
+            var args = {};
+            var argRe = /<arg_key>\s*([\s\S]*?)\s*<\/arg_key>\s*<arg_value>\s*([\s\S]*?)\s*<\/arg_value>/gi;
+            var arg;
+
+            while ((arg = argRe.exec(body)) !== null) {
+                var key = arg[1].trim();
+                var val = arg[2].trim();
+                if (val !== "" && !isNaN(val)) val = parseFloat(val);
+                args[key] = val;
+            }
+
+            args = normalizeToolArgs(fnName, args);
+            calls.push({
+                id: "call_xml_" + n,
+                type: "function",
+                function: {
+                    name: fnName,
+                    arguments: JSON.stringify(args)
+                }
+            });
+            n += 1;
+        }
+
+        return calls.length ? calls : null;
+    }
+
+    function resolveToolCalls(message) {
+        if (message.tool_calls && message.tool_calls.length) {
+            return message.tool_calls;
+        }
+        return parseContentToolCalls(message.content);
+    }
+
     function callAI(userText) {
         var messages = [
             { role: "system", content: buildSystemPrompt() },
@@ -343,18 +400,20 @@
 
         return chatCompletions(messages, "auto").then(function (data) {
             var message = getMessage(data);
-            var toolCalls = message.tool_calls;
+            var toolCalls = resolveToolCalls(message);
 
             if (!toolCalls || !toolCalls.length) {
-                if (message.content) {
+                if (message.content && message.content.indexOf("<tool_call>") === -1) {
                     return { ok: true, message: message.content.trim() };
                 }
                 throw new Error("Assistant could not process that request.");
             }
 
+            var parsedFromXml = !(message.tool_calls && message.tool_calls.length);
+
             messages.push({
                 role: "assistant",
-                content: message.content || "",
+                content: parsedFromXml ? "" : (message.content || ""),
                 tool_calls: toolCalls
             });
 
@@ -369,6 +428,7 @@
                     throw new Error("Invalid tool arguments.");
                 }
 
+                args = normalizeToolArgs(toolCalls[i].function.name, args);
                 var toolResult = runTool(toolCalls[i].function.name, args);
                 if (!toolResult.success) allOk = false;
 
