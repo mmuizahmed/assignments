@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Furniro — Furniture Ecommerce</title>
+    <link rel="icon" type="image/png" href="assets/figma/icons/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <a href="index.html" class="logo">
+          <img src="assets/figma/icons/logo.png" alt="Furniro" />
+          Furniro
+        </a>
+        <nav class="nav">
+          <a href="index.html" class="active">Home</a>
+          <a href="shop.html">Shop</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <div class="header-icons">
+          <a href="checkout.html" aria-label="Account"><img src="assets/figma/icons/account.svg" alt="" width="28" height="28" /></a>
+          <a href="shop.html" aria-label="Search"><img src="assets/figma/icons/search.svg" alt="" width="28" height="28" /></a>
+          <a href="comparison.html" aria-label="Wishlist"><img src="assets/figma/icons/heart.svg" alt="" width="28" height="28" /></a>
+          <a href="cart.html" aria-label="Cart">
+            <img src="assets/figma/icons/cart.svg" alt="" width="28" height="28" />
+            <span class="cart-badge">0</span>
+          </a>
+          <button class="menu-toggle" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" style="background-image: url('assets/figma/sections/hero.png')">
+      <div class="hero-card">
+        <p class="tag">New Arrival</p>
+        <h1>Discover Our<br />New Collection</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
+          tellus, luctus nec ullamcorper mattis.
+        </p>
+        <a href="shop.html" class="btn btn-primary">BUY Now</a>
+      </div>
+    </section>
+
+    <!-- Browse The Range -->
+    <section class="section range-section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Browse The Range</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="range-grid">
+          <a href="shop.html" class="range-card">
+            <img src="assets/figma/sections/dining.png" alt="Dining" />
+            <h3>Dining</h3>
+          </a>
+          <a href="shop.html" class="range-card">
+            <img src="assets/figma/sections/living.png" alt="Living" />
+            <h3>Living</h3>
+          </a>
+          <a href="shop.html" class="range-card">
+            <img src="assets/figma/sections/bedroom.png" alt="Bedroom" />
+            <h3>Bedroom</h3>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Products -->
+    <section class="section products-section">
+      <div class="container container-home">
+        <div class="section-title">
+          <h2>Our Products</h2>
+        </div>
+        <div class="products-grid">
+          <article class="product-card">
+            <div class="product-img">
+              <img src="assets/figma/product/syltherine.png" alt="Syltherine" />
+              <span class="badge badge-sale">-30%</span>
+            </div>
+            <a href="product.html" class="product-info">
+              <h3>Syltherine</h3>
+              <p class="desc">Stylish cafe chair</p>
+              <div class="product-price">
+                <span class="current">Rp 2.500.000</span>
+                <span class="old">Rp 3.500.000</span>
+              </div>
+            </a>
+            <div class="product-overlay">
+              <button class="add-cart-btn" data-add-cart="syltherine">Add to cart</button>
+              <div class="overlay-actions">
+                <button type="button"><img src="assets/figma/icons/share.svg" alt="" width="16" height="16" /> Share</button>
+                <a href="comparison.html"><img src="assets/figma/icons/compare.svg" alt="" width="16" height="16" /> Compare</a>
+                <button type="button"><img src="assets/figma/icons/heart.svg" alt="" width="16" height="16" /> Like</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-img">
+              <img src="assets/figma/product/leviosa.png" alt="Leviosa" />
+            </div>
+            <a href="product.html" class="product-info">
+              <h3>Leviosa</h3>
+              <p class="desc">Stylish cafe chair</p>
+              <div class="product-price">
+                <span class="current">Rp 2.500.000</span>
+              </div>
+            </a>
+            <div class="product-overlay">
+              <button class="add-cart-btn" data-add-cart="leviosa">Add to cart</button>
+              <div class="overlay-actions">
+                <button type="button"><img src="assets/figma/icons/share.svg" alt="" width="16" height="16" /> Share</button>
+                <a href="comparison.html"><img src="assets/figma/icons/compare.svg" alt="" width="16" height="16" /> Compare</a>
+                <button type="button"><img src="assets/figma/icons/heart.svg" alt="" width="16" height="16" /> Like</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-img">
+              <img src="assets/figma/product/lolito.png" alt="Lolito" />
+              <span class="badge badge-sale">-50%</span>
+            </div>
+            <a href="product.html" class="product-info">
+              <h3>Lolito</h3>
+              <p class="desc">Luxury big sofa</p>
+              <div class="product-price">
+                <span class="current">Rp 7.000.000</span>
+                <span class="old">Rp 14.000.000</span>
+              </div>
+            </a>
+            <div class="product-overlay">
+              <button class="add-cart-btn" data-add-cart="lolito">Add to cart</button>
+              <div class="overlay-actions">
+                <button type="button"><img src="assets/figma/icons/share.svg" alt="" width="16" height="16" /> Share</button>
+                <a href="comparison.html"><img src="assets/figma/icons/compare.svg" alt="" width="16" height="16" /> Compare</a>
+                <button type="button"><img src="assets/figma/icons/heart.svg" alt="" width="16" height="16" /> Like</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-img">
+              <img src="assets/figma/product/respira.png" alt="Respira" />
+              <span class="badge badge-new">New</span>
+            </div>
+            <a href="product.html" class="product-info">
+              <h3>Respira</h3>
+              <p class="desc">Outdoor bar table and stool</p>
+              <div class="product-price">
+                <span class="current">Rp 500.000</span>
+              </div>
+            </a>
+            <div class="product-overlay">
+              <button class="add-cart-btn" data-add-cart="respira">Add to cart</button>
+              <div class="overlay-actions">
+                <button type="button"><img src="assets/figma/icons/share.svg" alt="" width="16" height="16" /> Share</button>
+                <a href="comparison.html"><img src="assets/figma/icons/compare.svg" alt="" width="16" height="16" /> Compare</a>
+                <button type="button"><img src="assets/figma/icons/heart.svg" alt="" width="16" height="16" /> Like</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-img">
+              <img src="assets/figma/product/grifo.png" alt="Grifo" />
+            </div>
+            <a href="product.html" class="product-info">
+              <h3>Grifo</h3>
+              <p class="desc">Night lamp</p>
+              <div class="product-price">
+                <span class="current">Rp 1.500.000</span>
+              </div>
+            </a>
+            <div class="product-overlay">
+              <button class="add-cart-btn" data-add-cart="grifo">Add to cart</button>
+              <div class="overlay-actions">
+                <button type="button"><img src="assets/figma/icons/share.svg" alt="" width="16" height="16" /> Share</button>
+                <a href="comparison.html"><img src="assets/figma/icons/compare.svg" alt="" width="16" height="16" /> Compare</a>
+                <button type="button"><img src="assets/figma/icons/heart.svg" alt="" width="16" height="16" /> Like</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-img">
+              <img src="assets/figma/product/muggo.png" alt="Muggo" />
+              <span class="badge badge-new">New</span>
+            </div>
+            <a href="product.html" class="product-info">
+              <h3>Muggo</h3>
+              <p class="desc">Small mug</p>
+              <div class="product-price">
+                <span class="current">Rp 150.000</span>
+              </div>
+            </a>
+            <div class="product-overlay">
+              <button class="add-cart-btn" data-add-cart="muggo">Add to cart</button>
+              <div class="overlay-actions">
+                <button type="button"><img src="assets/figma/icons/share.svg" alt="" width="16" height="16" /> Share</button>
+                <a href="comparison.html"><img src="assets/figma/icons/compare.svg" alt="" width="16" height="16" /> Compare</a>
+                <button type="button"><img src="assets/figma/icons/heart.svg" alt="" width="16" height="16" /> Like</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-img">
+              <img src="assets/figma/product/pingky.png" alt="Pingky" />
+              <span class="badge badge-sale">-50%</span>
+            </div>
+            <a href="product.html" class="product-info">
+              <h3>Pingky</h3>
+              <p class="desc">Cute bed set</p>
+              <div class="product-price">
+                <span class="current">Rp 7.000.000</span>
+                <span class="old">Rp 14.000.000</span>
+              </div>
+            </a>
+            <div class="product-overlay">
+              <button class="add-cart-btn" data-add-cart="pingky">Add to cart</button>
+              <div class="overlay-actions">
+                <button type="button"><img src="assets/figma/icons/share.svg" alt="" width="16" height="16" /> Share</button>
+                <a href="comparison.html"><img src="assets/figma/icons/compare.svg" alt="" width="16" height="16" /> Compare</a>
+                <button type="button"><img src="assets/figma/icons/heart.svg" alt="" width="16" height="16" /> Like</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-img">
+              <img src="assets/figma/product/potty.png" alt="Potty" />
+              <span class="badge badge-new">New</span>
+            </div>
+            <a href="product.html" class="product-info">
+              <h3>Potty</h3>
+              <p class="desc">Minimalist flower pot</p>
+              <div class="product-price">
+                <span class="current">Rp 500.000</span>
+              </div>
+            </a>
+            <div class="product-overlay">
+              <button class="add-cart-btn" data-add-cart="potty">Add to cart</button>
+              <div class="overlay-actions">
+                <button type="button"><img src="assets/figma/icons/share.svg" alt="" width="16" height="16" /> Share</button>
+                <a href="comparison.html"><img src="assets/figma/icons/compare.svg" alt="" width="16" height="16" /> Compare</a>
+                <button type="button"><img src="assets/figma/icons/heart.svg" alt="" width="16" height="16" /> Like</button>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="show-more-wrap">
+          <a href="shop.html" class="btn btn-outline">Show More</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rooms Inspiration -->
+    <section class="inspiration">
+      <div class="inspiration-inner">
+        <div class="inspiration-text">
+          <h2>50+ Beautiful rooms inspiration</h2>
+          <p>
+            Our designer already made a lot of beautiful prototipe of rooms that
+            inspire you
+          </p>
+          <a href="shop.html" class="btn btn-primary btn-explore">Explore More</a>
+        </div>
+        <div class="inspiration-media">
+          <div class="inspiration-slider">
+            <div class="inspo-slide">
+              <img src="assets/figma/sections/room1.png" alt="01 — Bed Room — Inner Peace" />
+            </div>
+            <div class="inspo-slide">
+              <img src="assets/figma/sections/room2.png" alt="Dining inspiration" />
+            </div>
+            <div class="inspo-slide">
+              <img src="assets/figma/sections/room3.png" alt="Living room inspiration" />
+            </div>
+          </div>
+          <button type="button" class="inspo-next" aria-label="Next slide">
+            <img src="assets/figma/icons/arrow-right.svg" alt="" width="24" height="24" />
+          </button>
+          <div class="inspo-dots">
+            <span class="active"></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Share / FuniroFurniture — Figma 117:492 -->
+    <section class="share-section">
+      <div class="section-title">
+        <p>Share your setup with</p>
+        <h2>#FuniroFurniture</h2>
+      </div>
+      <div class="share-stage">
+        <img
+          class="share-collage"
+          src="assets/figma/sections/share-images-full.png"
+          alt="Share your furniture setup"
+          width="1440"
+          height="721"
+        />
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <span class="brand-name">Funiro.</span>
+            <address>
+              400 University Drive Suite 200 Coral Gables,<br />
+              FL 33134 USA
+            </address>
+          </div>
+          <div>
+            <h4>Links</h4>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="shop.html">Shop</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Help</h4>
+            <ul class="footer-links">
+              <li><a href="checkout.html">Payment Options</a></li>
+              <li><a href="#">Returns</a></li>
+              <li><a href="#">Privacy Policies</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Newsletter</h4>
+            <form class="newsletter-form">
+              <label class="newsletter-field">
+                <input type="email" placeholder="Enter Your Email Address" required />
+              </label>
+              <button type="submit">SUBSCRIBE</button>
+            </form>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>2023 furino. All rights reverved</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

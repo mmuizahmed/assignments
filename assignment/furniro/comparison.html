@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Comparison — Furniro</title>
+    <link rel="icon" type="image/png" href="assets/figma/icons/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <a href="index.html" class="logo">
+          <img src="assets/figma/icons/logo.png" alt="Furniro" />
+          Furniro
+        </a>
+        <nav class="nav">
+          <a href="index.html">Home</a>
+          <a href="shop.html">Shop</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <div class="header-icons">
+          <a href="checkout.html" aria-label="Account"><img src="assets/figma/icons/account.svg" alt="" width="28" height="28" /></a>
+          <a href="shop.html" aria-label="Search"><img src="assets/figma/icons/search.svg" alt="" width="28" height="28" /></a>
+          <a href="comparison.html" aria-label="Wishlist"><img src="assets/figma/icons/heart.svg" alt="" width="28" height="28" /></a>
+          <a href="cart.html" aria-label="Cart">
+            <img src="assets/figma/icons/cart.svg" alt="" width="28" height="28" />
+            <span class="cart-badge">0</span>
+          </a>
+          <button class="menu-toggle" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Figma 117:643 Group 78 — 1440×316 -->
+    <section
+      class="page-banner"
+      style="background-image: url('assets/figma/sections/shop-banner-bg.png')"
+    >
+      <div class="page-banner-content">
+        <img class="banner-logo" src="assets/figma/icons/logo.png" alt="" />
+        <h1>Product Comparison</h1>
+        <div class="breadcrumb">
+          <a href="index.html">Home</a>
+          <span>›</span>
+          <span class="current">Comparison</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Figma 117:653 Group 165 — 1332×2645 @ x=54 -->
+    <section class="comparison-section">
+      <div class="container">
+        <div class="compare-grid">
+          <!-- Header row -->
+          <div class="compare-cell compare-intro">
+            <p class="compare-intro-title">Go to Product page for more Products</p>
+            <a href="shop.html" class="compare-view-more">View More</a>
+          </div>
+
+          <div class="compare-cell compare-product-head">
+            <div class="compare-thumb">
+              <img src="assets/figma/product/asgaard-main.png" alt="Asgaard Sofa" />
+            </div>
+            <h3>Asgaard Sofa</h3>
+            <p class="price">Rs. 250,000.00</p>
+            <div class="compare-rating">
+              <span class="score">4.7</span>
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <span class="divider"></span>
+              <span class="reviews">204 Review</span>
+            </div>
+          </div>
+
+          <div class="compare-cell compare-product-head">
+            <div class="compare-thumb">
+              <img src="assets/figma/product/casaliving.png" alt="Outdoor Sofa Set" />
+            </div>
+            <h3>Outdoor Sofa Set</h3>
+            <p class="price">Rs. 224,000.00</p>
+            <div class="compare-rating">
+              <span class="score">4.2</span>
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <span class="divider"></span>
+              <span class="reviews">145 Review</span>
+            </div>
+          </div>
+
+          <div class="compare-cell compare-add">
+            <h3>Add A Product</h3>
+            <div class="compare-select-wrap">
+              <select aria-label="Choose a Product">
+                <option>Choose a Product</option>
+                <option>Lolito</option>
+                <option>Respira</option>
+                <option>Leviosa</option>
+                <option>Syltherine</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- General -->
+          <div class="compare-cell compare-section-title">General</div>
+          <div class="compare-cell"></div>
+          <div class="compare-cell"></div>
+          <div class="compare-cell"></div>
+
+          <div class="compare-cell compare-label">Sales Package</div>
+          <div class="compare-cell">1 sectional sofa</div>
+          <div class="compare-cell">1 Three Seater, 2 Single Seater</div>
+          <div class="compare-cell"></div>
+
+          <div class="compare-cell compare-label">Model Number</div>
+          <div class="compare-cell">TFCBLIGRBL6SRHS</div>
+          <div class="compare-cell">DTUBLIGRBL568</div>
+          <div class="compare-cell"></div>
+
+          <div class="compare-cell compare-label">Secondary Material</div>
+          <div class="compare-cell">Solid Wood</div>
+          <div class="compare-cell">Solid Wood</div>
+          <div class="compare-cell"></div>
+
+          <div class="compare-cell compare-label">Configuration</div>
+          <div class="compare-cell">L-shaped</div>
+          <div class="compare-cell">L-shaped</div>
+          <div class="compare-cell"></div>
+
+          <div class="compare-cell compare-label">Upholstery Material</div>
+          <div class="compare-cell">Fabric + Cotton</div>
+          <div class="compare-cell">Fabric + Cotton</div>
+          <div class="compare-cell"></div>
+
+          <div class="compare-cell compare-label">Upholstery Color</div>
+          <div class="compare-cell">Bright Grey &amp; Lion</div>
+          <div class="compare-cell">Bright Grey &amp; Lion</div>
+          <div class="compare-cell"></div>
+
+          <!-- Product -->
+          <div class="compare-cell compare-section-title">Product</div>
+          <div class="compare-cell"></div>
+          <div class="compare-cell"></div>
+          <div class="compare-cell"></div>
+
+          <div class="compare-cell compare-label">Filling Material</div>
+          <div class="compare-cell">Foam</div>
+          <div class="compare-cell">Matte</div>
+          <div class="compare-cell"></div>
+
+          <div class="compare-cell compare-label">Finish Type</div>
+          <div class="compare-cell">Bright Grey &amp; Lion</div>
+          <div class="compare-cell">Bright Grey &amp; Lion</div>
+          <div class="compare-cell"></div>
+
+          <div class="compare-cell compare-label">Adjustable Headrest</div>
+          <div class="compare-cell">No</div>
+          <div class="compare-cell">yes</div>
+          <div class="compare-cell"></div>
+
+          <div class="compare-cell compare-label">Maximum Load Capacity</div>
+          <div class="compare-cell">280 KG</div>
+          <div class="compare-cell">300 KG</div>
+          <div class="compare-cell"></div>
+
+          <div class="compare-cell compare-label">Origin of Manufacture</div>
+          <div class="compare-cell">India</div>
+          <div class="compare-cell">India</div>
+          <div class="compare-cell"></div>
+
+          <!-- Dimensions -->
+          <div class="compare-cell compare-section-title">Dimensions</div>
+          <div class="compare-cell"></div>
+          <div class="compare-cell"></div>
+          <div class="compare-cell"></div>
+
+          <div class="compare-cell compare-label">Width</div>
+          <div class="compare-cell">265.32 cm</div>
+          <div class="compare-cell">265.32 cm</div>
+          <div class="compare-cell"></div>
+
+          <div class="compare-cell compare-label">Height</div>
+          <div class="compare-cell">76 cm</div>
+          <div class="compare-cell">76 cm</div>
+          <div class="compare-cell"></div>
+
+          <div class="compare-cell compare-label">Depth</div>
+          <div class="compare-cell">167.76 cm</div>
+          <div class="compare-cell">167.76 cm</div>
+          <div class="compare-cell"></div>
+
+          <div class="compare-cell compare-label">Weight</div>
+          <div class="compare-cell">45 KG</div>
+          <div class="compare-cell">65 KG</div>
+          <div class="compare-cell"></div>
+
+          <div class="compare-cell compare-label">Seat Height</div>
+          <div class="compare-cell">41.52 cm</div>
+          <div class="compare-cell">41.52 cm</div>
+          <div class="compare-cell"></div>
+
+          <div class="compare-cell compare-label">Leg Height</div>
+          <div class="compare-cell">5.46 cm</div>
+          <div class="compare-cell">5.46 cm</div>
+          <div class="compare-cell"></div>
+
+          <!-- Warranty -->
+          <div class="compare-cell compare-section-title">Warranty</div>
+          <div class="compare-cell"></div>
+          <div class="compare-cell"></div>
+          <div class="compare-cell"></div>
+
+          <div class="compare-cell compare-label">Warranty Summary</div>
+          <div class="compare-cell">1 Year Manufacturing Warranty</div>
+          <div class="compare-cell">1.2 Year Manufacturing Warranty</div>
+          <div class="compare-cell"></div>
+
+          <div class="compare-cell compare-label">Warranty Service Type</div>
+          <div class="compare-cell">
+            For Warranty Claims or Any Product Related Issues Please Email at
+            operations@trevifurniture.com
+          </div>
+          <div class="compare-cell">
+            For Warranty Claims or Any Product Related Issues Please Email at
+            support@xyz.com
+          </div>
+          <div class="compare-cell"></div>
+
+          <div class="compare-cell compare-label">Covered in Warranty</div>
+          <div class="compare-cell">Warranty Against Manufacturing Defect</div>
+          <div class="compare-cell">
+            Warranty of the product is limited to manufacturing defects only.
+          </div>
+          <div class="compare-cell"></div>
+
+          <div class="compare-cell compare-label">Not Covered in Warranty</div>
+          <div class="compare-cell">
+            The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond
+            Its Intended Use And Wear &amp; Tear In The Natural Course Of Product
+            Usage.
+          </div>
+          <div class="compare-cell">
+            The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond
+            Its Intended Use And Wear &amp; Tear In The Natural Course Of Product
+            Usage.
+          </div>
+          <div class="compare-cell"></div>
+
+          <div class="compare-cell compare-label">Domestic Warranty</div>
+          <div class="compare-cell">1 Year</div>
+          <div class="compare-cell">3 Months</div>
+          <div class="compare-cell"></div>
+
+          <div class="compare-cell"></div>
+          <div class="compare-cell compare-actions">
+            <button type="button" class="btn compare-add-cart" data-add-cart="asgaard">
+              Add To Cart
+            </button>
+          </div>
+          <div class="compare-cell compare-actions">
+            <button type="button" class="btn compare-add-cart" data-add-cart="casaliving">
+              Add To Cart
+            </button>
+          </div>
+          <div class="compare-cell"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Figma 117:787 Feature strip -->
+    <section class="features">
+      <div class="container features-inner">
+        <div class="features-grid">
+          <div class="feature-item">
+            <img class="feature-icon" src="assets/figma/icons/trophy.svg" alt="" />
+            <div>
+              <h4>High Quality</h4>
+              <p>crafted from top materials</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <img class="feature-icon" src="assets/figma/icons/guarantee.svg" alt="" />
+            <div>
+              <h4>Warranty Protection</h4>
+              <p>Over 2 years</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <img class="feature-icon" src="assets/figma/icons/shipping.svg" alt="" />
+            <div>
+              <h4>Free Shipping</h4>
+              <p>Order over 150 $</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <img class="feature-icon" src="assets/figma/icons/support.svg" alt="" />
+            <div>
+              <h4>24 / 7 Support</h4>
+              <p>Dedicated support</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <span class="brand-name">Funiro.</span>
+            <address>
+              400 University Drive Suite 200 Coral Gables,<br />
+              FL 33134 USA
+            </address>
+          </div>
+          <div>
+            <h4>Links</h4>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="shop.html">Shop</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Help</h4>
+            <ul class="footer-links">
+              <li><a href="checkout.html">Payment Options</a></li>
+              <li><a href="#">Returns</a></li>
+              <li><a href="#">Privacy Policies</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Newsletter</h4>
+            <form class="newsletter-form">
+              <label class="newsletter-field">
+                <input type="email" placeholder="Enter Your Email Address" required />
+              </label>
+              <button type="submit">SUBSCRIBE</button>
+            </form>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>2023 furino. All rights reverved</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Asgaard sofa — Furniro</title>
+    <link rel="icon" type="image/png" href="assets/figma/icons/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <a href="index.html" class="logo">
+          <img src="assets/figma/icons/logo.png" alt="Furniro" />
+          Furniro
+        </a>
+        <nav class="nav">
+          <a href="index.html">Home</a>
+          <a href="shop.html">Shop</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <div class="header-icons">
+          <a href="checkout.html" aria-label="Account"><img src="assets/figma/icons/account.svg" alt="" width="28" height="28" /></a>
+          <a href="shop.html" aria-label="Search"><img src="assets/figma/icons/search.svg" alt="" width="28" height="28" /></a>
+          <a href="comparison.html" aria-label="Wishlist"><img src="assets/figma/icons/heart.svg" alt="" width="28" height="28" /></a>
+          <a href="cart.html" aria-label="Cart">
+            <img src="assets/figma/icons/cart.svg" alt="" width="28" height="28" />
+            <span class="cart-badge">0</span>
+          </a>
+          <button class="menu-toggle" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+        </div>
+      </div>
+    </header>
+
+    <div class="breadcrumb-bar">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="sep">›</span>
+          <a href="shop.html">Shop</a>
+          <span class="sep pipe">|</span>
+          <span class="current">Asgaard sofa</span>
+        </div>
+      </div>
+    </div>
+
+    <section class="product-detail">
+      <div class="container">
+        <div class="product-detail-grid">
+          <div class="gallery">
+            <div class="thumbs">
+              <img src="assets/figma/product/asgaard-thumb1.png" alt="Thumb 1" class="active" />
+              <img src="assets/figma/product/asgaard-thumb2.png" alt="Thumb 2" />
+              <img src="assets/figma/product/asgaard-thumb3.png" alt="Thumb 3" />
+              <img src="assets/figma/product/asgaard-thumb4.png" alt="Thumb 4" />
+            </div>
+            <div class="main-image">
+              <img id="main-product-img" src="assets/figma/product/asgaard-main.png" alt="Asgaard sofa" />
+            </div>
+          </div>
+
+          <div class="product-details">
+            <h1>Asgaard sofa</h1>
+            <p class="price">Rs. 250,000.00</p>
+            <div class="rating">
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <div class="divider"></div>
+              <span class="reviews">5 Customer Review</span>
+            </div>
+            <p class="short-desc">
+              Setting the bar as one of the loudest speakers in its class, the
+              Kilburn is a compact, stout-hearted hero with a well-balanced audio
+              which boasts a clear midrange and extended highs for a sound.
+            </p>
+
+            <p class="option-label">Size</p>
+            <div class="size-options">
+              <button type="button" class="active">L</button>
+              <button type="button">XL</button>
+              <button type="button">XS</button>
+            </div>
+
+            <p class="option-label">Color</p>
+            <div class="color-options">
+              <button type="button" class="color-purple active" aria-label="Purple"></button>
+              <button type="button" class="color-black" aria-label="Black"></button>
+              <button type="button" class="color-gold" aria-label="Gold"></button>
+            </div>
+
+            <div class="product-actions">
+              <div class="qty-control">
+                <button type="button" data-qty="minus">−</button>
+                <input type="number" id="product-qty" value="1" min="1" />
+                <button type="button" data-qty="plus">+</button>
+              </div>
+              <button type="button" class="btn-add-cart" data-add-cart="asgaard">
+                Add To Cart
+              </button>
+              <a href="comparison.html" class="btn-compare"><span>+</span> Compare</a>
+            </div>
+
+            <div class="product-meta">
+              <p><span class="label">SKU</span> : SS001</p>
+              <p><span class="label">Category</span> : Sofas</p>
+              <p><span class="label">Tags</span> : Sofa, Chair, Home, Shop</p>
+              <p class="social">
+                <span class="label">Share</span> :
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-tabs">
+      <div class="container">
+        <div class="tabs-nav">
+          <button type="button" class="active" data-tab="tab-desc">Description</button>
+          <button type="button" data-tab="tab-info">Additional Information</button>
+          <button type="button" data-tab="tab-reviews">Reviews [5]</button>
+        </div>
+
+        <div id="tab-desc" class="tab-panel active">
+          <p>
+            Embodying the raw, wayward spirit of rock ‘n’ roll, the Kilburn
+            portable active stereo speaker takes the unmistakable look and sound
+            of Marshall, unplugs the chords, and takes the show on the road.
+          </p>
+          <p>
+            Weighing in under 7 pounds, the Kilburn is a lightweight piece of
+            vintage styled engineering. Setting the bar as one of the loudest
+            speakers in its class, the Kilburn is a compact, stout-hearted hero
+            with a well-balanced audio which boasts a clear midrange and extended
+            highs for a sound that is both articulate and pronounced. The analogue
+            knobs allow you to fine tune the controls to your personal preferences
+            while the guitar-influenced leather strap enables easy and stylish
+            travel.
+          </p>
+          <div class="tab-images">
+            <img src="assets/figma/product/cloud-sofa1.png" alt="Product detail 1" />
+            <img src="assets/figma/product/cloud-sofa2.png" alt="Product detail 2" />
+          </div>
+        </div>
+
+        <div id="tab-info" class="tab-panel">
+          <p><strong>Weight:</strong> 5 kg</p>
+          <p><strong>Dimensions:</strong> 80 × 60 × 90 cm</p>
+          <p><strong>Materials:</strong> Wood, Fabric, Metal</p>
+          <p><strong>Warranty:</strong> 2 years</p>
+        </div>
+
+        <div id="tab-reviews" class="tab-panel">
+          <p>★★★★★ — "Beautiful chair, very comfortable!" — Sarah M.</p>
+          <p>★★★★☆ — "Great quality for the price." — James K.</p>
+          <p>★★★★★ — "Matches my cafe perfectly." — Priya R.</p>
+          <p>★★★★★ — "Fast shipping and solid packaging." — Alex T.</p>
+          <p>★★★★☆ — "Love the design, cushion is soft." — Maya L.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="related-products">
+      <div class="container">
+        <div class="section-title">
+          <h2>Related Products</h2>
+        </div>
+        <div class="products-grid">
+          <article class="product-card">
+            <div class="product-img">
+              <img src="assets/figma/product/syltherine.png" alt="Syltherine" />
+              <span class="badge badge-sale">-30%</span>
+            </div>
+            <a href="product.html" class="product-info">
+              <h3>Syltherine</h3>
+              <p class="desc">Stylish cafe chair</p>
+              <div class="product-price">
+                <span class="current">Rp 2.500.000</span>
+                <span class="old">Rp 3.500.000</span>
+              </div>
+            </a>
+            <div class="product-overlay">
+              <button class="add-cart-btn" data-add-cart="syltherine">Add to cart</button>
+              <div class="overlay-actions">
+                <button type="button"><img src="assets/figma/icons/share.svg" alt="" width="16" height="16" /> Share</button>
+                <a href="comparison.html"><img src="assets/figma/icons/compare.svg" alt="" width="16" height="16" /> Compare</a>
+                <button type="button"><img src="assets/figma/icons/heart.svg" alt="" width="16" height="16" /> Like</button>
+              </div>
+            </div>
+          </article>
+          <article class="product-card">
+            <div class="product-img">
+              <img src="assets/figma/product/leviosa.png" alt="Leviosa" />
+            </div>
+            <a href="product.html" class="product-info">
+              <h3>Leviosa</h3>
+              <p class="desc">Stylish cafe chair</p>
+              <div class="product-price"><span class="current">Rp 2.500.000</span></div>
+            </a>
+            <div class="product-overlay">
+              <button class="add-cart-btn" data-add-cart="leviosa">Add to cart</button>
+              <div class="overlay-actions">
+                <button type="button"><img src="assets/figma/icons/share.svg" alt="" width="16" height="16" /> Share</button>
+                <a href="comparison.html"><img src="assets/figma/icons/compare.svg" alt="" width="16" height="16" /> Compare</a>
+                <button type="button"><img src="assets/figma/icons/heart.svg" alt="" width="16" height="16" /> Like</button>
+              </div>
+            </div>
+          </article>
+          <article class="product-card">
+            <div class="product-img">
+              <img src="assets/figma/product/lolito.png" alt="Lolito" />
+              <span class="badge badge-sale">-50%</span>
+            </div>
+            <a href="product.html" class="product-info">
+              <h3>Lolito</h3>
+              <p class="desc">Luxury big sofa</p>
+              <div class="product-price">
+                <span class="current">Rp 7.000.000</span>
+                <span class="old">Rp 14.000.000</span>
+              </div>
+            </a>
+            <div class="product-overlay">
+              <button class="add-cart-btn" data-add-cart="lolito">Add to cart</button>
+              <div class="overlay-actions">
+                <button type="button"><img src="assets/figma/icons/share.svg" alt="" width="16" height="16" /> Share</button>
+                <a href="comparison.html"><img src="assets/figma/icons/compare.svg" alt="" width="16" height="16" /> Compare</a>
+                <button type="button"><img src="assets/figma/icons/heart.svg" alt="" width="16" height="16" /> Like</button>
+              </div>
+            </div>
+          </article>
+          <article class="product-card">
+            <div class="product-img">
+              <img src="assets/figma/product/respira.png" alt="Respira" />
+              <span class="badge badge-new">New</span>
+            </div>
+            <a href="product.html" class="product-info">
+              <h3>Respira</h3>
+              <p class="desc">Outdoor bar table and stool</p>
+              <div class="product-price"><span class="current">Rp 500.000</span></div>
+            </a>
+            <div class="product-overlay">
+              <button class="add-cart-btn" data-add-cart="respira">Add to cart</button>
+              <div class="overlay-actions">
+                <button type="button"><img src="assets/figma/icons/share.svg" alt="" width="16" height="16" /> Share</button>
+                <a href="comparison.html"><img src="assets/figma/icons/compare.svg" alt="" width="16" height="16" /> Compare</a>
+                <button type="button"><img src="assets/figma/icons/heart.svg" alt="" width="16" height="16" /> Like</button>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="show-more-wrap">
+          <a href="shop.html" class="btn btn-outline">Show More</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <span class="brand-name">Funiro.</span>
+            <address>
+              400 University Drive Suite 200 Coral Gables,<br />
+              FL 33134 USA
+            </address>
+          </div>
+          <div>
+            <h4>Links</h4>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="shop.html">Shop</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Help</h4>
+            <ul class="footer-links">
+              <li><a href="checkout.html">Payment Options</a></li>
+              <li><a href="#">Returns</a></li>
+              <li><a href="#">Privacy Policies</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Newsletter</h4>
+            <form class="newsletter-form">
+              <label class="newsletter-field">
+                <input type="email" placeholder="Enter Your Email Address" required />
+              </label>
+              <button type="submit">SUBSCRIBE</button>
+            </form>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>2023 furino. All rights reverved</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

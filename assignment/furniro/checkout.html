@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout — Furniro</title>
+    <link rel="icon" type="image/png" href="assets/figma/icons/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <a href="index.html" class="logo">
+          <img src="assets/figma/icons/logo.png" alt="Furniro" />
+          Furniro
+        </a>
+        <nav class="nav">
+          <a href="index.html">Home</a>
+          <a href="shop.html">Shop</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <div class="header-icons">
+          <a href="checkout.html" aria-label="Account"><img src="assets/figma/icons/account.svg" alt="" width="28" height="28" /></a>
+          <a href="shop.html" aria-label="Search"><img src="assets/figma/icons/search.svg" alt="" width="28" height="28" /></a>
+          <a href="comparison.html" aria-label="Wishlist"><img src="assets/figma/icons/heart.svg" alt="" width="28" height="28" /></a>
+          <a href="cart.html" aria-label="Cart">
+            <img src="assets/figma/icons/cart.svg" alt="" width="28" height="28" />
+            <span class="cart-badge">0</span>
+          </a>
+          <button class="menu-toggle" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Figma 117:1145 Group 78 — 1440×316 -->
+    <section
+      class="page-banner"
+      style="background-image: url('assets/figma/sections/shop-banner-bg.png')"
+    >
+      <div class="page-banner-content">
+        <img class="banner-logo" src="assets/figma/icons/logo.png" alt="" />
+        <h1>Checkout</h1>
+        <div class="breadcrumb">
+          <a href="index.html">Home</a>
+          <span>›</span>
+          <span class="current">Checkout</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Figma 117:1155 Group 136 — 1440×1829 -->
+    <section class="checkout-section">
+      <div class="container">
+        <form id="checkout-form" class="checkout-grid">
+          <div class="billing">
+            <h2>Billing details</h2>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="first-name">First Name</label>
+                <input id="first-name" type="text" required />
+              </div>
+              <div class="form-group">
+                <label for="last-name">Last Name</label>
+                <input id="last-name" type="text" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="company">Company Name (Optional)</label>
+              <input id="company" type="text" />
+            </div>
+
+            <div class="form-group">
+              <label for="country">Country / Region</label>
+              <select id="country" required>
+                <option value="Sri Lanka" selected>Sri Lanka</option>
+                <option value="Pakistan">Pakistan</option>
+                <option value="India">India</option>
+                <option value="USA">USA</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="street">Street address</label>
+              <input id="street" type="text" required />
+            </div>
+
+            <div class="form-group">
+              <label for="city">Town / City</label>
+              <input id="city" type="text" required />
+            </div>
+
+            <div class="form-group">
+              <label for="province">Province</label>
+              <select id="province" required>
+                <option value="Western Province" selected>Western Province</option>
+                <option value="Central Province">Central Province</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="zip">ZIP code</label>
+              <input id="zip" type="text" required />
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input id="phone" type="tel" required />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input id="email" type="email" required />
+            </div>
+
+            <div class="form-group form-group-note">
+              <input
+                id="additional"
+                type="text"
+                placeholder="Additional information"
+                aria-label="Additional information"
+              />
+            </div>
+          </div>
+
+          <aside class="order-summary">
+            <div class="order-summary-box">
+              <div class="order-head">
+                <span>Product</span>
+                <span>Subtotal</span>
+              </div>
+              <div id="order-items" class="order-items"></div>
+              <div class="order-row">
+                <span>Subtotal</span>
+                <span id="order-subtotal" class="order-value">Rs. 0.00</span>
+              </div>
+              <div class="order-row total">
+                <span>Total</span>
+                <strong id="order-total">Rs. 0.00</strong>
+              </div>
+
+              <hr class="order-divider" />
+
+              <div class="payment-methods">
+                <label class="payment-option active">
+                  <input type="radio" name="pay" value="bank" checked />
+                  <span class="radio-dot" aria-hidden="true"></span>
+                  <span class="payment-label">Direct Bank Transfer</span>
+                </label>
+                <p class="pay-note">
+                  Make your payment directly into our bank account. Please use
+                  your Order ID as the payment reference. Your order will not be
+                  shipped until the funds have cleared in our account.
+                </p>
+
+                <label class="payment-option">
+                  <input type="radio" name="pay" value="bank2" />
+                  <span class="radio-dot" aria-hidden="true"></span>
+                  <span class="payment-label">Direct Bank Transfer</span>
+                </label>
+
+                <label class="payment-option">
+                  <input type="radio" name="pay" value="cod" />
+                  <span class="radio-dot" aria-hidden="true"></span>
+                  <span class="payment-label">Cash On Delivery</span>
+                </label>
+
+                <p class="privacy-note">
+                  Your personal data will be used to support your experience
+                  throughout this website, to manage access to your account, and
+                  for other purposes described in our
+                  <a href="#">privacy policy</a>.
+                </p>
+              </div>
+
+              <button type="submit" class="btn place-order">Place order</button>
+            </div>
+          </aside>
+        </form>
+      </div>
+    </section>
+
+    <!-- Figma 117:1228 Feature strip 1440×270 -->
+    <section class="features">
+      <div class="container features-inner">
+        <div class="features-grid">
+          <div class="feature-item">
+            <img class="feature-icon" src="assets/figma/icons/trophy.svg" alt="" />
+            <div>
+              <h4>High Quality</h4>
+              <p>crafted from top materials</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <img class="feature-icon" src="assets/figma/icons/guarantee.svg" alt="" />
+            <div>
+              <h4>Warranty Protection</h4>
+              <p>Over 2 years</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <img class="feature-icon" src="assets/figma/icons/shipping.svg" alt="" />
+            <div>
+              <h4>Free Shipping</h4>
+              <p>Order over 150 $</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <img class="feature-icon" src="assets/figma/icons/support.svg" alt="" />
+            <div>
+              <h4>24 / 7 Support</h4>
+              <p>Dedicated support</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <span class="brand-name">Funiro.</span>
+            <address>
+              400 University Drive Suite 200 Coral Gables,<br />
+              FL 33134 USA
+            </address>
+          </div>
+          <div>
+            <h4>Links</h4>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="shop.html">Shop</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Help</h4>
+            <ul class="footer-links">
+              <li><a href="checkout.html">Payment Options</a></li>
+              <li><a href="#">Returns</a></li>
+              <li><a href="#">Privacy Policies</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Newsletter</h4>
+            <form class="newsletter-form">
+              <label class="newsletter-field">
+                <input type="email" placeholder="Enter Your Email Address" required />
+              </label>
+              <button type="submit">SUBSCRIBE</button>
+            </form>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>2023 furino. All rights reverved</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
