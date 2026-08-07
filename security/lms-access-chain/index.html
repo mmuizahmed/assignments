@@ -36,7 +36,7 @@
 
       <div class="stats">
         <div class="stat"><b>6</b><span>Confirmed findings</span></div>
-        <div class="stat"><b>1</b><span>Auth model (cookies)</span></div>
+        <div class="stat"><b>1</b><span>Fixed — profile CNIC</span></div>
         <div class="stat"><b>401</b><span>No-cookie baseline</span></div>
         <div class="stat"><b>200</b><span>Other-object reads</span></div>
       </div>
@@ -85,9 +85,9 @@
           <span class="step-num">02</span>
           <span>
             <strong>Profile read IDOR</strong>
-            <small>CNIC path returns full profile + courses / slot / student _id</small>
+            <small>Fixed Aug 8, 2026 — other CNIC now returns 403 Forbidden</small>
           </span>
-          <span class="sev sev-high">High</span>
+          <span class="sev sev-fixed">Fixed</span>
         </a>
         <a class="step-link" href="#bug-3">
           <span class="step-num">03</span>
@@ -117,7 +117,7 @@
           <span class="step-num">06</span>
           <span>
             <strong>Password set chain</strong>
-            <small>Profile leaks CNIC + DOB → generate-password (no token) → login as that account</small>
+            <small>Historical: profile CNIC+DOB → generate-password → login (Bug 02 fuel now 403)</small>
           </span>
           <span class="sev sev-crit">Critical</span>
         </a>
@@ -178,12 +178,13 @@ Credentials: include (session cookie)</div>
 
     <section class="finding" id="bug-2">
       <div class="finding-head">
-        <span class="badge">Bug 02</span>
+        <span class="badge">Bug 02 · Fixed</span>
         <h3>Profile read IDOR</h3>
-        <span class="sev sev-high">High</span>
+        <span class="sev sev-fixed">Fixed · Aug 8, 2026</span>
       </div>
       <p class="lead">
-        Frontend loads profile by <strong>CNIC</strong> (not Mongo _id). Another student’s CNIC returns full profile and course enrollment objects.
+        Frontend loads profile by <strong>CNIC</strong> (not Mongo _id). Originally another student’s CNIC returned full profile and enrollments.
+        Retest: other CNIC now returns <span class="status-ok">403 Forbidden</span>.
       </p>
 
       <div class="grid-2">
@@ -195,33 +196,29 @@ Credentials: include (session cookie)</div>
 Frontend path param = student_cnic
 Credentials: include</div>
             </dd>
-            <dt>Student fields seen</dt>
+            <dt>Original exposed fields (when vulnerable)</dt>
             <dd>
               <span class="mono">full_name, father_name, email, contact_number, full_address, gender, date_of_birth, image, _id</span>
+              + course / slot / roll keys on induction list
             </dd>
-            <dt>Course list keys seen</dt>
+            <dt>Status</dt>
             <dd>
-              <span class="mono">status, is_sponsored, has_joined_whatsapp_group, _id, student_id, country, city, course, new_course, batch_number, laptop, metadata, slot_transition, createdAt, updatedAt, roll_number, campus, slot, trainer, progress_percentage, …</span>
-            </dd>
-            <dt>Observed behavior</dt>
-            <dd>
-              Known CNIC → <span class="status-ok">200</span> “Student found” · Other CNIC → <span class="status-bad">200</span> full object · No cookie → unauthorized
+              Before: other CNIC → <span class="status-bad">200</span> full object · After (Aug 8, 2026): other CNIC → <span class="status-ok">403 Forbidden</span>
             </dd>
           </dl>
           <div class="tag-row">
             <span class="tag">IDOR</span>
             <span class="tag">object: cnic</span>
-            <span class="tag">PII</span>
-            <span class="tag">read</span>
+            <span class="tag">fixed</span>
           </div>
         </div>
         <div class="panel">
           <dl class="kv">
-            <dt>Why next</dt>
-            <dd>Profile page Network call after attendance pattern; CNIC is high-value identifier.</dd>
-            <dt>Unlocks next</dt>
-            <dd>Leaks <span class="mono">_id</span>, <span class="mono">roll_number</span>, course/slot ids → payments &amp; quiz tests. Also leaks <span class="mono">date_of_birth</span> used later in Bug 06.</dd>
-            <dt>Impact</dt>
+            <dt>Why it mattered</dt>
+            <dd>High-value PII + identifiers that fed Bugs 03–06.</dd>
+            <dt>Chain effect</dt>
+            <dd>Bug 06 step A (read other profile for CNIC + DOB) is blocked for other students. Remaining findings still documented below.</dd>
+            <dt>Original impact</dt>
             <dd>Broad PII and enrollment disclosure across students.</dd>
           </dl>
         </div>
@@ -362,8 +359,9 @@ Body shape:
         <span class="sev sev-crit">Critical</span>
       </div>
       <p class="lead">
-        Profile IDOR exposes CNIC + date of birth. Password generation does not require a prior auth token.
-        Combined: set a password, then login as that student.
+        Originally: profile IDOR exposed CNIC + DOB, then password generation (no token) + login completed takeover.
+        With Bug 02 fixed, reading another student’s profile for that fuel is blocked (<span class="mono">403</span>).
+        Documented here as the historical chain that was verified with permission.
       </p>
 
       <div class="panel">
@@ -373,7 +371,7 @@ Body shape:
             <div>
               <strong>Read profile</strong>
               <div class="mono">GET /api/student_induction/students/profile/{cnic}</div>
-              Obtain CNIC + DOB (+ _id already known from earlier).
+              Obtain CNIC + DOB (+ _id). <em>Other CNIC now 403 (Bug 02 fixed).</em>
             </div>
           </div>
           <div class="chain-item">
@@ -441,9 +439,9 @@ Body: { user_type: "student", cnic, password }</div>
             </tr>
             <tr>
               <td class="mono">GET /api/student_induction/students/profile/{cnic}</td>
-              <td>Bug 02 — IDOR read / chain fuel</td>
+              <td>Bug 02 — was IDOR read / chain fuel</td>
               <td>cnic</td>
-              <td><span class="status-bad">200</span> full profile</td>
+              <td><span class="status-ok">403</span> other CNIC (fixed Aug 8, 2026)</td>
             </tr>
             <tr>
               <td class="mono">GET /api/student_induction/students/payments?student_id=&amp;course_id=</td>
