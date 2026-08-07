@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LMS Access Control Series — muiz.tech</title>
+  <meta name="description" content="Responsible disclosure write-up: authenticated IDOR chain on Saylani LMS student APIs, discovery order, affected endpoints, and impact.">
+  <link rel="icon" type="image/png" href="../../logos.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=Syne:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="site-bar">
+      <a class="brand" href="https://muiz.tech">muiz<span>.tech</span></a>
+      <nav class="nav" aria-label="Page navigation" style="display:flex;gap:0.85rem;flex-wrap:wrap;align-items:center">
+        <a href="https://muiz.tech" style="font-family:var(--font-mono);font-size:0.8rem;color:var(--muted);text-decoration:none">Home</a>
+        <a href="/security/" style="font-family:var(--font-mono);font-size:0.8rem;color:var(--muted);text-decoration:none">Security</a>
+        <span class="meta-pill">Security research · Aug 2026</span>
+      </nav>
+    </header>
+
+    <section class="hero" style="border-top: none; padding-top: 3.5rem;">
+      <p class="eyebrow">Saylani LMS · Broken object access</p>
+      <h1>LMS Access Control Series</h1>
+      <p class="hero-lead">
+        How one attendance IDOR led to profile, payments, quiz, write access,
+        and a password-reset chain — documented in discovery order.
+      </p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#series">View series</a>
+        <a class="btn btn-ghost" href="#endpoints">Endpoint map</a>
+      </div>
+
+      <div class="stats">
+        <div class="stat"><b>6</b><span>Confirmed findings</span></div>
+        <div class="stat"><b>1</b><span>Auth model (cookies)</span></div>
+        <div class="stat"><b>401</b><span>No-cookie baseline</span></div>
+        <div class="stat"><b>200</b><span>Other-object reads</span></div>
+      </div>
+    </section>
+
+    <section id="context">
+      <p class="section-kicker">Context</p>
+      <h2>What this is</h2>
+      <p class="lead">
+        Authorized student testing on Saylani LMS, reported through LMS Bug Feedback
+        and to instructors. This page is a technical timeline — not a live exploit tool.
+        Other students’ personal data is redacted.
+      </p>
+
+      <div class="panel">
+        <dl class="kv">
+          <dt>Target</dt>
+          <dd>Frontend <span class="mono">lms.saylanimit.com</span> · API <span class="mono">api.saylanimit.com</span></dd>
+          <dt>Auth seen</dt>
+          <dd>Cookie session (<span class="mono">uat</span>), Axios <span class="mono">withCredentials: true</span>. Boot via <span class="mono">GET /api/auth/me</span>.</dd>
+          <dt>Reporter</dt>
+          <dd>Muhammad Muiz Ahmed · Student roll <span class="mono">777251</span></dd>
+          <dt>Core class</dt>
+          <dd>Authenticated IDOR / Broken Object Level Authorization — login required, ownership not enforced.</dd>
+        </dl>
+      </div>
+    </section>
+
+    <section id="series">
+      <p class="section-kicker">Discovery order</p>
+      <h2>Bug series — first to last</h2>
+      <p class="lead">
+        Each step unlocked identifiers or impact for the next. Jump to any finding for full endpoint detail.
+      </p>
+
+      <div class="timeline">
+        <a class="step-link" href="#bug-1">
+          <span class="step-num">01</span>
+          <span>
+            <strong>Attendance IDOR</strong>
+            <small>First confirmed — roll_number swap returns other student name + attendance</small>
+          </span>
+          <span class="sev sev-med">Medium–High</span>
+        </a>
+        <a class="step-link" href="#bug-2">
+          <span class="step-num">02</span>
+          <span>
+            <strong>Profile read IDOR</strong>
+            <small>CNIC path returns full profile + courses / slot / student _id</small>
+          </span>
+          <span class="sev sev-high">High</span>
+        </a>
+        <a class="step-link" href="#bug-3">
+          <span class="step-num">03</span>
+          <span>
+            <strong>Payments IDOR</strong>
+            <small>student_id + course_id returns payment data array</small>
+          </span>
+          <span class="sev sev-high">High</span>
+        </a>
+        <a class="step-link" href="#bug-4">
+          <span class="step-num">04</span>
+          <span>
+            <strong>Quiz results IDOR</strong>
+            <small>active_results accepts other student_id with slot/course</small>
+          </span>
+          <span class="sev sev-med">Medium–High</span>
+        </a>
+        <a class="step-link" href="#bug-5">
+          <span class="step-num">05</span>
+          <span>
+            <strong>Profile write IDOR</strong>
+            <small>PUT update with another student’s _id returns 200 and applies change</small>
+          </span>
+          <span class="sev sev-crit">Critical</span>
+        </a>
+        <a class="step-link" href="#bug-6">
+          <span class="step-num">06</span>
+          <span>
+            <strong>Password set chain</strong>
+            <small>Profile leaks CNIC + DOB → generate-password (no token) → login as that account</small>
+          </span>
+          <span class="sev sev-crit">Critical</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="finding" id="bug-1">
+      <div class="finding-head">
+        <span class="badge">Bug 01 · First</span>
+        <h3>Attendance IDOR</h3>
+        <span class="sev sev-med">Medium–High</span>
+      </div>
+      <p class="lead">
+        Any logged-in student can read another student’s attendance identity by changing
+        <span class="mono">roll_number</span>. Authentication works; ownership does not.
+      </p>
+
+      <div class="grid-2">
+        <div class="panel">
+          <dl class="kv">
+            <dt>Affected endpoint</dt>
+            <dd>
+              <div class="code">GET /api/attendance/single-student?roll_number={roll}
+Base: https://api.saylanimit.com
+Credentials: include (session cookie)</div>
+            </dd>
+            <dt>Response shape (fields)</dt>
+            <dd>
+              <span class="mono">status, message, student.{full_name, roll_number}, total_classes, total_present, total_leave, total_absent, attendance[{date, status}]</span>
+            </dd>
+            <dt>Observed behavior</dt>
+            <dd>
+              Own roll → <span class="status-ok">200</span> · Other valid roll → <span class="status-bad">200 + other identity</span> · Unknown roll → <span class="status-warn">404</span> Student not found · No cookie → <span class="status-ok">401</span>
+            </dd>
+            <dt>Related (not vulnerable the same way)</dt>
+            <dd>
+              <span class="mono">GET /api/attendance/single-student-attendance?roll_number={roll}</span> → student session <span class="status-ok">403</span> Unauthorized role
+            </dd>
+          </dl>
+          <div class="tag-row">
+            <span class="tag">IDOR</span>
+            <span class="tag">object: roll_number</span>
+            <span class="tag">read</span>
+          </div>
+        </div>
+        <div class="panel">
+          <dl class="kv">
+            <dt>Why first</dt>
+            <dd>Visible in Network on Attendance page; easiest object id to swap.</dd>
+            <dt>Unlocks next</dt>
+            <dd>Confirms pattern: session required, object id trusted. Led to hunting other object params (CNIC, student_id).</dd>
+            <dt>Impact</dt>
+            <dd>Cross-student attendance and name disclosure for any guessable/known roll.</dd>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="finding" id="bug-2">
+      <div class="finding-head">
+        <span class="badge">Bug 02</span>
+        <h3>Profile read IDOR</h3>
+        <span class="sev sev-high">High</span>
+      </div>
+      <p class="lead">
+        Frontend loads profile by <strong>CNIC</strong> (not Mongo _id). Another student’s CNIC returns full profile and course enrollment objects.
+      </p>
+
+      <div class="grid-2">
+        <div class="panel">
+          <dl class="kv">
+            <dt>Affected endpoint</dt>
+            <dd>
+              <div class="code">GET /api/student_induction/students/profile/{cnic}
+Frontend path param = student_cnic
+Credentials: include</div>
+            </dd>
+            <dt>Student fields seen</dt>
+            <dd>
+              <span class="mono">full_name, father_name, email, contact_number, full_address, gender, date_of_birth, image, _id</span>
+            </dd>
+            <dt>Course list keys seen</dt>
+            <dd>
+              <span class="mono">status, is_sponsored, has_joined_whatsapp_group, _id, student_id, country, city, course, new_course, batch_number, laptop, metadata, slot_transition, createdAt, updatedAt, roll_number, campus, slot, trainer, progress_percentage, …</span>
+            </dd>
+            <dt>Observed behavior</dt>
+            <dd>
+              Known CNIC → <span class="status-ok">200</span> “Student found” · Other CNIC → <span class="status-bad">200</span> full object · No cookie → unauthorized
+            </dd>
+          </dl>
+          <div class="tag-row">
+            <span class="tag">IDOR</span>
+            <span class="tag">object: cnic</span>
+            <span class="tag">PII</span>
+            <span class="tag">read</span>
+          </div>
+        </div>
+        <div class="panel">
+          <dl class="kv">
+            <dt>Why next</dt>
+            <dd>Profile page Network call after attendance pattern; CNIC is high-value identifier.</dd>
+            <dt>Unlocks next</dt>
+            <dd>Leaks <span class="mono">_id</span>, <span class="mono">roll_number</span>, course/slot ids → payments &amp; quiz tests. Also leaks <span class="mono">date_of_birth</span> used later in Bug 06.</dd>
+            <dt>Impact</dt>
+            <dd>Broad PII and enrollment disclosure across students.</dd>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="finding" id="bug-3">
+      <div class="finding-head">
+        <span class="badge">Bug 03</span>
+        <h3>Payments IDOR</h3>
+        <span class="sev sev-high">High</span>
+      </div>
+      <p class="lead">
+        Payment history accepts arbitrary <span class="mono">student_id</span> (plus course) without proving the caller owns that student.
+      </p>
+
+      <div class="grid-2">
+        <div class="panel">
+          <dl class="kv">
+            <dt>Affected endpoint</dt>
+            <dd>
+              <div class="code">GET /api/student_induction/students/payments?student_id={id}&amp;course_id={id}
+Credentials: include</div>
+            </dd>
+            <dt>Response</dt>
+            <dd><span class="mono">status, data[]</span> — <span class="status-bad">200</span> with data array for other student_id</dd>
+          </dl>
+          <div class="tag-row">
+            <span class="tag">IDOR</span>
+            <span class="tag">object: student_id</span>
+            <span class="tag">financial</span>
+          </div>
+        </div>
+        <div class="panel">
+          <dl class="kv">
+            <dt>Depends on</dt>
+            <dd>Bug 02 (or UI Network) for real <span class="mono">student_id</span> / <span class="mono">course_id</span>.</dd>
+            <dt>Impact</dt>
+            <dd>Cross-student payment record visibility.</dd>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="finding" id="bug-4">
+      <div class="finding-head">
+        <span class="badge">Bug 04</span>
+        <h3>Quiz results IDOR</h3>
+        <span class="sev sev-med">Medium–High</span>
+      </div>
+      <p class="lead">
+        Active quiz results keyed by <span class="mono">student_id</span> (with slot/course) return another student’s results.
+      </p>
+
+      <div class="grid-2">
+        <div class="panel">
+          <dl class="kv">
+            <dt>Affected endpoint</dt>
+            <dd>
+              <div class="code">GET /api/quiz/active_results?student_id={id}&amp;slot_id={id}&amp;course_id={id}
+Credentials: include</div>
+            </dd>
+            <dt>Response</dt>
+            <dd>
+              <span class="mono">status, data, isTodayAttendanceMarked</span> — other student_id → <span class="status-bad">200</span> with data present
+            </dd>
+          </dl>
+          <div class="tag-row">
+            <span class="tag">IDOR</span>
+            <span class="tag">object: student_id</span>
+            <span class="tag">academic</span>
+          </div>
+        </div>
+        <div class="panel">
+          <dl class="kv">
+            <dt>Depends on</dt>
+            <dd>IDs from Bug 02 / Network on quiz pages.</dd>
+            <dt>Impact</dt>
+            <dd>Cross-student academic result disclosure.</dd>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="finding" id="bug-5">
+      <div class="finding-head">
+        <span class="badge">Bug 05</span>
+        <h3>Profile write IDOR</h3>
+        <span class="sev sev-crit">Critical</span>
+      </div>
+      <p class="lead">
+        Same broken ownership pattern on update: another student’s <span class="mono">_id</span> in the body is accepted and persisted.
+      </p>
+
+      <div class="grid-2">
+        <div class="panel">
+          <dl class="kv">
+            <dt>Affected endpoint</dt>
+            <dd>
+              <div class="code">PUT /api/student_induction/students/profile/update
+Credentials: include
+
+Body shape:
+{
+  student: {
+    _id, full_name, email, contact_number, image,
+    full_address, last_qualification, gender, date_of_birth
+  },
+  _id
+}</div>
+            </dd>
+            <dt>Observed behavior</dt>
+            <dd>Other student’s <span class="mono">_id</span> → <span class="status-bad">200</span> and profile fields updated on that account</dd>
+          </dl>
+          <div class="tag-row">
+            <span class="tag">IDOR</span>
+            <span class="tag">write</span>
+            <span class="tag">integrity</span>
+          </div>
+        </div>
+        <div class="panel">
+          <dl class="kv">
+            <dt>Depends on</dt>
+            <dd>Bug 02 for target <span class="mono">_id</span>.</dd>
+            <dt>Impact</dt>
+            <dd>Unauthorized modification of another student’s profile (integrity + further social-engineering surface).</dd>
+            <dt>Note</dt>
+            <dd>Tested with classmate permission; changes reverted where needed.</dd>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="finding" id="bug-6">
+      <div class="finding-head">
+        <span class="badge">Bug 06 · Chain</span>
+        <h3>Password set → account takeover</h3>
+        <span class="sev sev-crit">Critical</span>
+      </div>
+      <p class="lead">
+        Profile IDOR exposes CNIC + date of birth. Password generation does not require a prior auth token.
+        Combined: set a password, then login as that student.
+      </p>
+
+      <div class="panel">
+        <div class="chain">
+          <div class="chain-item">
+            <b>A</b>
+            <div>
+              <strong>Read profile</strong>
+              <div class="mono">GET /api/student_induction/students/profile/{cnic}</div>
+              Obtain CNIC + DOB (+ _id already known from earlier).
+            </div>
+          </div>
+          <div class="chain-item">
+            <b>B</b>
+            <div>
+              <strong>Set password (frontend isToken: false)</strong>
+              <div class="code">POST /api/student_induction/students/generate-password
+Body: { cnic, dob, password }</div>
+            </div>
+          </div>
+          <div class="chain-item">
+            <b>C</b>
+            <div>
+              <strong>Login as that student</strong>
+              <div class="code">POST /api/auth/login
+Body: { user_type: "student", cnic, password }</div>
+            </div>
+          </div>
+        </div>
+        <div class="tag-row">
+          <span class="tag">account takeover</span>
+          <span class="tag">chained</span>
+          <span class="tag">auth design</span>
+        </div>
+        <p class="note">
+          Verified only with explicit classmate permission. Friend account was logged out afterward and password reset again.
+          Do not use this chain against accounts without authorization.
+        </p>
+      </div>
+    </section>
+
+    <section id="endpoints">
+      <p class="section-kicker">Reference</p>
+      <h2>Endpoints involved</h2>
+      <p class="lead">Complete map of endpoints touched in this series, plus useful session baselines.</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Endpoint</th>
+              <th>Role in series</th>
+              <th>Object key</th>
+              <th>Result seen</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="mono">GET /api/auth/me</td>
+              <td>Session baseline / own user fields</td>
+              <td>—</td>
+              <td><span class="status-ok">200</span> with cookie · <span class="status-ok">401</span> without</td>
+            </tr>
+            <tr>
+              <td class="mono">GET /api/attendance/single-student?roll_number=</td>
+              <td>Bug 01 — IDOR read</td>
+              <td>roll_number</td>
+              <td><span class="status-bad">200</span> other student</td>
+            </tr>
+            <tr>
+              <td class="mono">GET /api/attendance/single-student-attendance?roll_number=</td>
+              <td>Contrast — role locked</td>
+              <td>roll_number</td>
+              <td><span class="status-ok">403</span> for student</td>
+            </tr>
+            <tr>
+              <td class="mono">GET /api/student_induction/students/profile/{cnic}</td>
+              <td>Bug 02 — IDOR read / chain fuel</td>
+              <td>cnic</td>
+              <td><span class="status-bad">200</span> full profile</td>
+            </tr>
+            <tr>
+              <td class="mono">GET /api/student_induction/students/payments?student_id=&amp;course_id=</td>
+              <td>Bug 03 — IDOR read</td>
+              <td>student_id</td>
+              <td><span class="status-bad">200</span> data[]</td>
+            </tr>
+            <tr>
+              <td class="mono">GET /api/quiz/active_results?student_id=&amp;slot_id=&amp;course_id=</td>
+              <td>Bug 04 — IDOR read</td>
+              <td>student_id</td>
+              <td><span class="status-bad">200</span> data</td>
+            </tr>
+            <tr>
+              <td class="mono">PUT /api/student_induction/students/profile/update</td>
+              <td>Bug 05 — IDOR write</td>
+              <td>student._id / _id</td>
+              <td><span class="status-bad">200</span> applies update</td>
+            </tr>
+            <tr>
+              <td class="mono">POST /api/student_induction/students/generate-password</td>
+              <td>Bug 06 — set password</td>
+              <td>cnic + dob</td>
+              <td>isToken false; sets password</td>
+            </tr>
+            <tr>
+              <td class="mono">POST /api/auth/login</td>
+              <td>Bug 06 — complete takeover</td>
+              <td>cnic + password</td>
+              <td>student login succeeds after B</td>
+            </tr>
+            <tr>
+              <td class="mono">GET /api/certificate/student/{id}</td>
+              <td>Checked during hunt</td>
+              <td>id</td>
+              <td>404 in test path used</td>
+            </tr>
+            <tr>
+              <td class="mono">GET /api/course_progress?course=&amp;slot=&amp;show_assignment=</td>
+              <td>Checked — no student_id in path</td>
+              <td>course / slot</td>
+              <td>200 (scoped by params)</td>
+            </tr>
+            <tr>
+              <td class="mono">GET /api/online_class/student?slot=</td>
+              <td>Checked</td>
+              <td>slot</td>
+              <td>500 in one probe</td>
+            </tr>
+            <tr>
+              <td class="mono">POST /api/auth/logout · /refresh · /2fa</td>
+              <td>Auth surface (not IDOR findings)</td>
+              <td>—</td>
+              <td>Present in frontend bundle</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="method">
+      <p class="section-kicker">Method</p>
+      <h2>How the series was built</h2>
+      <div class="panel">
+        <ol>
+          <li>Logged in as student; confirmed session via <span class="mono">/api/auth/me</span>.</li>
+          <li>Used DevTools Network on Attendance / Profile / Quiz / Payments.</li>
+          <li>Baselined each call with own identifiers → expected <span class="mono">200</span>.</li>
+          <li>Changed only the object id (with permission where needed).</li>
+          <li>Confirmed no-cookie requests → <span class="mono">401</span> (auth present, authz missing).</li>
+          <li>Reported via LMS Bug Feedback; shared technical detail with instructor on request.</li>
+        </ol>
+        <p class="note" style="margin-top: 1.1rem;">
+          Fix recommendation for all object endpoints: derive identity from session; if requested
+          roll / cnic / student_id ≠ caller (and role is not privileged), return <span class="mono">403</span>.
+          Password generation should require a strong, single-use proof beyond CNIC+DOB alone.
+        </p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>
+        <a href="https://muiz.tech">muiz.tech</a>
+        · Responsible disclosure write-up · No live API calls from this page
+      </p>
+    </footer>
+  </div>
+</body>
+</html>
