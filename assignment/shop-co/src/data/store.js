@@ -58,12 +58,6 @@ export const oneLifeProduct = {
   description: 'This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.'
 }
 
-export const cartSeed = [
-  {...products.gradient, color: 'White', size: 'Large', cartImage: 'figma/cart-gradient.png'},
-  {...products.checkered, cartImage: 'figma/cart-checkered.png'},
-  {...products.skinny, cartImage: 'figma/cart-jeans.png'}
-]
-
 export const reviews = [
   {name: 'Samantha D.', date: 'August 14, 2023', rating: '4.5/5', text: '"I absolutely love this t-shirt! The design is unique and the fabric feels so comfortable. As a fellow designer, I appreciate the attention to detail. It\'s become my favorite go-to shirt."'},
   {name: 'Alex M.', date: 'August 15, 2023', rating: '4.5/5', text: '"The t-shirt exceeded my expectations! The colors are vibrant and the print quality is top-notch. Being a UI/UX designer myself, I\'m quite picky about aesthetics, and this t-shirt definitely gets a thumbs up from me."'},

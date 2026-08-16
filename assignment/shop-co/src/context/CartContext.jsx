@@ -1,7 +1,6 @@
 import React from 'react'
-import {cartSeed} from '../data/store'
-
-const STORAGE_KEY = 'shopco-cart-v1'
+const STORAGE_KEY = 'shopco-cart-v2'
+const LEGACY_STORAGE_KEY = 'shopco-cart-v1'
 const CartContext = React.createContext(null)
 
 function createCartKey(item) {
@@ -22,15 +21,11 @@ function normalizeCartItem(item) {
   }
 }
 
-function createSeedCart() {
-  return cartSeed.map(item => normalizeCartItem({...item, quantity: 1}))
-}
-
 function loadInitialCart() {
-  if (typeof window === 'undefined') return createSeedCart()
+  if (typeof window === 'undefined') return []
 
   const storedCart = window.localStorage.getItem(STORAGE_KEY)
-  if (storedCart === null) return createSeedCart()
+  if (storedCart === null) return []
 
   try {
     const parsedCart = JSON.parse(storedCart)
@@ -47,6 +42,7 @@ export function CartProvider({children}) {
 
   React.useEffect(() => {
     try {
+      window.localStorage.removeItem(LEGACY_STORAGE_KEY)
       window.localStorage.setItem(STORAGE_KEY, JSON.stringify(items))
     } catch {
       // The cart remains usable in memory when browser storage is unavailable.

@@ -16,18 +16,6 @@ npm run build
 npm run preview
 ```
 
-## Deploy from this monorepo
-
-When importing the repository into Vercel, set the project Root Directory to:
-
-```text
-assignment/shop-co
-```
-
-Vercel should detect Vite automatically. The included `vercel.json` sends direct
-SPA routes such as `/product/tape`, `/category/casual`, and `/cart` to
-`index.html`, allowing React Router to handle them.
-
 ## Routes
 
 - `/` — homepage
