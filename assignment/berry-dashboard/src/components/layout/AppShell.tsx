@@ -8,12 +8,16 @@ import CustomizeFab from "./CustomizeFab";
 import { CONTAINER_MAX, DRAWER_WIDTH, HEADER_HEIGHT, MINI_DRAWER_WIDTH } from "@/lib/tokens";
 
 export default function AppShell({ children }: { children: React.ReactNode }) {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
   const [desktop, setDesktop] = useState(true);
 
   useEffect(() => {
     const mq = window.matchMedia("(min-width: 900px)");
-    const onChange = () => setDesktop(mq.matches);
+    const onChange = () => {
+      const isDesktop = mq.matches;
+      setDesktop(isDesktop);
+      if (!isDesktop) setOpen(false);
+    };
     onChange();
     mq.addEventListener("change", onChange);
     return () => mq.removeEventListener("change", onChange);

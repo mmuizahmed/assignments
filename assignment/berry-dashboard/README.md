@@ -11,6 +11,8 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000). It redirects to `/dashboard`.
 
+Live: [https://berry.muiz.tech/](https://berry.muiz.tech/)
+
 ## Routes
 
 - `/dashboard` — earning, orders, income, growth chart, popular stocks
