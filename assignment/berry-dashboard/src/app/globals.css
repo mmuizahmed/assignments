@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-berry: #111936;
+  --color-berry-canvas: #1a223f;
+  --color-berry-card: #212946;
+  --color-berry-level: #29314f;
+  --color-berry-text: #bdc8f0;
+  --color-berry-heading: #d7dcec;
+  --color-berry-muted: #8492c4;
+  --color-berry-grey: #95a4b8;
+  --color-berry-th: #c3ccd8;
+  --color-berry-divider: #364152;
+  --color-berry-primary: #2196f3;
+  --color-berry-primary-light: #1e88e5;
+  --color-berry-primary-dark: #90caf9;
+  --color-berry-primary-800: #1565c0;
+  --color-berry-secondary: #7c4dff;
+  --color-berry-secondary-light: #651fff;
+  --color-berry-secondary-dark: #b39ddb;
+  --color-berry-secondary-800: #6200ea;
+  --color-berry-success: #11c86f;
+  --color-berry-error: #f44336;
+  --color-berry-warning: #f8bb05;
+  --color-berry-orange: #ff8000;
+  --font-sans: var(--font-roboto);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #111936;
+  color: #bdc8f0;
+  font-family: var(--font-roboto), Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18.676px;
+}
+
+@layer base {
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+button,
+input,
+select {
+  font-family: inherit;
+}
+
+.berry-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+.berry-scroll::-webkit-scrollbar-thumb {
+  background: #29314f;
+  border-radius: 8px;
+}
+
+.recharts-cartesian-axis-tick-value {
+  fill: #8492c4;
+  font-size: 12px;
+  font-family: Roboto, sans-serif;
+}

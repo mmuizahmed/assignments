@@ -214,6 +214,7 @@ h1 {
 .card-icon-js { color: #facc15; }
 .card-icon-furniro { color: #B88E2F; }
 .card-icon-shop { color: #f8fafc; }
+.card-icon-berry { color: #7c4dff; }
 
 .card h2 {
   font-size: 1.35rem;
@@ -291,6 +292,12 @@ h1 {
   background: rgba(248, 250, 252, 0.1);
   color: #f8fafc;
   border: 1px solid rgba(248, 250, 252, 0.3);
+}
+
+.badge.berry {
+  background: rgba(124, 77, 255, 0.16);
+  color: #b39ddb;
+  border: 1px solid rgba(124, 77, 255, 0.38);
 }
 
 footer {
