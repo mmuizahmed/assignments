@@ -1,0 +1,463 @@
+{
+  "status": 200,
+  "data": [
+    {
+      "type": "monthly",
+      "_id": "6a9dbcde348fa967b4d206b9",
+      "student": {
+        "_id": "691b81e913837c0015af3cf1",
+        "full_name": "Muhammad Muiz Ahmed",
+        "father_name": "Muhammad Tasleem",
+        "email": "muizahmedarain@gmail.com",
+        "contact_number": "03306001126"
+      },
+      "student_induction": {
+        "_id": "691b81ea13837c0015af3cf3",
+        "course": {
+          "en": {
+            "course_name": "Modern Web Application Development"
+          },
+          "_id": "66c379b6c96ecb0015e4c5b1",
+          "course_slug": "WMA"
+        },
+        "batch_number": 20,
+        "roll_number": 777251
+      },
+      "amount": "1000",
+      "format_amount": "1000",
+      "billing_month": "2609",
+      "due_date": "2026-09-08",
+      "due_date_student": "08-Sep-2026",
+      "status": "paid",
+      "jazzcash_id": "202609777251",
+      "createdAt": "2026-09-06T19:19:58.938Z",
+      "updatedAt": "2026-09-06T19:22:48.977Z",
+      "__v": 0,
+      "meta_data": {
+        "consumerNumber": "202609777251",
+        "authId": "723084276099",
+        "amount": "1000.00",
+        "tranDate": "2026-09-06",
+        "tranTime": "19:22:48"
+      },
+      "tran_date": "2026-09-06",
+      "tran_time": "19:22:48",
+      "transaction_amount": "1000.00",
+      "transaction_id": "723084276099"
+    },
+    {
+      "type": "monthly",
+      "_id": "6a6cf6cbffdedd05dc111c56",
+      "student": {
+        "_id": "691b81e913837c0015af3cf1",
+        "full_name": "Muhammad Muiz Ahmed",
+        "father_name": "Muhammad Tasleem",
+        "email": "muizahmedarain@gmail.com",
+        "contact_number": "03306001126"
+      },
+      "student_induction": {
+        "_id": "691b81ea13837c0015af3cf3",
+        "course": {
+          "en": {
+            "course_name": "Modern Web Application Development"
+          },
+          "_id": "66c379b6c96ecb0015e4c5b1",
+          "course_slug": "WMA"
+        },
+        "batch_number": 20,
+        "roll_number": 777251
+      },
+      "amount": "1000",
+      "format_amount": "1000",
+      "billing_month": "2608",
+      "due_date": "2026-08-08",
+      "due_date_student": "08-Aug-2026",
+      "status": "paid",
+      "jazzcash_id": "202608777251",
+      "createdAt": "2026-07-31T19:26:03.662Z",
+      "updatedAt": "2026-07-31T19:32:24.274Z",
+      "__v": 0,
+      "meta_data": {
+        "consumerNumber": "202608777251",
+        "authId": "719272761845",
+        "amount": "1000.00",
+        "tranDate": "2026-07-31",
+        "tranTime": "19:32:23"
+      },
+      "tran_date": "2026-07-31",
+      "tran_time": "19:32:23",
+      "transaction_amount": "1000.00",
+      "transaction_id": "719272761845"
+    },
+    {
+      "type": "monthly",
+      "_id": "6a46cdc0e6b5050d5206582e",
+      "student": {
+        "_id": "691b81e913837c0015af3cf1",
+        "full_name": "Muhammad Muiz Ahmed",
+        "father_name": "Muhammad Tasleem",
+        "email": "muizahmedarain@gmail.com",
+        "contact_number": "03306001126"
+      },
+      "student_induction": {
+        "_id": "691b81ea13837c0015af3cf3",
+        "course": {
+          "en": {
+            "course_name": "Modern Web Application Development"
+          },
+          "_id": "66c379b6c96ecb0015e4c5b1",
+          "course_slug": "WMA"
+        },
+        "batch_number": 20,
+        "roll_number": 777251
+      },
+      "amount": "1000",
+      "format_amount": "1000",
+      "billing_month": "2607",
+      "due_date": "2026-07-08",
+      "due_date_student": "08-Jul-2026",
+      "status": "paid",
+      "jazzcash_id": "202607777251",
+      "createdAt": "2026-07-02T20:44:48.426Z",
+      "updatedAt": "2026-07-02T20:47:08.467Z",
+      "__v": 0,
+      "meta_data": {
+        "consumerNumber": "202607777251",
+        "authId": "716438763559",
+        "amount": "1000.00",
+        "tranDate": "2026-07-02",
+        "tranTime": "20:47:07"
+      },
+      "tran_date": "2026-07-02",
+      "tran_time": "20:47:07",
+      "transaction_amount": "1000.00",
+      "transaction_id": "716438763559"
+    },
+    {
+      "type": "monthly",
+      "_id": "6a1fe2987ffc0419f0971a66",
+      "student": {
+        "_id": "691b81e913837c0015af3cf1",
+        "full_name": "Muhammad Muiz Ahmed",
+        "father_name": "Muhammad Tasleem",
+        "email": "muizahmedarain@gmail.com",
+        "contact_number": "03306001126"
+      },
+      "student_induction": {
+        "_id": "691b81ea13837c0015af3cf3",
+        "course": {
+          "en": {
+            "course_name": "Modern Web Application Development"
+          },
+          "_id": "66c379b6c96ecb0015e4c5b1",
+          "course_slug": "WMA"
+        },
+        "batch_number": 20,
+        "roll_number": 777251
+      },
+      "amount": "1000",
+      "format_amount": "1000",
+      "billing_month": "2606",
+      "due_date": "2026-06-08",
+      "due_date_student": "08-Jun-2026",
+      "status": "paid",
+      "jazzcash_id": "202606777251",
+      "createdAt": "2026-06-03T08:15:20.655Z",
+      "updatedAt": "2026-06-03T08:16:02.636Z",
+      "__v": 0,
+      "meta_data": {
+        "consumerNumber": "202606777251",
+        "authId": "713697893332",
+        "amount": "1000.00",
+        "tranDate": "2026-06-03",
+        "tranTime": "08:16:01"
+      },
+      "tran_date": "2026-06-03",
+      "tran_time": "08:16:01",
+      "transaction_amount": "1000.00",
+      "transaction_id": "713697893332"
+    },
+    {
+      "type": "monthly",
+      "_id": "69f85440d0878c6104fca2f4",
+      "student": {
+        "_id": "691b81e913837c0015af3cf1",
+        "full_name": "Muhammad Muiz Ahmed",
+        "father_name": "Muhammad Tasleem",
+        "email": "muizahmedarain@gmail.com",
+        "contact_number": "03306001126"
+      },
+      "student_induction": {
+        "_id": "691b81ea13837c0015af3cf3",
+        "course": {
+          "en": {
+            "course_name": "Modern Web Application Development"
+          },
+          "_id": "66c379b6c96ecb0015e4c5b1",
+          "course_slug": "WMA"
+        },
+        "batch_number": 20,
+        "roll_number": 777251
+      },
+      "amount": "1000",
+      "format_amount": "1000",
+      "billing_month": "2605",
+      "due_date": "2026-05-08",
+      "due_date_student": "08-May-2026",
+      "status": "paid",
+      "jazzcash_id": "202605777251",
+      "createdAt": "2026-05-04T08:09:36.164Z",
+      "updatedAt": "2026-05-04T08:10:15.488Z",
+      "__v": 0,
+      "meta_data": {
+        "consumerNumber": "202605777251",
+        "authId": "710950436086",
+        "amount": "1000.00",
+        "tranDate": "2026-05-04",
+        "tranTime": "08:10:14"
+      },
+      "tran_date": "2026-05-04",
+      "tran_time": "08:10:14",
+      "transaction_amount": "1000.00",
+      "transaction_id": "710950436086"
+    },
+    {
+      "type": "monthly",
+      "_id": "69d25dd5cf211079c931bd06",
+      "student": {
+        "_id": "691b81e913837c0015af3cf1",
+        "full_name": "Muhammad Muiz Ahmed",
+        "father_name": "Muhammad Tasleem",
+        "email": "muizahmedarain@gmail.com",
+        "contact_number": "03306001126"
+      },
+      "student_induction": {
+        "_id": "691b81ea13837c0015af3cf3",
+        "course": {
+          "en": {
+            "course_name": "Modern Web Application Development"
+          },
+          "_id": "66c379b6c96ecb0015e4c5b1",
+          "course_slug": "WMA"
+        },
+        "batch_number": 20,
+        "roll_number": 777251
+      },
+      "amount": "1000",
+      "format_amount": "1000",
+      "billing_month": "2604",
+      "due_date": "2026-04-08",
+      "due_date_student": "08-Apr-2026",
+      "status": "paid",
+      "jazzcash_id": "202604777251",
+      "createdAt": "2026-04-05T13:04:21.050Z",
+      "updatedAt": "2026-04-05T13:06:33.429Z",
+      "__v": 0,
+      "meta_data": {
+        "consumerNumber": "202604777251",
+        "authId": "708383377847",
+        "amount": "1000.00",
+        "tranDate": "2026-04-05",
+        "tranTime": "13:06:32"
+      },
+      "tran_date": "2026-04-05",
+      "tran_time": "13:06:32",
+      "transaction_amount": "1000.00",
+      "transaction_id": "708383377847"
+    },
+    {
+      "type": "monthly",
+      "_id": "69a785665ec94d0014264878",
+      "student": {
+        "_id": "691b81e913837c0015af3cf1",
+        "full_name": "Muhammad Muiz Ahmed",
+        "father_name": "Muhammad Tasleem",
+        "email": "muizahmedarain@gmail.com",
+        "contact_number": "03306001126"
+      },
+      "student_induction": {
+        "_id": "691b81ea13837c0015af3cf3",
+        "course": {
+          "en": {
+            "course_name": "Modern Web Application Development"
+          },
+          "_id": "66c379b6c96ecb0015e4c5b1",
+          "course_slug": "WMA"
+        },
+        "batch_number": 20,
+        "roll_number": 777251
+      },
+      "amount": "1000",
+      "format_amount": "1000",
+      "billing_month": "2603",
+      "due_date": "2026-03-08",
+      "due_date_student": "08-Mar-2026",
+      "status": "paid",
+      "jazzcash_id": "202603777251",
+      "createdAt": "2026-03-04T01:05:42.062Z",
+      "updatedAt": "2026-03-04T01:06:35.230Z",
+      "__v": 0,
+      "meta_data": {
+        "consumerNumber": "202603777251",
+        "authId": "705307300182",
+        "amount": "1000.00",
+        "tranDate": "2026-03-04",
+        "tranTime": "01:06:34"
+      },
+      "tran_date": "2026-03-04",
+      "tran_time": "01:06:34",
+      "transaction_amount": "1000.00",
+      "transaction_id": "705307300182"
+    },
+    {
+      "type": "monthly",
+      "_id": "6984e094f0d03f7ae7f89117",
+      "student": {
+        "_id": "691b81e913837c0015af3cf1",
+        "full_name": "Muhammad Muiz Ahmed",
+        "father_name": "Muhammad Tasleem",
+        "email": "muizahmedarain@gmail.com",
+        "contact_number": "03306001126"
+      },
+      "student_induction": {
+        "_id": "691b81ea13837c0015af3cf3",
+        "course": {
+          "en": {
+            "course_name": "Modern Web Application Development"
+          },
+          "_id": "66c379b6c96ecb0015e4c5b1",
+          "course_slug": "WMA"
+        },
+        "batch_number": 20,
+        "roll_number": 777251
+      },
+      "amount": "1000",
+      "format_amount": "1000",
+      "billing_month": "2602",
+      "due_date": "2026-02-08",
+      "due_date_student": "08-Feb-2026",
+      "status": "paid",
+      "jazzcash_id": "202602777251",
+      "createdAt": "2026-02-05T18:25:24.172Z",
+      "updatedAt": "2026-02-05T18:27:29.280Z",
+      "__v": 0,
+      "meta_data": {
+        "consumerNumber": "202602777251",
+        "authId": "702741818968",
+        "amount": "1000.00",
+        "tranDate": "2026-02-05",
+        "tranTime": "18:27:24"
+      },
+      "tran_date": "2026-02-05",
+      "tran_time": "18:27:24",
+      "transaction_amount": "1000.00",
+      "transaction_id": "702741818968"
+    },
+    {
+      "type": "monthly",
+      "_id": "69595a224dda460015316f17",
+      "student": {
+        "_id": "691b81e913837c0015af3cf1",
+        "full_name": "Muhammad Muiz Ahmed",
+        "father_name": "Muhammad Tasleem",
+        "email": "muizahmedarain@gmail.com",
+        "contact_number": "03306001126"
+      },
+      "student_induction": {
+        "_id": "691b81ea13837c0015af3cf3",
+        "course": {
+          "en": {
+            "course_name": "Modern Web Application Development"
+          },
+          "_id": "66c379b6c96ecb0015e4c5b1",
+          "course_slug": "WMA"
+        },
+        "batch_number": 20,
+        "roll_number": 777251
+      },
+      "amount": "1000",
+      "format_amount": "1000",
+      "billing_month": "2601",
+      "due_date": "2026-01-08",
+      "due_date_student": "08-Jan-2026",
+      "blinq_invoice_number": "202601777251",
+      "click_to_pay_url": "https://blinqpay.pk/q5fGLXuq267",
+      "one_bill_id": "10033303912600301145",
+      "status": "paid",
+      "createdAt": "2026-01-03T18:04:18.943Z",
+      "updatedAt": "2026-01-05T08:59:13.859Z",
+      "__v": 0,
+      "meta_data": {
+        "data_integrity": "9f952164b66661e7bc9beff698cf1605",
+        "paid_on": "1/5/2026 01:58:54 PM",
+        "invoice_number": "202601777251",
+        "invoice_status": "PAID",
+        "payment_code": "03912600301145",
+        "payment_id": "03912600301145",
+        "ref_number": null,
+        "paid_bank": "TMF",
+        "amount": "1000.0000",
+        "amount_paid": "1035.0000",
+        "net_amount": "1000.0000",
+        "txnFee": "35.00",
+        "paid_via": "BLINQ_1BILL"
+      },
+      "tran_date": "1/5/2026 01:58:54 PM",
+      "transaction_amount": "1035.0000",
+      "transaction_id": "03912600301145"
+    },
+    {
+      "type": "monthly",
+      "_id": "692d5ab200f74c00155518ad",
+      "student": {
+        "_id": "691b81e913837c0015af3cf1",
+        "full_name": "Muhammad Muiz Ahmed",
+        "father_name": "Muhammad Tasleem",
+        "email": "muizahmedarain@gmail.com",
+        "contact_number": "03306001126"
+      },
+      "student_induction": {
+        "_id": "691b81ea13837c0015af3cf3",
+        "course": {
+          "en": {
+            "course_name": "Modern Web Application Development"
+          },
+          "_id": "66c379b6c96ecb0015e4c5b1",
+          "course_slug": "WMA"
+        },
+        "batch_number": 20,
+        "roll_number": 777251
+      },
+      "amount": "1000",
+      "format_amount": "1000",
+      "billing_month": "2512",
+      "due_date": "2025-12-08",
+      "due_date_student": "08-Dec-2025",
+      "blinq_invoice_number": "202512777251",
+      "click_to_pay_url": "https://blinqpay.pk/419NbwxFafu",
+      "one_bill_id": "10033303912533500248",
+      "status": "paid",
+      "createdAt": "2025-12-01T09:06:58.276Z",
+      "updatedAt": "2025-12-03T09:26:49.343Z",
+      "__v": 0,
+      "meta_data": {
+        "data_integrity": "cbe087169d483a4f66ecb30845d40445",
+        "paid_on": "12/3/2025 02:26:24 PM",
+        "invoice_number": "202512777251",
+        "invoice_status": "PAID",
+        "payment_code": "03912533500248",
+        "payment_id": "03912533500248",
+        "ref_number": null,
+        "paid_bank": "TMF",
+        "amount": "1000.0000",
+        "amount_paid": "1035.0000",
+        "net_amount": "1000.0000",
+        "txnFee": "35.00",
+        "paid_via": "BLINQ_1BILL"
+      },
+      "tran_date": "12/3/2025 02:26:24 PM",
+      "transaction_amount": "1035.0000",
+      "transaction_id": "03912533500248"
+    }
+  ]
+}

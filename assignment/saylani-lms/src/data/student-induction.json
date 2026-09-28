@@ -1,0 +1,102 @@
+{
+  "status": 200,
+  "message": "Student found",
+  "student_induction_list": {
+    "student_id": {
+      "_id": "691b81e913837c0015af3cf1",
+      "date_of_birth": "2010-05-29T00:00:00.000Z",
+      "full_name": "Muhammad Muiz Ahmed",
+      "father_name": "Muhammad Tasleem",
+      "email": "muizahmedarain@gmail.com",
+      "image": "https://res.cloudinary.com/saylani-welfare/image/upload/v1772389202/SMIT/Students/4210156218865.jpg"
+    },
+    "student_course_list": [
+      {
+        "status": "enrolled",
+        "is_sponsored": null,
+        "has_joined_whatsapp_group": false,
+        "_id": "691b81ea13837c0015af3cf3",
+        "student_id": "691b81e913837c0015af3cf1",
+        "country": "66d305d643f6c350a6a1ed59",
+        "city": {
+          "en": {
+            "city_name": "Karachi"
+          },
+          "is_online": false,
+          "_id": "62036fc7ddc33e0023177fc3"
+        },
+        "course": {
+          "en": {
+            "course_name": "Modern Web Application Development"
+          },
+          "_id": "66c379b6c96ecb0015e4c5b1"
+        },
+        "new_course": {
+          "gender": {
+            "en": [
+              "Male",
+              "Female"
+            ],
+            "ur": [
+              "مرد",
+              "عورت"
+            ]
+          },
+          "_id": "69119a2b289718001534ae87",
+          "batch_number": 20,
+          "is_online": false,
+          "status": false
+        },
+        "batch_number": 20,
+        "laptop": "NO",
+        "metadata": {
+          "computer_proficiency": "Intermediate"
+        },
+        "slot_transition": [
+          {
+            "slot": "6926fe56c74fda001503ae82",
+            "date": "2025-11-27T09:30:44.904Z"
+          },
+          {
+            "slot": "6926fe56c74fda001503ae82",
+            "date": "2026-06-06T11:51:27.949Z"
+          },
+          {
+            "slot": "69d8d909687cb147b9d9309a",
+            "date": "2026-06-07T13:18:37.379Z"
+          }
+        ],
+        "createdAt": "2025-11-17T20:13:30.168Z",
+        "updatedAt": "2026-06-07T13:18:37.379Z",
+        "roll_number": 777251,
+        "__v": 0,
+        "updated_by": "66f40e597df41600157e57f7",
+        "message": "Congratulations!\n\nYou’ve successfully cleared the entrance exam!\n\n👉 Reserve your seat now: https://lms.saylanimit.com\n\n📅 Classes start on Monday, 1st Dec 2025\n(as per your selected time Slot & campus).\n\nℹ️ For any issues, please visit the nearest SMIT campus.",
+        "sponsor_message": null,
+        "sponsored_by": null,
+        "campus": "66e1320cb08e700015c2181c",
+        "slot": {
+          "status": "active",
+          "is_online": false,
+          "gender": "male",
+          "_id": "6926fe56c74fda001503ae82",
+          "schedule": "Mon 01:00 PM - 03:00 PM | Wed 01:00 PM - 03:00 PM | Fri 01:00 PM - 03:00 PM",
+          "trainer": {
+            "en": {
+              "trainer_name": "S Muzammil Javed"
+            },
+            "_id": "68ee12917aa2ba0015ed7453"
+          },
+          "campus": {
+            "en": {
+              "campus_name": "Zaitoon Ashraf IT Park"
+            },
+            "_id": "66e1320cb08e700015c2181c"
+          }
+        },
+        "trainer": "68ee12917aa2ba0015ed7453",
+        "progress_percentage": 74
+      }
+    ]
+  }
+}

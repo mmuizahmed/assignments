@@ -1,0 +1,1173 @@
+{
+  "status": 200,
+  "formattedAssignments": [
+    {
+      "assignment": {
+        "_id": "6a9a8b6b2145a6492e3bb566",
+        "title": "Admin panel (E commerce Dashboad)",
+        "links": [
+          "https://berrydashboard.com/dashboard/default"
+        ],
+        "images": [],
+        "description": "<p>Create the provided UI design in React or nextjs.</p><p>Make it fully responsive.</p><p>Keep the design, spacing, colors, and components as close to the reference as possible.</p><p>Use clean and reusable React components.</p><p>Push the complete project to GitHub.</p><p>Deploy the project and submit the live website link along with the GitHub repository link.</p>",
+        "status": "active",
+        "submission_date": "2026-09-10T18:59:59.999Z",
+        "is_hackathon": false,
+        "topics": [
+          {
+            "_id": "68d2299eebd0da0015cd1e03",
+            "title": "NextJS",
+            "description": "",
+            "course": "66c379b6c96ecb0015e4c5b1",
+            "course_module": "6809e10c48efa3384ddf64fa",
+            "__v": 0,
+            "createdAt": "2025-09-23T05:01:18.260Z",
+            "updatedAt": "2026-05-05T10:29:26.807Z",
+            "sequence": 14
+          },
+          {
+            "_id": "686bbba10fadd60015d26a3e",
+            "title": "ReactJS Introduction & How to Create React Project",
+            "description": "<p>React vs JavaScript</p><p>Difference between FrameWork and Library</p>",
+            "course": "66c379b6c96ecb0015e4c5b1",
+            "course_module": "6809e10c48efa3384ddf64fa",
+            "__v": 0,
+            "createdAt": "2025-07-07T12:20:49.299Z",
+            "updatedAt": "2026-05-05T10:29:25.473Z",
+            "sequence": 1
+          },
+          {
+            "_id": "686bbba10fadd60015d26a6e",
+            "title": "Components , Props and JSX",
+            "description": "<p>How React is Rendered</p><p>What is Strict Mode</p><p>Components and its Re-useability</p><p>What is JSX</p><p>Styling in JSX</p><p>Rendering Lists</p><p>Conditional Rendering</p><p>Props Destructuring</p><p>React Fragments</p>",
+            "course": "66c379b6c96ecb0015e4c5b1",
+            "course_module": "6809e10c48efa3384ddf64fa",
+            "__v": 0,
+            "createdAt": "2025-07-07T12:20:49.964Z",
+            "updatedAt": "2026-05-05T10:29:25.576Z",
+            "sequence": 2
+          },
+          {
+            "_id": "686bbba20fadd60015d26a73",
+            "title": "State, Events, Forms",
+            "description": "<p>What is State?</p><p>How to handle Events in React?</p><p>UseState in Depth</p><p>State vs Props</p><p>State Management</p><p>Props Passing Parent to Child</p><p>Props Passing Child to Parent</p>",
+            "course": "66c379b6c96ecb0015e4c5b1",
+            "course_module": "6809e10c48efa3384ddf64fa",
+            "__v": 0,
+            "createdAt": "2025-07-07T12:20:50.611Z",
+            "updatedAt": "2026-05-05T10:29:25.675Z",
+            "sequence": 3
+          },
+          {
+            "_id": "68d228e2ebd0da0015cd1d19",
+            "title": "Single Page Application (SPA) - React Router DOM",
+            "description": "",
+            "course": "66c379b6c96ecb0015e4c5b1",
+            "course_module": "6809e10c48efa3384ddf64fa",
+            "__v": 0,
+            "createdAt": "2025-09-23T04:58:10.033Z",
+            "updatedAt": "2026-05-05T10:29:26.187Z",
+            "sequence": 8
+          },
+          {
+            "_id": "68d228f3ecbd440015ef33d9",
+            "title": "State Management - Context Api",
+            "description": "",
+            "course": "66c379b6c96ecb0015e4c5b1",
+            "course_module": "6809e10c48efa3384ddf64fa",
+            "__v": 0,
+            "createdAt": "2025-09-23T04:58:27.681Z",
+            "updatedAt": "2026-05-05T10:29:26.291Z",
+            "sequence": 9
+          },
+          {
+            "_id": "68d22972ebd0da0015cd1dd1",
+            "title": "Tailwind, Material UI, Styled Components OverView",
+            "description": "",
+            "course": "66c379b6c96ecb0015e4c5b1",
+            "course_module": "6809e10c48efa3384ddf64fa",
+            "__v": 0,
+            "createdAt": "2025-09-23T05:00:34.430Z",
+            "updatedAt": "2026-05-05T10:29:26.601Z",
+            "sequence": 12
+          }
+        ]
+      },
+      "submission": {
+        "_id": "6aa37765b49962f362d84028",
+        "link": "https://berry.muiz.tech/",
+        "files": [],
+        "submitted_date": "2026-09-11T03:37:09.852Z",
+        "text": "https://github.com/mmuizahmed/assignments/tree/main/assignment/berry-dashboard",
+        "trainer_feedback": null,
+        "status": "approved"
+      }
+    },
+    {
+      "assignment": {
+        "_id": "6a927e0d1d15245b785b00e4",
+        "title": "QUICKSERVE WMA (Batch-20)",
+        "links": [
+          "https://docs.google.com/document/d/1pw_UvI0P8ngThuMapzuUM0AOeUfZGIou/edit?usp=sharing&ouid=109724291894010507451&rtpof=true&sd=true"
+        ],
+        "images": [],
+        "description": "<p><strong>Challenge: </strong>Build a modern service-booking web application that connects customers with local service providers.</p><p><strong>Core idea: </strong>Customer → Browse → Book → Provider Accepts → Complete → Review</p><p><strong>1. Problem Statement</strong></p><p>Customers often find local service providers through scattered WhatsApp messages, social media, or phone calls. Build a focused MVP that makes discovering a provider and managing a service request simple.</p>",
+        "status": "inactive",
+        "submission_date": "2026-08-30T00:00:00.000Z",
+        "is_hackathon": true,
+        "topics": []
+      },
+      "submission": null
+    },
+    {
+      "assignment": {
+        "_id": "6a8215d8596020da2ec57a93",
+        "title": "E-Commerce Website (React js)",
+        "links": [
+          "https://www.figma.com/design/j55YNUXnNnwQUzB7VatyVy/E-commerce-Website-Template--Freebie---Community-?node-id=39-1402&p=f&t=Ey3BezZhAOQRoyG0-0"
+        ],
+        "images": [],
+        "description": "<ul><li>React.js frontend</li><li>Create all required e-commerce pages and functionality based on the Figma design</li><li>Fully responsive design for mobile, tablet, and desktop</li><li>Clean and reusable component structure</li><li>Proper form handling and validation</li><li>Push the complete source code to a <strong>public GitHub repository</strong></li><li>Deploy the complete project and provide a <strong>live working link</strong></li></ul><p><br></p>",
+        "status": "active",
+        "submission_date": "2026-08-17T18:59:59.999Z",
+        "is_hackathon": false,
+        "topics": [
+          {
+            "_id": "686bbba10fadd60015d26a3e",
+            "title": "ReactJS Introduction & How to Create React Project",
+            "description": "<p>React vs JavaScript</p><p>Difference between FrameWork and Library</p>",
+            "course": "66c379b6c96ecb0015e4c5b1",
+            "course_module": "6809e10c48efa3384ddf64fa",
+            "__v": 0,
+            "createdAt": "2025-07-07T12:20:49.299Z",
+            "updatedAt": "2026-05-05T10:29:25.473Z",
+            "sequence": 1
+          },
+          {
+            "_id": "686bbba10fadd60015d26a6e",
+            "title": "Components , Props and JSX",
+            "description": "<p>How React is Rendered</p><p>What is Strict Mode</p><p>Components and its Re-useability</p><p>What is JSX</p><p>Styling in JSX</p><p>Rendering Lists</p><p>Conditional Rendering</p><p>Props Destructuring</p><p>React Fragments</p>",
+            "course": "66c379b6c96ecb0015e4c5b1",
+            "course_module": "6809e10c48efa3384ddf64fa",
+            "__v": 0,
+            "createdAt": "2025-07-07T12:20:49.964Z",
+            "updatedAt": "2026-05-05T10:29:25.576Z",
+            "sequence": 2
+          },
+          {
+            "_id": "686bbba33b75630015cff895",
+            "title": "Effects and Data Fetching in React",
+            "description": "<p>Component LifeCycle</p><p>Wrong ways of Fetching Data</p><p>UseEffect in detail and benefits</p><p>UseEffect dependency Array</p><p>Async Function handling</p><p>UseEffect Cleanup</p>",
+            "course": "66c379b6c96ecb0015e4c5b1",
+            "course_module": "6809e10c48efa3384ddf64fa",
+            "__v": 0,
+            "createdAt": "2025-07-07T12:20:51.920Z",
+            "updatedAt": "2026-05-05T10:29:25.880Z",
+            "sequence": 5
+          },
+          {
+            "_id": "68d22995ebd0da0015cd1dfd",
+            "title": "FrontEnd Deployment through Vercel",
+            "description": "",
+            "course": "66c379b6c96ecb0015e4c5b1",
+            "course_module": "6809e10c48efa3384ddf64fa",
+            "__v": 0,
+            "createdAt": "2025-09-23T05:01:09.581Z",
+            "updatedAt": "2026-05-05T10:29:26.707Z",
+            "sequence": 13
+          }
+        ]
+      },
+      "submission": {
+        "_id": "6a8216c059602041fcc57e98",
+        "link": "https://shop.muiz.tech/",
+        "files": [],
+        "submitted_date": "2026-08-16T20:00:00.447Z",
+        "text": "https://github.com/mmuizahmed/assignments/tree/main/assignment/shop-co",
+        "trainer_feedback": null,
+        "status": "approved"
+      }
+    },
+    {
+      "assignment": {
+        "_id": "6a77b5c8c1041a41f3edc68b",
+        "title": "Furniture E-Commerce Website",
+        "links": [],
+        "images": [],
+        "description": "<ol><li>Follow the Figma design. ( https://www.figma.com/design/Xp5Eo7xPNhlblXaJG6Qm8Y/eCommerce-Website-%7C-Web-Page-Design-%7C-UI-KIT-%7C-Interior-Landing-Page--Community-?node-id=0-1&amp;p=f&amp;t=9KrEj5HsfAzc22wp-0 )</li><li>Make the website fully responsive.</li><li>Add required interactions using JavaScript.</li><li>Push complete code to a public GitHub repository.</li><li>Deploy the website and provide the live link.</li><li>Both GitHub and live website links are compulsory.</li><li>Submit both links with the assignment.</li></ol>",
+        "status": "active",
+        "submission_date": "2026-08-10T18:59:59.999Z",
+        "is_hackathon": false,
+        "topics": [
+          {
+            "_id": "68a438b4b3fef10015137634",
+            "title": "JavaScript Book Completed",
+            "description": "",
+            "course": "66c379b6c96ecb0015e4c5b1",
+            "course_module": "6800a99e57f21b2ea2d8eccf",
+            "__v": 0,
+            "createdAt": "2025-08-19T08:41:24.018Z",
+            "updatedAt": "2026-05-05T10:29:23.469Z",
+            "sequence": 11
+          },
+          {
+            "_id": "686bba280fadd60015d25c35",
+            "title": "Github",
+            "description": "",
+            "course": "66c379b6c96ecb0015e4c5b1",
+            "course_module": "6800a96c57f21b2ea2d8ec9e",
+            "__v": 0,
+            "createdAt": "2025-07-07T12:14:32.635Z",
+            "updatedAt": "2026-05-05T10:29:22.160Z",
+            "sequence": 12
+          },
+          {
+            "_id": "686bb2883ce7cc5b6ae2c506",
+            "title": "Css3",
+            "description": "",
+            "course": "66c379b6c96ecb0015e4c5b1",
+            "course_module": "6800a96c57f21b2ea2d8ec9e",
+            "__v": 0,
+            "createdAt": "2025-07-07T11:42:00.387Z",
+            "updatedAt": "2026-05-06T08:53:10.730Z",
+            "sequence": 10
+          },
+          {
+            "_id": "69fb014fdff99312ed8d5fe6",
+            "title": "HTML Images",
+            "description": "",
+            "sequence": 2,
+            "course": "66c379b6c96ecb0015e4c5b1",
+            "course_module": "6800a96c57f21b2ea2d8ec9e",
+            "__v": 0,
+            "createdAt": "2026-05-06T08:52:31.230Z",
+            "updatedAt": "2026-05-06T08:52:31.230Z"
+          },
+          {
+            "_id": "686bb27d3ce7cc5b6ae2c4fa",
+            "title": "HTML Text",
+            "description": "",
+            "course": "66c379b6c96ecb0015e4c5b1",
+            "course_module": "6800a96c57f21b2ea2d8ec9e",
+            "__v": 0,
+            "createdAt": "2025-07-07T11:41:49.343Z",
+            "updatedAt": "2026-05-05T10:32:30.748Z",
+            "sequence": 1
+          }
+        ]
+      },
+      "submission": {
+        "_id": "6a7994bf99133744093f0848",
+        "link": "https://muiz.tech/assignment/furniro/",
+        "files": [],
+        "submitted_date": "2026-08-10T09:07:11.565Z",
+        "text": "https://github.com/mmuizahmed/assignments/tree/main/assignment/furniro",
+        "trainer_feedback": null,
+        "status": "submitted"
+      }
+    },
+    {
+      "assignment": {
+        "_id": "6a5268b204b80dbe9f28a149",
+        "title": "MaintainIQ (Batch-20)",
+        "links": [
+          "https://drive.google.com/file/d/1p9d3ZfLNOxh3p_9UFDSUpCFEOQZJr-PX/view?usp=sharing",
+          "https://www.youtube.com/watch?v=WEB51_xKwso"
+        ],
+        "images": [],
+        "description": "<p><strong><u>MaintainIQ </u></strong></p><p><br></p><p><strong>Hackathon Overview&nbsp;</strong></p><p><br></p><p>MaintainIQ is a professional maintenance-management platform that gives every physical asset a digital identity, a QR-accessible public page, an issue-reporting workflow, and a permanent service history. The product is designed for schools, universities, hospitals, offices, factories, housing societies, labs, hotels, restaurants, warehouses, and facility-management companies.</p><p>The hackathon is not about generating QR codes. The QR code is only the entry point. The actual product value lies in issue triage, assignment, maintenance workflow, evidence, history, accountability, and preventive recommendations.&nbsp;</p><p><br></p><p><strong>Task Explaination</strong></p><p><br></p><p>https://www.youtube.com/watch?v=WEB51_xKwso</p>",
+        "status": "inactive",
+        "submission_date": "2026-07-12T00:00:00.000Z",
+        "is_hackathon": true,
+        "topics": []
+      },
+      "submission": null
+    },
+    {
+      "assignment": {
+        "_id": "6a501b3504b80d390719c527",
+        "title": "JavaScript Assignment – 25 Questions",
+        "links": [],
+        "images": [],
+        "description": "<p>Complete all 25 JavaScript questions available at the link below and upload your solutions to a public GitHub repository.</p><p><strong>Assignment Questions:</strong></p><p>https://js-assignment-25-question.vercel.app/</p>",
+        "status": "active",
+        "submission_date": "2026-07-10T18:59:59.999Z",
+        "is_hackathon": false,
+        "topics": [
+          {
+            "_id": "686bbb2a3b75630015cff2a8",
+            "title": "JavaScript Introduction",
+            "description": "",
+            "course": "66c379b6c96ecb0015e4c5b1",
+            "course_module": "6800a99e57f21b2ea2d8eccf",
+            "__v": 0,
+            "createdAt": "2025-07-07T12:18:50.603Z",
+            "updatedAt": "2026-05-05T10:29:22.590Z",
+            "sequence": 1
+          },
+          {
+            "_id": "686bbb2b0fadd60015d2653e",
+            "title": "JavaScript Chapter 1 - 10",
+            "description": "",
+            "course": "66c379b6c96ecb0015e4c5b1",
+            "course_module": "6800a99e57f21b2ea2d8eccf",
+            "__v": 0,
+            "createdAt": "2025-07-07T12:18:51.262Z",
+            "updatedAt": "2026-05-05T10:29:22.674Z",
+            "sequence": 2
+          },
+          {
+            "_id": "686bbb2b0fadd60015d26542",
+            "title": "JavaScript Chapter 11 - 20",
+            "description": "",
+            "course": "66c379b6c96ecb0015e4c5b1",
+            "course_module": "6800a99e57f21b2ea2d8eccf",
+            "__v": 0,
+            "createdAt": "2025-07-07T12:18:51.914Z",
+            "updatedAt": "2026-05-05T10:29:22.760Z",
+            "sequence": 3
+          },
+          {
+            "_id": "686bbb2d3b75630015cff2cf",
+            "title": "JavaScript Chapter 21 - 30",
+            "description": "",
+            "course": "66c379b6c96ecb0015e4c5b1",
+            "course_module": "6800a99e57f21b2ea2d8eccf",
+            "__v": 0,
+            "createdAt": "2025-07-07T12:18:53.220Z",
+            "updatedAt": "2026-05-05T10:29:22.936Z",
+            "sequence": 5
+          },
+          {
+            "_id": "68a4384ea6bfe30015e180da",
+            "title": "JavaScript Chapter 31 - 40",
+            "description": "",
+            "course": "66c379b6c96ecb0015e4c5b1",
+            "course_module": "6800a99e57f21b2ea2d8eccf",
+            "__v": 0,
+            "createdAt": "2025-08-19T08:39:42.880Z",
+            "updatedAt": "2026-05-05T10:29:23.032Z",
+            "sequence": 6
+          },
+          {
+            "_id": "68a43865b3fef1001513760b",
+            "title": " JavaScript Chapter 41 - 50",
+            "description": "",
+            "course": "66c379b6c96ecb0015e4c5b1",
+            "course_module": "6800a99e57f21b2ea2d8eccf",
+            "__v": 0,
+            "createdAt": "2025-08-19T08:40:05.546Z",
+            "updatedAt": "2026-05-05T10:29:23.202Z",
+            "sequence": 8
+          },
+          {
+            "_id": "68a4386fa06203001553ad09",
+            "title": "JavaScript Chapter 51 - 60",
+            "description": "",
+            "course": "66c379b6c96ecb0015e4c5b1",
+            "course_module": "6800a99e57f21b2ea2d8eccf",
+            "__v": 0,
+            "createdAt": "2025-08-19T08:40:15.994Z",
+            "updatedAt": "2026-05-05T10:29:23.285Z",
+            "sequence": 9
+          },
+          {
+            "_id": "68a438b4b3fef10015137634",
+            "title": "JavaScript Book Completed",
+            "description": "",
+            "course": "66c379b6c96ecb0015e4c5b1",
+            "course_module": "6800a99e57f21b2ea2d8eccf",
+            "__v": 0,
+            "createdAt": "2025-08-19T08:41:24.018Z",
+            "updatedAt": "2026-05-05T10:29:23.469Z",
+            "sequence": 11
+          }
+        ]
+      },
+      "submission": {
+        "_id": "6a632c624a112712ce6ea335",
+        "link": "https://muiz.tech/assignment/javascript/",
+        "files": [],
+        "submitted_date": "2026-07-24T09:12:02.846Z",
+        "text": "https://github.com/mmuizahmed/assignments/tree/main/assignment/javascript",
+        "trainer_feedback": null,
+        "status": "late_submitted"
+      }
+    },
+    {
+      "assignment": {
+        "_id": "6a1245a09a946a29a5e74aef",
+        "title": "Budgetting App",
+        "links": [],
+        "images": [
+          "https://res.cloudinary.com/saylani-welfare/image/upload/v1779582368/assignment/assignment/1779582366_0_eh9r1sid.webp"
+        ],
+        "description": "<p>Develop a fully responsive and functional Budgeting Web Application using HTML, CSS, and JavaScript. The app should allow users to add income and expenses, display real-time balance updates,  The project must be mobile-friendly and visually clean.</p><p>Host the project on GitHub and deploy it using any platform (Netlify, Vercel, or GitHub Pages). Submit both the GitHub repository link and the live deployed link.</p>",
+        "status": "active",
+        "submission_date": "2026-06-01T18:59:59.999Z",
+        "is_hackathon": false,
+        "topics": [
+          {
+            "_id": "686bbb2b0fadd60015d2653e",
+            "title": "JavaScript Chapter 1 - 10",
+            "description": "",
+            "course": "66c379b6c96ecb0015e4c5b1",
+            "course_module": "6800a99e57f21b2ea2d8eccf",
+            "__v": 0,
+            "createdAt": "2025-07-07T12:18:51.262Z",
+            "updatedAt": "2026-05-05T10:29:22.674Z",
+            "sequence": 2
+          },
+          {
+            "_id": "686bbb2b0fadd60015d26542",
+            "title": "JavaScript Chapter 11 - 20",
+            "description": "",
+            "course": "66c379b6c96ecb0015e4c5b1",
+            "course_module": "6800a99e57f21b2ea2d8eccf",
+            "__v": 0,
+            "createdAt": "2025-07-07T12:18:51.914Z",
+            "updatedAt": "2026-05-05T10:29:22.760Z",
+            "sequence": 3
+          },
+          {
+            "_id": "686bbb2d3b75630015cff2cf",
+            "title": "JavaScript Chapter 21 - 30",
+            "description": "",
+            "course": "66c379b6c96ecb0015e4c5b1",
+            "course_module": "6800a99e57f21b2ea2d8eccf",
+            "__v": 0,
+            "createdAt": "2025-07-07T12:18:53.220Z",
+            "updatedAt": "2026-05-05T10:29:22.936Z",
+            "sequence": 5
+          },
+          {
+            "_id": "68a4384ea6bfe30015e180da",
+            "title": "JavaScript Chapter 31 - 40",
+            "description": "",
+            "course": "66c379b6c96ecb0015e4c5b1",
+            "course_module": "6800a99e57f21b2ea2d8eccf",
+            "__v": 0,
+            "createdAt": "2025-08-19T08:39:42.880Z",
+            "updatedAt": "2026-05-05T10:29:23.032Z",
+            "sequence": 6
+          },
+          {
+            "_id": "68a43865b3fef1001513760b",
+            "title": " JavaScript Chapter 41 - 50",
+            "description": "",
+            "course": "66c379b6c96ecb0015e4c5b1",
+            "course_module": "6800a99e57f21b2ea2d8eccf",
+            "__v": 0,
+            "createdAt": "2025-08-19T08:40:05.546Z",
+            "updatedAt": "2026-05-05T10:29:23.202Z",
+            "sequence": 8
+          },
+          {
+            "_id": "68a4386fa06203001553ad09",
+            "title": "JavaScript Chapter 51 - 60",
+            "description": "",
+            "course": "66c379b6c96ecb0015e4c5b1",
+            "course_module": "6800a99e57f21b2ea2d8eccf",
+            "__v": 0,
+            "createdAt": "2025-08-19T08:40:15.994Z",
+            "updatedAt": "2026-05-05T10:29:23.285Z",
+            "sequence": 9
+          },
+          {
+            "_id": "686bb9d30fadd60015d25a3d",
+            "title": "Flex box ",
+            "description": "",
+            "course": "66c379b6c96ecb0015e4c5b1",
+            "course_module": "6800a96c57f21b2ea2d8ec9e",
+            "__v": 0,
+            "createdAt": "2025-07-07T12:13:07.594Z",
+            "updatedAt": "2026-05-06T08:54:24.677Z",
+            "sequence": 16
+          },
+          {
+            "_id": "69fb0158dff9932f008d6120",
+            "title": "HTML Table",
+            "description": "",
+            "sequence": 3,
+            "course": "66c379b6c96ecb0015e4c5b1",
+            "course_module": "6800a96c57f21b2ea2d8ec9e",
+            "__v": 0,
+            "createdAt": "2026-05-06T08:52:40.754Z",
+            "updatedAt": "2026-05-06T08:52:40.754Z"
+          },
+          {
+            "_id": "69fb0164dff993bc248d6220",
+            "title": "HTML Forms",
+            "description": "",
+            "sequence": 4,
+            "course": "66c379b6c96ecb0015e4c5b1",
+            "course_module": "6800a96c57f21b2ea2d8ec9e",
+            "__v": 0,
+            "createdAt": "2026-05-06T08:52:52.820Z",
+            "updatedAt": "2026-05-06T08:52:52.820Z"
+          },
+          {
+            "_id": "686bba260fadd60015d25c28",
+            "title": "Font Awesome",
+            "description": "",
+            "course": "66c379b6c96ecb0015e4c5b1",
+            "course_module": "6800a96c57f21b2ea2d8ec9e",
+            "__v": 0,
+            "createdAt": "2025-07-07T12:14:30.073Z",
+            "updatedAt": "2026-05-05T10:29:21.816Z",
+            "sequence": 8
+          },
+          {
+            "_id": "686bba280fadd60015d25c35",
+            "title": "Github",
+            "description": "",
+            "course": "66c379b6c96ecb0015e4c5b1",
+            "course_module": "6800a96c57f21b2ea2d8ec9e",
+            "__v": 0,
+            "createdAt": "2025-07-07T12:14:32.635Z",
+            "updatedAt": "2026-05-05T10:29:22.160Z",
+            "sequence": 12
+          },
+          {
+            "_id": "686bba290fadd60015d25c41",
+            "title": "Github Hosting ",
+            "description": "",
+            "course": "66c379b6c96ecb0015e4c5b1",
+            "course_module": "6800a96c57f21b2ea2d8ec9e",
+            "__v": 0,
+            "createdAt": "2025-07-07T12:14:33.283Z",
+            "updatedAt": "2026-05-05T10:29:22.244Z",
+            "sequence": 13
+          }
+        ]
+      },
+      "submission": {
+        "_id": "6a4b69bc4d60fea68ca86bd9",
+        "link": "https://muiz.tech/assignment/budget/",
+        "files": [],
+        "submitted_date": "2026-07-06T08:39:24.149Z",
+        "text": "https://github.com/mmuizahmed/assignments/tree/main/assignment/budget",
+        "trainer_feedback": null,
+        "status": "late_submitted"
+      }
+    },
+    {
+      "assignment": {
+        "_id": "6a024cb480b94258d856d5b5",
+        "title": "Amazon Clone",
+        "links": [],
+        "images": [],
+        "description": "<p><span style=\"color: rgb(10, 10, 10);\">Create a fully responsive landing page inspired by the official Amazon website using HTML, CSS, and JavaScript. The design should exact match the layout, styling, and user experience of the original site, including smooth animations, transitions, and interactive elements. Ensure the page is optimized for all devices (mobile, tablet, and desktop) with proper responsiveness. Implement JavaScript functionality such as navigation effects, sliders, or dynamic content where applicable. Finally, upload the complete project to GitHub and provide both the repository link and a live deployed link (e.g., via GitHub Pages, vercel, netlify).</span></p>",
+        "status": "active",
+        "submission_date": "2026-05-24T18:59:59.999Z",
+        "is_hackathon": false,
+        "topics": [
+          {
+            "_id": "686bb27d3ce7cc5b6ae2c4fa",
+            "title": "HTML Text",
+            "description": "",
+            "course": "66c379b6c96ecb0015e4c5b1",
+            "course_module": "6800a96c57f21b2ea2d8ec9e",
+            "__v": 0,
+            "createdAt": "2025-07-07T11:41:49.343Z",
+            "updatedAt": "2026-05-05T10:32:30.748Z",
+            "sequence": 1
+          },
+          {
+            "_id": "69fb014fdff99312ed8d5fe6",
+            "title": "HTML Images",
+            "description": "",
+            "sequence": 2,
+            "course": "66c379b6c96ecb0015e4c5b1",
+            "course_module": "6800a96c57f21b2ea2d8ec9e",
+            "__v": 0,
+            "createdAt": "2026-05-06T08:52:31.230Z",
+            "updatedAt": "2026-05-06T08:52:31.230Z"
+          },
+          {
+            "_id": "69fb01b6dff993b31d8d6bd9",
+            "title": "HTML Links",
+            "description": "",
+            "sequence": 6,
+            "course": "66c379b6c96ecb0015e4c5b1",
+            "course_module": "6800a96c57f21b2ea2d8ec9e",
+            "__v": 0,
+            "createdAt": "2026-05-06T08:54:14.973Z",
+            "updatedAt": "2026-05-06T08:54:14.973Z"
+          },
+          {
+            "_id": "686bb9d40fadd60015d25a4a",
+            "title": "Grid system",
+            "description": "",
+            "course": "66c379b6c96ecb0015e4c5b1",
+            "course_module": "6800a96c57f21b2ea2d8ec9e",
+            "__v": 0,
+            "createdAt": "2025-07-07T12:13:08.239Z",
+            "updatedAt": "2026-05-05T10:29:21.729Z",
+            "sequence": 7
+          },
+          {
+            "_id": "686bba260fadd60015d25c28",
+            "title": "Font Awesome",
+            "description": "",
+            "course": "66c379b6c96ecb0015e4c5b1",
+            "course_module": "6800a96c57f21b2ea2d8ec9e",
+            "__v": 0,
+            "createdAt": "2025-07-07T12:14:30.073Z",
+            "updatedAt": "2026-05-05T10:29:21.816Z",
+            "sequence": 8
+          },
+          {
+            "_id": "686bba263b75630015cfe9f2",
+            "title": "Bootstrap",
+            "description": "",
+            "course": "66c379b6c96ecb0015e4c5b1",
+            "course_module": "6800a96c57f21b2ea2d8ec9e",
+            "__v": 0,
+            "createdAt": "2025-07-07T12:14:30.726Z",
+            "updatedAt": "2026-05-05T10:29:21.900Z",
+            "sequence": 9
+          },
+          {
+            "_id": "686bb2883ce7cc5b6ae2c506",
+            "title": "Css3",
+            "description": "",
+            "course": "66c379b6c96ecb0015e4c5b1",
+            "course_module": "6800a96c57f21b2ea2d8ec9e",
+            "__v": 0,
+            "createdAt": "2025-07-07T11:42:00.387Z",
+            "updatedAt": "2026-05-06T08:53:10.730Z",
+            "sequence": 10
+          },
+          {
+            "_id": "686bba270fadd60015d25c2d",
+            "title": "Google Fonts ",
+            "description": "",
+            "course": "66c379b6c96ecb0015e4c5b1",
+            "course_module": "6800a96c57f21b2ea2d8ec9e",
+            "__v": 0,
+            "createdAt": "2025-07-07T12:14:31.362Z",
+            "updatedAt": "2026-05-05T10:29:21.989Z",
+            "sequence": 10
+          },
+          {
+            "_id": "686bba280fadd60015d25c35",
+            "title": "Github",
+            "description": "",
+            "course": "66c379b6c96ecb0015e4c5b1",
+            "course_module": "6800a96c57f21b2ea2d8ec9e",
+            "__v": 0,
+            "createdAt": "2025-07-07T12:14:32.635Z",
+            "updatedAt": "2026-05-05T10:29:22.160Z",
+            "sequence": 12
+          },
+          {
+            "_id": "686bba290fadd60015d25c41",
+            "title": "Github Hosting ",
+            "description": "",
+            "course": "66c379b6c96ecb0015e4c5b1",
+            "course_module": "6800a96c57f21b2ea2d8ec9e",
+            "__v": 0,
+            "createdAt": "2025-07-07T12:14:33.283Z",
+            "updatedAt": "2026-05-05T10:29:22.244Z",
+            "sequence": 13
+          },
+          {
+            "_id": "686bba290fadd60015d25c4a",
+            "title": "Surge hosting ",
+            "description": "",
+            "course": "66c379b6c96ecb0015e4c5b1",
+            "course_module": "6800a96c57f21b2ea2d8ec9e",
+            "__v": 0,
+            "createdAt": "2025-07-07T12:14:33.926Z",
+            "updatedAt": "2026-05-05T10:29:22.331Z",
+            "sequence": 14
+          },
+          {
+            "_id": "686bb9d20fadd60015d25a36",
+            "title": "Media queries",
+            "description": "",
+            "course": "66c379b6c96ecb0015e4c5b1",
+            "course_module": "6800a96c57f21b2ea2d8ec9e",
+            "__v": 0,
+            "createdAt": "2025-07-07T12:13:06.947Z",
+            "updatedAt": "2026-05-06T08:53:59.916Z",
+            "sequence": 14
+          },
+          {
+            "_id": "686bb9d30fadd60015d25a3d",
+            "title": "Flex box ",
+            "description": "",
+            "course": "66c379b6c96ecb0015e4c5b1",
+            "course_module": "6800a96c57f21b2ea2d8ec9e",
+            "__v": 0,
+            "createdAt": "2025-07-07T12:13:07.594Z",
+            "updatedAt": "2026-05-06T08:54:24.677Z",
+            "sequence": 16
+          },
+          {
+            "_id": "686bb9d23b75630015cfe7c7",
+            "title": "CSS Animations",
+            "description": "",
+            "course": "66c379b6c96ecb0015e4c5b1",
+            "course_module": "6800a96c57f21b2ea2d8ec9e",
+            "__v": 0,
+            "createdAt": "2025-07-07T12:13:06.284Z",
+            "updatedAt": "2026-05-06T08:53:31.965Z",
+            "sequence": 14
+          },
+          {
+            "_id": "68a43865b3fef1001513760b",
+            "title": " JavaScript Chapter 41 - 50",
+            "description": "",
+            "course": "66c379b6c96ecb0015e4c5b1",
+            "course_module": "6800a99e57f21b2ea2d8eccf",
+            "__v": 0,
+            "createdAt": "2025-08-19T08:40:05.546Z",
+            "updatedAt": "2026-05-05T10:29:23.202Z",
+            "sequence": 8
+          }
+        ]
+      },
+      "submission": {
+        "_id": "6a25e90f7ffc04f09ccbff32",
+        "link": "https://muiz.tech/assignment/amazon/",
+        "files": [],
+        "submitted_date": "2026-06-07T21:56:31.888Z",
+        "text": "https://github.com/mmuizahmed/assignments/tree/main/assignment/amazon",
+        "trainer_feedback": null,
+        "status": "approved"
+      }
+    },
+    {
+      "assignment": {
+        "_id": "69e5471258184f726f80ee73",
+        "title": "NASA Landing Page",
+        "links": [],
+        "images": [],
+        "description": "<p>Create a fully responsive landing page inspired by the official NASA website using HTML, CSS, and JavaScript. The design should exact match the layout, styling, and user experience of the original site, including smooth animations, transitions, and interactive elements. Ensure the page is optimized for all devices (mobile, tablet, and desktop) with proper responsiveness. Implement JavaScript functionality such as navigation effects, sliders, or dynamic content where applicable. Finally, upload the complete project to GitHub and provide both the repository link and a live deployed link (e.g., via GitHub Pages, vercel, netlify).</p>",
+        "status": "active",
+        "submission_date": "2026-05-01T18:59:59.999Z",
+        "is_hackathon": false,
+        "topics": [
+          {
+            "_id": "686bb9d20fadd60015d25a36",
+            "title": "Media queries",
+            "description": "",
+            "course": "66c379b6c96ecb0015e4c5b1",
+            "course_module": "6800a96c57f21b2ea2d8ec9e",
+            "__v": 0,
+            "createdAt": "2025-07-07T12:13:06.947Z",
+            "updatedAt": "2026-05-06T08:53:59.916Z",
+            "sequence": 14
+          },
+          {
+            "_id": "686bb27d3ce7cc5b6ae2c4fa",
+            "title": "HTML Text",
+            "description": "",
+            "course": "66c379b6c96ecb0015e4c5b1",
+            "course_module": "6800a96c57f21b2ea2d8ec9e",
+            "__v": 0,
+            "createdAt": "2025-07-07T11:41:49.343Z",
+            "updatedAt": "2026-05-05T10:32:30.748Z",
+            "sequence": 1
+          },
+          {
+            "_id": "69fb014fdff99312ed8d5fe6",
+            "title": "HTML Images",
+            "description": "",
+            "sequence": 2,
+            "course": "66c379b6c96ecb0015e4c5b1",
+            "course_module": "6800a96c57f21b2ea2d8ec9e",
+            "__v": 0,
+            "createdAt": "2026-05-06T08:52:31.230Z",
+            "updatedAt": "2026-05-06T08:52:31.230Z"
+          },
+          {
+            "_id": "69fb01a1dff993cf148d68bf",
+            "title": "HTML Audio/Video Tags",
+            "description": "",
+            "sequence": 5,
+            "course": "66c379b6c96ecb0015e4c5b1",
+            "course_module": "6800a96c57f21b2ea2d8ec9e",
+            "__v": 0,
+            "createdAt": "2026-05-06T08:53:53.177Z",
+            "updatedAt": "2026-05-06T08:53:53.177Z"
+          },
+          {
+            "_id": "686bb2883ce7cc5b6ae2c506",
+            "title": "Css3",
+            "description": "",
+            "course": "66c379b6c96ecb0015e4c5b1",
+            "course_module": "6800a96c57f21b2ea2d8ec9e",
+            "__v": 0,
+            "createdAt": "2025-07-07T11:42:00.387Z",
+            "updatedAt": "2026-05-06T08:53:10.730Z",
+            "sequence": 10
+          },
+          {
+            "_id": "686bba280fadd60015d25c35",
+            "title": "Github",
+            "description": "",
+            "course": "66c379b6c96ecb0015e4c5b1",
+            "course_module": "6800a96c57f21b2ea2d8ec9e",
+            "__v": 0,
+            "createdAt": "2025-07-07T12:14:32.635Z",
+            "updatedAt": "2026-05-05T10:29:22.160Z",
+            "sequence": 12
+          },
+          {
+            "_id": "686bba290fadd60015d25c41",
+            "title": "Github Hosting ",
+            "description": "",
+            "course": "66c379b6c96ecb0015e4c5b1",
+            "course_module": "6800a96c57f21b2ea2d8ec9e",
+            "__v": 0,
+            "createdAt": "2025-07-07T12:14:33.283Z",
+            "updatedAt": "2026-05-05T10:29:22.244Z",
+            "sequence": 13
+          },
+          {
+            "_id": "686bba270fadd60015d25c2d",
+            "title": "Google Fonts ",
+            "description": "",
+            "course": "66c379b6c96ecb0015e4c5b1",
+            "course_module": "6800a96c57f21b2ea2d8ec9e",
+            "__v": 0,
+            "createdAt": "2025-07-07T12:14:31.362Z",
+            "updatedAt": "2026-05-05T10:29:21.989Z",
+            "sequence": 10
+          },
+          {
+            "_id": "686bb9d30fadd60015d25a3d",
+            "title": "Flex box ",
+            "description": "",
+            "course": "66c379b6c96ecb0015e4c5b1",
+            "course_module": "6800a96c57f21b2ea2d8ec9e",
+            "__v": 0,
+            "createdAt": "2025-07-07T12:13:07.594Z",
+            "updatedAt": "2026-05-06T08:54:24.677Z",
+            "sequence": 16
+          }
+        ]
+      },
+      "submission": {
+        "_id": "69fda79d11e57d659b58b1f9",
+        "link": "https://muiz.tech/assignment/nasa/",
+        "files": [],
+        "submitted_date": "2026-05-08T09:06:37.372Z",
+        "text": "https://github.com/mmuizahmed/assignments/tree/main/assignment/nasa",
+        "trainer_feedback": null,
+        "status": "approved"
+      }
+    },
+    {
+      "assignment": {
+        "_id": "69e3e52658184f834c74eb6b",
+        "title": "Helplytics AI – Community Support Platform",
+        "links": [
+          "https://drive.google.com/file/d/1aKhYfcowaBsd3y597gXyAE9tc5h9VNmp/view?usp=sharing",
+          "https://youtu.be/LIkRZmSN-Ug?si=fak8Ut66L7FR2BWL",
+          "https://drive.google.com/file/d/1GzT3NmQb5t8qOH_zlJucdpHeK5jSIoyV/view?usp=sharing"
+        ],
+        "images": [],
+        "description": "<p>SMIT GRAND CODING NIGHT - April 2026</p><p>Helplytics AI – Community Support Platform</p><p><br></p><p>&nbsp;</p><p>1.&nbsp;Problem Statement</p><p>&nbsp;</p><p>In today’s learning ecosystem:</p><p><br></p><p><br></p><p>• Students struggle to find timely help</p><p>• Skilled individuals are willing to help but lack a platform</p><p>• No structured system exists for:</p><p>• Asking for help</p><p>• Offering help</p><p>• Tracking contributions</p><p><br></p><p>Result:</p><p>&nbsp;</p><p>• Slower learning</p><p>• Missed opportunities</p><p>• Weak community collaboration</p><p><br></p><p>1.&nbsp;Vision</p><p>Build a multi-page, AI-powered community platform that connects people who need help with those who can provide it.</p><p>&nbsp;</p><p><br></p><p>2.&nbsp;Product Scope</p><p>&nbsp;Required:</p><p>• Multi-page structure</p><p>• Clear navigation</p><p>• Product-level thinking</p><p>• Smart UI/UX</p><p>&nbsp;</p><p><br></p><p>1.&nbsp;Core Features</p><p>&nbsp;</p><p>• Create help requests</p><p>• View and filter requests</p><p>• Mark requests as completed</p><p>• Multi-page navigation</p><p>• Basic user identity</p><p>&nbsp;</p><p><br></p><p>2.&nbsp;AI Requirements (Mandatory)</p><p>Projects must include at least ONE AI-like feature: Examples:</p><p>• Keyword-based categorization</p><p>• Smart tag suggestions</p><p>• Urgency detection</p><p>• Response suggestions</p><p>&nbsp;</p><p><br></p><p>3.&nbsp;Design Expectations</p><p>3&nbsp;Expected:</p><p>• Card-based UI</p><p>• Dashboard-style layouts</p><p>• Clean spacing and hierarchy</p><p>• Modern UI inspiration:</p><p>• Notion</p><p>• Stripe</p><p>• Linear</p><p>&nbsp;</p><p><br></p><p>4.&nbsp;Stack Expectations (Confirm from your trainer as well)</p><p>&nbsp;&nbsp;HTML/CSS (Only for Batch 18)</p><p>• Multi-page UI prototype</p><p><br></p><p>P&nbsp;JavaScript + LocalStorage (Only for Batch 18)</p><p><br></p><p>• Functional frontend with persistence</p><p><br></p><p>l&nbsp;HTML/CSS + JavaScript + Firebase / Supabase (Only for Batch 17)</p><p><br></p><p>• Functional frontend with firebase/supabase</p><p><br></p><p>a&nbsp;HTML/CSS + JavaScript + Node + Express + MongoDB (Only for Batch 16, 17)</p><p><br></p><p>• Frontend on html, css, javascript + Backend APIs</p><p><br></p><p>t&nbsp;React + Firebase/Supabase (Only for Batch 16, 17)</p><p><br></p><p>• Dynamic UI + real-time features</p><p><br></p><p>f&nbsp;MERN Stack (Only for Batch 16)</p><p>• Full platform architecture</p><p>&nbsp;</p><p><br></p><p>5.&nbsp;Bonus Twist</p><p>&nbsp;</p><p>Implement any TWO:</p><p><br></p><p><br></p><p>• Trust score system</p><p>• Leaderboard</p><p>• AI suggestion feature</p><p>• Notification system</p><p>&nbsp;</p><p><br></p><p>6.&nbsp;Final Note</p><p>&nbsp;</p><p>This is not an assignment.</p><p><br></p><p>This is a product-building challenge. Build something that:</p><p>• Feels real</p><p>• Looks premium</p><p><br></p><p>• Solves a real problem</p><p>&nbsp;</p><p><br></p><p>\"Writing code is not enough. Building a product is what truly matters.\"m Structure (Mandatory Pages)</p><p>&nbsp;Landing Page</p><p>• Hero section</p><p>• Platform overview</p><p>• Call-to-action</p><p>• Community stats (dummy allowed)</p><p><br></p><p>&nbsp;Authentication Page</p><p><br></p><p>• Login / Signup</p><p>• Role selection:</p><p>• Need Help</p><p>• Can Help</p><p>• Both</p><p><br></p><p>&nbsp;Onboarding Page</p><p>• Name</p><p>• Skills</p><p>• Interests</p><p>• Location</p><p><br></p><p>AI Suggestion:</p><p>&nbsp;</p><p>• Suggest skills user can help with</p><p>• Suggest areas where user may need help</p><p><br></p><p>&nbsp;Dashboard</p><p>• Stats cards</p><p>• Recent requests</p><p>• AI insights</p><p>• Quick actions</p><p><br></p><p>&nbsp;Explore / Feed Page</p><p>• List of all help requests</p><p>• Filters:</p><p>• Category</p><p>• Urgency</p><p>• Skills</p><p>• Location</p><p><br></p><p>&nbsp;Create Request Page</p><p>• Title</p><p>• Description</p><p><br></p><p>• Tags</p><p>• Category</p><p>• Urgency</p><p><br></p><p>AI Features:</p><p>&nbsp;</p><p>• Auto categorization</p><p>• Suggested tags</p><p>• Rewrite suggestions</p><p><br></p><p>&nbsp;Request Detail Page</p><p>• Full request description</p><p>• AI summary</p><p>• Helper list</p><p>• Actions:</p><p>• “I can help”</p><p>• “Mark as solved”</p><p><br></p><p>&nbsp;Interaction / Messaging Page</p><p>• Basic communication between users</p><p><br></p><p>&nbsp;Leaderboard Page</p><p>• Top helpers</p><p>• Rankings</p><p>• Badges</p><p><br></p><p>&nbsp;AI Center Page</p><p>• AI insights</p><p>• Suggestions</p><p>• Trends</p><p><br></p><p>&nbsp;Notifications Page</p><p>• New requests</p><p>• Help updates</p><p>• Status changes</p><p><br></p><p>&nbsp;Profile Page</p><p><br></p><p>• User info</p><p>• Skills</p><p>• Contributions</p><p>• Trust score</p><p>• Badges</p><p>&nbsp;Admin Panel (Bonus)</p><p>• Manage requests</p><p>• Moderate content</p><p>• View analytics</p>",
+        "status": "inactive",
+        "submission_date": "2026-04-19T00:00:00.000Z",
+        "is_hackathon": true,
+        "topics": []
+      },
+      "submission": null
+    },
+    {
+      "assignment": {
+        "_id": "699a1ca65ec94d0014a11031",
+        "title": "Landing Page Assignment",
+        "links": [],
+        "images": [],
+        "description": "<p>You must share both the GitHub repository link and the live project link. Sharing both links is compulsory.</p><p>The assignment must be exactly the same as the provided Figma design. The project should be developed using HTML and CSS only.</p><p>The website must be fully responsive and properly implemented using media queries.</p>",
+        "status": "active",
+        "submission_date": "2026-03-06T18:59:59.999Z",
+        "is_hackathon": false,
+        "topics": [
+          {
+            "_id": "686bb27d3ce7cc5b6ae2c4fa",
+            "title": "HTML Text",
+            "description": "",
+            "course": "66c379b6c96ecb0015e4c5b1",
+            "course_module": "6800a96c57f21b2ea2d8ec9e",
+            "__v": 0,
+            "createdAt": "2025-07-07T11:41:49.343Z",
+            "updatedAt": "2026-05-05T10:32:30.748Z",
+            "sequence": 1
+          },
+          {
+            "_id": "69fb014fdff99312ed8d5fe6",
+            "title": "HTML Images",
+            "description": "",
+            "sequence": 2,
+            "course": "66c379b6c96ecb0015e4c5b1",
+            "course_module": "6800a96c57f21b2ea2d8ec9e",
+            "__v": 0,
+            "createdAt": "2026-05-06T08:52:31.230Z",
+            "updatedAt": "2026-05-06T08:52:31.230Z"
+          },
+          {
+            "_id": "69fb0164dff993bc248d6220",
+            "title": "HTML Forms",
+            "description": "",
+            "sequence": 4,
+            "course": "66c379b6c96ecb0015e4c5b1",
+            "course_module": "6800a96c57f21b2ea2d8ec9e",
+            "__v": 0,
+            "createdAt": "2026-05-06T08:52:52.820Z",
+            "updatedAt": "2026-05-06T08:52:52.820Z"
+          },
+          {
+            "_id": "686bba260fadd60015d25c28",
+            "title": "Font Awesome",
+            "description": "",
+            "course": "66c379b6c96ecb0015e4c5b1",
+            "course_module": "6800a96c57f21b2ea2d8ec9e",
+            "__v": 0,
+            "createdAt": "2025-07-07T12:14:30.073Z",
+            "updatedAt": "2026-05-05T10:29:21.816Z",
+            "sequence": 8
+          },
+          {
+            "_id": "686bb9d40fadd60015d25a4a",
+            "title": "Grid system",
+            "description": "",
+            "course": "66c379b6c96ecb0015e4c5b1",
+            "course_module": "6800a96c57f21b2ea2d8ec9e",
+            "__v": 0,
+            "createdAt": "2025-07-07T12:13:08.239Z",
+            "updatedAt": "2026-05-05T10:29:21.729Z",
+            "sequence": 7
+          },
+          {
+            "_id": "686bb9d30fadd60015d25a3d",
+            "title": "Flex box ",
+            "description": "",
+            "course": "66c379b6c96ecb0015e4c5b1",
+            "course_module": "6800a96c57f21b2ea2d8ec9e",
+            "__v": 0,
+            "createdAt": "2025-07-07T12:13:07.594Z",
+            "updatedAt": "2026-05-06T08:54:24.677Z",
+            "sequence": 16
+          },
+          {
+            "_id": "686bb9d20fadd60015d25a36",
+            "title": "Media queries",
+            "description": "",
+            "course": "66c379b6c96ecb0015e4c5b1",
+            "course_module": "6800a96c57f21b2ea2d8ec9e",
+            "__v": 0,
+            "createdAt": "2025-07-07T12:13:06.947Z",
+            "updatedAt": "2026-05-06T08:53:59.916Z",
+            "sequence": 14
+          },
+          {
+            "_id": "686bba280fadd60015d25c35",
+            "title": "Github",
+            "description": "",
+            "course": "66c379b6c96ecb0015e4c5b1",
+            "course_module": "6800a96c57f21b2ea2d8ec9e",
+            "__v": 0,
+            "createdAt": "2025-07-07T12:14:32.635Z",
+            "updatedAt": "2026-05-05T10:29:22.160Z",
+            "sequence": 12
+          },
+          {
+            "_id": "686bba290fadd60015d25c41",
+            "title": "Github Hosting ",
+            "description": "",
+            "course": "66c379b6c96ecb0015e4c5b1",
+            "course_module": "6800a96c57f21b2ea2d8ec9e",
+            "__v": 0,
+            "createdAt": "2025-07-07T12:14:33.283Z",
+            "updatedAt": "2026-05-05T10:29:22.244Z",
+            "sequence": 13
+          },
+          {
+            "_id": "686bb2883ce7cc5b6ae2c506",
+            "title": "Css3",
+            "description": "",
+            "course": "66c379b6c96ecb0015e4c5b1",
+            "course_module": "6800a96c57f21b2ea2d8ec9e",
+            "__v": 0,
+            "createdAt": "2025-07-07T11:42:00.387Z",
+            "updatedAt": "2026-05-06T08:53:10.730Z",
+            "sequence": 10
+          },
+          {
+            "_id": "686bba270fadd60015d25c2d",
+            "title": "Google Fonts ",
+            "description": "",
+            "course": "66c379b6c96ecb0015e4c5b1",
+            "course_module": "6800a96c57f21b2ea2d8ec9e",
+            "__v": 0,
+            "createdAt": "2025-07-07T12:14:31.362Z",
+            "updatedAt": "2026-05-05T10:29:21.989Z",
+            "sequence": 10
+          }
+        ]
+      },
+      "submission": {
+        "_id": "69a3c5a75ec94d001404ff19",
+        "link": "https://muiz.tech/assignment/marketing/",
+        "files": [],
+        "submitted_date": "2026-03-01T04:50:47.569Z",
+        "text": "https://github.com/mmuizahmed/assignments/tree/main/assignment/marketing",
+        "trainer_feedback": null,
+        "status": "approved"
+      }
+    },
+    {
+      "assignment": {
+        "_id": "698dd4be0b9d690014afa1bf",
+        "title": "Grid Assignment no 2",
+        "links": [],
+        "images": [
+          "https://res.cloudinary.com/saylani-welfare/image/upload/v1770902717/assignment/assignment/1770902716_0_a98ra2at.png"
+        ],
+        "description": "<p><span style=\"color: rgb(10, 10, 10);\">This assignment must be submitted with both the live project link and the GitHub repository link. Sharing both links is compulsory for evaluation. The project layout and design should be exactly the same as the picture provided</span></p>",
+        "status": "active",
+        "submission_date": "2026-02-16T18:59:59.999Z",
+        "is_hackathon": false,
+        "topics": [
+          {
+            "_id": "686bb9d40fadd60015d25a4a",
+            "title": "Grid system",
+            "description": "",
+            "course": "66c379b6c96ecb0015e4c5b1",
+            "course_module": "6800a96c57f21b2ea2d8ec9e",
+            "__v": 0,
+            "createdAt": "2025-07-07T12:13:08.239Z",
+            "updatedAt": "2026-05-05T10:29:21.729Z",
+            "sequence": 7
+          }
+        ]
+      },
+      "submission": {
+        "_id": "698e50fd0b9d690014b391aa",
+        "link": "https://muiz.is-a.dev/assignment/css/grid-t-1/",
+        "files": [],
+        "submitted_date": "2026-02-12T22:15:25.151Z",
+        "text": "https://github.com/mmuizahmed/assignments/tree/main/assignment/css/grid-t-1",
+        "trainer_feedback": null,
+        "status": "approved"
+      }
+    },
+    {
+      "assignment": {
+        "_id": "698dd47f0b9d690014afa00a",
+        "title": "Grid Assignment no 1",
+        "links": [],
+        "images": [
+          "https://res.cloudinary.com/saylani-welfare/image/upload/v1770902655/assignment/assignment/1770902654_0_pa5hosq7.png"
+        ],
+        "description": "<p>This assignment must be submitted with both the live project link and the GitHub repository link. Sharing both links is compulsory for evaluation. The project layout and design should be exactly the same as the picture provided</p>",
+        "status": "active",
+        "submission_date": "2026-02-16T18:59:59.999Z",
+        "is_hackathon": false,
+        "topics": [
+          {
+            "_id": "686bb9d40fadd60015d25a4a",
+            "title": "Grid system",
+            "description": "",
+            "course": "66c379b6c96ecb0015e4c5b1",
+            "course_module": "6800a96c57f21b2ea2d8ec9e",
+            "__v": 0,
+            "createdAt": "2025-07-07T12:13:08.239Z",
+            "updatedAt": "2026-05-05T10:29:21.729Z",
+            "sequence": 7
+          }
+        ]
+      },
+      "submission": {
+        "_id": "698e50e50b9d690014b39167",
+        "link": "https://muiz.is-a.dev/assignment/css/grid-t-2/",
+        "files": [],
+        "submitted_date": "2026-02-12T22:15:01.002Z",
+        "text": "https://github.com/mmuizahmed/assignments/tree/main/assignment/css/grid-t-2",
+        "trainer_feedback": null,
+        "status": "approved"
+      }
+    },
+    {
+      "assignment": {
+        "_id": "69721bb9d35d1600151559ec",
+        "title": "ÇSs Figma website",
+        "links": [],
+        "images": [],
+        "description": "<p>Create a website using given figma </p>",
+        "status": "active",
+        "submission_date": "2026-01-23T18:59:59.999Z",
+        "is_hackathon": false,
+        "topics": []
+      },
+      "submission": {
+        "_id": "6975380c1a8e890a141d26fe",
+        "link": "https://muiz.is-a.dev/assignment/html/ecommerce/",
+        "files": [],
+        "submitted_date": "2026-01-24T21:22:19.992Z",
+        "text": "https://github.com/mmuizahmed/assignments/tree/main/assignment/html/ecommerce",
+        "trainer_feedback": null,
+        "status": "late_submitted"
+      }
+    },
+    {
+      "assignment": {
+        "_id": "6951650a7057720015d213a8",
+        "title": "HTML - Registration Form ",
+        "links": [],
+        "images": [],
+        "description": "<p>Create a registration form using all HTML semantic tags that you learned in the class</p>",
+        "status": "active",
+        "submission_date": "2025-12-29T18:59:59.999Z",
+        "is_hackathon": false,
+        "topics": []
+      },
+      "submission": {
+        "_id": "6952ab017ba3350015b7847c",
+        "link": "https://muiz.is-a.dev/assignment/html/forms/",
+        "files": [
+          "https://res.cloudinary.com/saylani-welfare/image/upload/v1767025407/assignment/assignment/1767025406_0_meah31cw.jpg"
+        ],
+        "submitted_date": "2025-12-29T16:23:29.095Z",
+        "text": "https://github.com/mmuizahmed/assignments/tree/main/assignment/html/forms",
+        "trainer_feedback": null,
+        "status": "submitted"
+      }
+    },
+    {
+      "assignment": {
+        "_id": "693fddd2fdf91800158880aa",
+        "title": "HTML - Links with multiple pages ",
+        "links": [],
+        "images": [],
+        "description": "<p>create a repo in which have multiple pages link code and submit hosted link </p>",
+        "status": "active",
+        "submission_date": "2025-12-17T18:59:59.999Z",
+        "is_hackathon": false,
+        "topics": []
+      },
+      "submission": {
+        "_id": "69409e88ef0299001579cb2b",
+        "link": "https://muiz.is-a.dev/assignment/html/links/",
+        "files": [],
+        "submitted_date": "2025-12-15T23:49:28.602Z",
+        "text": "https://github.com/mmuizahmed/assignments/tree/main/assignment/html/links",
+        "trainer_feedback": null,
+        "status": "submitted"
+      }
+    }
+  ],
+  "totals": {
+    "total_assignments": 16,
+    "total_submissions": 13,
+    "approved": 7,
+    "not_approved": 6
+  }
+}

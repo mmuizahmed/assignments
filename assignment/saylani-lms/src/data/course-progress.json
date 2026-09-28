@@ -1,0 +1,1477 @@
+{
+  "status": 200,
+  "course_completion": 70,
+  "total_topics": 81,
+  "completed_topics": 57,
+  "next_module": {
+    "module_id": "6800a99e57f21b2ea2d8eccf",
+    "sequence": 2,
+    "module_name": "Front-End Development ",
+    "module_description": "Unassigned Module",
+    "topics": [
+      {
+        "_id": "686bbb2a3b75630015cff2a8",
+        "title": "JavaScript Introduction",
+        "description": "",
+        "status": "completed",
+        "course_progress_id": "699a1d6a5ec94d0014a11147",
+        "completed_at": "2026-02-21T21:02:34.367Z",
+        "assignments": [
+          {
+            "_id": "6a501b3504b80d390719c527",
+            "title": "JavaScript Assignment – 25 Questions"
+          }
+        ]
+      },
+      {
+        "_id": "686bbb2b0fadd60015d2653e",
+        "title": "JavaScript Chapter 1 - 10",
+        "description": "",
+        "status": "completed",
+        "course_progress_id": "69a6c1a15ec94d0014212cc9",
+        "completed_at": "2026-03-03T11:10:25.309Z",
+        "assignments": [
+          {
+            "_id": "6a501b3504b80d390719c527",
+            "title": "JavaScript Assignment – 25 Questions"
+          },
+          {
+            "_id": "6a1245a09a946a29a5e74aef",
+            "title": "Budgetting App"
+          }
+        ]
+      },
+      {
+        "_id": "686bbb2b0fadd60015d26542",
+        "title": "JavaScript Chapter 11 - 20",
+        "description": "",
+        "status": "completed",
+        "course_progress_id": "69d36204cf2110666a38a250",
+        "completed_at": "2026-04-06T07:34:28.448Z",
+        "assignments": [
+          {
+            "_id": "6a501b3504b80d390719c527",
+            "title": "JavaScript Assignment – 25 Questions"
+          },
+          {
+            "_id": "6a1245a09a946a29a5e74aef",
+            "title": "Budgetting App"
+          }
+        ]
+      },
+      {
+        "_id": "686bbb2c3b75630015cff2c9",
+        "title": "JavaScript Quiz 1",
+        "description": "",
+        "status": "completed",
+        "course_progress_id": "69e5474c58184f773280eed5",
+        "completed_at": "2026-04-19T21:21:16.775Z",
+        "assignments": []
+      },
+      {
+        "_id": "686bbb2d3b75630015cff2cf",
+        "title": "JavaScript Chapter 21 - 30",
+        "description": "",
+        "status": "completed",
+        "course_progress_id": "69f7460ed0878c25d3f2bbee",
+        "completed_at": "2026-05-03T12:56:46.809Z",
+        "assignments": [
+          {
+            "_id": "6a501b3504b80d390719c527",
+            "title": "JavaScript Assignment – 25 Questions"
+          },
+          {
+            "_id": "6a1245a09a946a29a5e74aef",
+            "title": "Budgetting App"
+          }
+        ]
+      },
+      {
+        "_id": "68a4384ea6bfe30015e180da",
+        "title": "JavaScript Chapter 31 - 40",
+        "description": "",
+        "status": "completed",
+        "course_progress_id": "69f85f4fd0878c7d51fd2d6d",
+        "completed_at": "2026-05-04T08:56:47.138Z",
+        "assignments": [
+          {
+            "_id": "6a501b3504b80d390719c527",
+            "title": "JavaScript Assignment – 25 Questions"
+          },
+          {
+            "_id": "6a1245a09a946a29a5e74aef",
+            "title": "Budgetting App"
+          }
+        ]
+      },
+      {
+        "_id": "68a43858a06203001553acfc",
+        "title": "JavaScript Quiz 2",
+        "description": "",
+        "status": "completed",
+        "course_progress_id": "6a0ac7618d07483491c70f4e",
+        "completed_at": "2026-05-18T08:01:37.173Z",
+        "assignments": []
+      },
+      {
+        "_id": "68a43865b3fef1001513760b",
+        "title": " JavaScript Chapter 41 - 50",
+        "description": "",
+        "status": "completed",
+        "course_progress_id": "6a01a99680b942b00b47f05a",
+        "completed_at": "2026-05-11T10:04:06.324Z",
+        "assignments": [
+          {
+            "_id": "6a501b3504b80d390719c527",
+            "title": "JavaScript Assignment – 25 Questions"
+          },
+          {
+            "_id": "6a1245a09a946a29a5e74aef",
+            "title": "Budgetting App"
+          },
+          {
+            "_id": "6a024cb480b94258d856d5b5",
+            "title": "Amazon Clone"
+          }
+        ]
+      },
+      {
+        "_id": "68a4386fa06203001553ad09",
+        "title": "JavaScript Chapter 51 - 60",
+        "description": "",
+        "status": "completed",
+        "course_progress_id": "6a0d896c8979c5f092733775",
+        "completed_at": "2026-05-20T10:14:04.766Z",
+        "assignments": [
+          {
+            "_id": "6a501b3504b80d390719c527",
+            "title": "JavaScript Assignment – 25 Questions"
+          },
+          {
+            "_id": "6a1245a09a946a29a5e74aef",
+            "title": "Budgetting App"
+          }
+        ]
+      },
+      {
+        "_id": "68a4387ab3fef10015137611",
+        "title": "JavaScript Quiz 3",
+        "description": "",
+        "status": "completed",
+        "course_progress_id": "6a1ff2d17ffc0420b0984b02",
+        "completed_at": "2026-06-03T09:24:33.260Z",
+        "assignments": []
+      },
+      {
+        "_id": "68a438b4b3fef10015137634",
+        "title": "JavaScript Book Completed",
+        "description": "",
+        "status": "completed",
+        "course_progress_id": "6a2b3a9f4333931b4523d8e8",
+        "completed_at": "2026-06-11T22:45:51.865Z",
+        "assignments": [
+          {
+            "_id": "6a77b5c8c1041a41f3edc68b",
+            "title": "Furniture E-Commerce Website"
+          },
+          {
+            "_id": "6a501b3504b80d390719c527",
+            "title": "JavaScript Assignment – 25 Questions"
+          }
+        ]
+      },
+      {
+        "_id": "68a438c2a06203001553ad34",
+        "title": "JavaScript Quiz 4",
+        "description": "",
+        "status": "completed",
+        "course_progress_id": "6a402f4b368de0fac3c4adf7",
+        "completed_at": "2026-06-27T20:15:07.162Z",
+        "assignments": []
+      },
+      {
+        "_id": "68a43924a06203001553ad66",
+        "title": "Var vs Let vs Const",
+        "description": "",
+        "status": "completed",
+        "course_progress_id": "6a2bdccf4333938c74287e69",
+        "completed_at": "2026-06-12T10:17:51.258Z",
+        "assignments": []
+      },
+      {
+        "_id": "68a43932b3fef10015137671",
+        "title": "Template Literals",
+        "description": "",
+        "status": "completed",
+        "course_progress_id": "6a368f64cd14837f1e5af277",
+        "completed_at": "2026-06-20T13:02:28.496Z",
+        "assignments": []
+      },
+      {
+        "_id": "68a4396ba06203001553ad93",
+        "title": "Arrow Functions",
+        "description": "",
+        "status": "completed",
+        "course_progress_id": "6a2fbe290dff4881a5b8173b",
+        "completed_at": "2026-06-15T08:56:09.591Z",
+        "assignments": []
+      },
+      {
+        "_id": "68a43991a6bfe30015e1819f",
+        "title": "Iterators & For..of",
+        "description": "",
+        "status": "completed",
+        "course_progress_id": "6a5d4211593e9a9c1b3feaab",
+        "completed_at": "2026-07-19T21:30:57.686Z",
+        "assignments": []
+      },
+      {
+        "_id": "68a439a7a06203001553adc0",
+        "title": "Array Advance Methods",
+        "description": "<p>Map</p><p>Filter</p><p>ForEach</p><p>Find</p><p>Reduce</p><p>Some</p><p>Every</p><p>Flat</p>",
+        "status": "completed",
+        "course_progress_id": "6a5d420e593e9a4a153feaa5",
+        "completed_at": "2026-07-19T21:30:54.101Z",
+        "assignments": []
+      },
+      {
+        "_id": "68a43c82a06203001553afe7",
+        "title": "JavaScript Behind the Scenes",
+        "description": "<p><br></p><p><span style=\"color: oklch(0.4809 0.0371 279.08);\">Execution Contexts and The Call Stack</span></p><p><span style=\"color: oklch(0.4809 0.0371 279.08);\">Scope and The Scope Chain</span></p><p><span style=\"color: oklch(0.4809 0.0371 279.08);\">Scoping in Practice</span></p><p><span style=\"color: oklch(0.4809 0.0371 279.08);\">Variable Environment: Hoisting and The TDZ</span></p><p><span style=\"color: oklch(0.4809 0.0371 279.08);\">Hoisting and TDZ in Practice</span></p><p><span style=\"color: oklch(0.4809 0.0371 279.08);\">The this Keyword</span></p><p><span style=\"color: oklch(0.4809 0.0371 279.08);\">The this Keyword in Practice</span></p><p><span style=\"color: oklch(0.4809 0.0371 279.08);\">Regular Functions vs. Arrow Functions</span></p><p><span style=\"color: oklch(0.4809 0.0371 279.08);\">Memory Management: Primitives vs. Objects</span></p><p><span style=\"color: oklch(0.4809 0.0371 279.08);\">Object References in Practice (Shallow vs. Deep Copies)</span></p><p><br></p>",
+        "status": "completed",
+        "course_progress_id": "6a7b494de40476482ee64f96",
+        "completed_at": "2026-08-11T16:09:49.804Z",
+        "assignments": []
+      },
+      {
+        "_id": "68a43ca5a6bfe30015e18388",
+        "title": "Destructuring, Rest & Spread Operators",
+        "description": "",
+        "status": "completed",
+        "course_progress_id": "6a328d7cddd8b2be80166435",
+        "completed_at": "2026-06-17T12:05:16.415Z",
+        "assignments": []
+      },
+      {
+        "_id": "68a43cd3a6bfe30015e1839e",
+        "title": "SET, MAP",
+        "description": "",
+        "status": "completed",
+        "course_progress_id": "6a53a8c304b80d177d2f3032",
+        "completed_at": "2026-07-12T14:46:27.972Z",
+        "assignments": []
+      },
+      {
+        "_id": "68a43cf0a6bfe30015e183a2",
+        "title": "Default Parameters",
+        "description": "",
+        "status": "completed",
+        "course_progress_id": "6a328d7cddd8b26abc166437",
+        "completed_at": "2026-06-17T12:05:16.644Z",
+        "assignments": []
+      },
+      {
+        "_id": "68a43d00b3fef10015137981",
+        "title": "First-Class and Higher-Order Functions",
+        "description": "",
+        "status": "completed",
+        "course_progress_id": "6a9c9b59348fa97678c7b743",
+        "completed_at": "2026-09-05T22:44:41.419Z",
+        "assignments": []
+      },
+      {
+        "_id": "68a43d0ea6bfe30015e183c8",
+        "title": "CallBack Functions",
+        "description": "",
+        "status": "completed",
+        "course_progress_id": "6a49137fc52e07e4f8b305ca",
+        "completed_at": "2026-07-04T14:06:55.836Z",
+        "assignments": []
+      },
+      {
+        "_id": "68a43d1fb3fef100151379c6",
+        "title": "Call, Apply, Bind",
+        "description": "",
+        "status": "pending",
+        "course_progress_id": null,
+        "completed_at": null,
+        "assignments": []
+      },
+      {
+        "_id": "68a43d2aa06203001553b0a1",
+        "title": "Closures",
+        "description": "",
+        "status": "completed",
+        "course_progress_id": "6a53a8c904b80d48b62f3041",
+        "completed_at": "2026-07-12T14:46:33.342Z",
+        "assignments": []
+      },
+      {
+        "_id": "68a43e1ea06203001553b1cd",
+        "title": "OOP with JavaScript",
+        "description": "<p>What is OOP?</p><p>OOP in JavaScript</p><p>Contructor</p><p>new Operator</p><p>Prototypes</p><p>ES6 Classes</p><p>Setters Getters</p><p><br></p>",
+        "status": "completed",
+        "course_progress_id": "6a4b7b084d60fe49c5a918bb",
+        "completed_at": "2026-07-06T09:53:12.841Z",
+        "assignments": []
+      },
+      {
+        "_id": "68a43e43a6bfe30015e18529",
+        "title": "Asynchronous JavaScript",
+        "description": "<p>CallBack Hell</p><p>Promises</p><p>Async Await</p><p>Event Loop</p>",
+        "status": "completed",
+        "course_progress_id": "6aaa1ad02f15e7259c0686fa",
+        "completed_at": "2026-09-16T04:28:00.868Z",
+        "assignments": []
+      },
+      {
+        "_id": "68a43ee8a06203001553b2ce",
+        "title": "TypeScript",
+        "description": "<ul><li class=\"ql-indent-1\">TS Compiler</li><li class=\"ql-indent-1\">Type Annotations</li><li class=\"ql-indent-1\">Interfaces</li><li class=\"ql-indent-1\">Classes</li><li class=\"ql-indent-1\">Generics</li><li class=\"ql-indent-1\">Enums</li><li class=\"ql-indent-1\">Type Inference</li><li class=\"ql-indent-1\">Union and Intersection Types</li><li class=\"ql-indent-1\">Type Guards</li><li class=\"ql-indent-1\">Decorators</li></ul>",
+        "status": "completed",
+        "course_progress_id": "6a68d46dd8415b4fe7d0048e",
+        "completed_at": "2026-07-28T16:10:21.826Z",
+        "assignments": []
+      },
+      {
+        "_id": "68a43f04a6bfe30015e185b1",
+        "title": "Advance Github",
+        "description": "<ul><li>Branches</li><li>PR</li><li>PR review</li><li>Merge</li><li>Rebase</li><li>Cherry Pick</li></ul><p><br></p>",
+        "status": "pending",
+        "course_progress_id": null,
+        "completed_at": null,
+        "assignments": []
+      },
+      {
+        "_id": "68a43f0ea6bfe30015e185c1",
+        "title": "GSAP Animations",
+        "description": "",
+        "status": "pending",
+        "course_progress_id": null,
+        "completed_at": null,
+        "assignments": []
+      },
+      {
+        "_id": "68a43f2bb3fef10015137bfd",
+        "title": "Supabase or Firebase",
+        "description": "<p><br></p><ul><li>Authentication</li><li class=\"ql-indent-2\">Email</li><li class=\"ql-indent-1\">Google</li><li class=\"ql-indent-1\">Database</li><li class=\"ql-indent-1\">Storage</li></ul><p><br></p>",
+        "status": "pending",
+        "course_progress_id": null,
+        "completed_at": null,
+        "assignments": []
+      }
+    ],
+    "total_topics": 31,
+    "completed_topics": 27,
+    "completion_percentage": 87
+  },
+  "modules": [
+    {
+      "module_id": "6800a96c57f21b2ea2d8ec9e",
+      "sequence": 1,
+      "module_name": "Web Designing",
+      "module_description": "Unassigned Module",
+      "topics": [
+        {
+          "_id": "686bb27d3ce7cc5b6ae2c4fa",
+          "title": "HTML Text",
+          "description": "",
+          "status": "completed",
+          "course_progress_id": "694023681e92370015faafb2",
+          "completed_at": "2025-12-15T15:04:08.043Z",
+          "assignments": [
+            {
+              "_id": "6a77b5c8c1041a41f3edc68b",
+              "title": "Furniture E-Commerce Website"
+            },
+            {
+              "_id": "6a024cb480b94258d856d5b5",
+              "title": "Amazon Clone"
+            },
+            {
+              "_id": "69e5471258184f726f80ee73",
+              "title": "NASA Landing Page"
+            },
+            {
+              "_id": "699a1ca65ec94d0014a11031",
+              "title": "Landing Page Assignment"
+            }
+          ]
+        },
+        {
+          "_id": "69fb014fdff99312ed8d5fe6",
+          "title": "HTML Images",
+          "description": "",
+          "status": "completed",
+          "course_progress_id": "69fb0eb8dff99321de8ef5a9",
+          "completed_at": "2026-05-06T09:49:44.733Z",
+          "assignments": [
+            {
+              "_id": "6a77b5c8c1041a41f3edc68b",
+              "title": "Furniture E-Commerce Website"
+            },
+            {
+              "_id": "6a024cb480b94258d856d5b5",
+              "title": "Amazon Clone"
+            },
+            {
+              "_id": "69e5471258184f726f80ee73",
+              "title": "NASA Landing Page"
+            },
+            {
+              "_id": "699a1ca65ec94d0014a11031",
+              "title": "Landing Page Assignment"
+            }
+          ]
+        },
+        {
+          "_id": "69fb0158dff9932f008d6120",
+          "title": "HTML Table",
+          "description": "",
+          "status": "completed",
+          "course_progress_id": "69fb0eb2dff9936e2e8ef554",
+          "completed_at": "2026-05-06T09:49:38.888Z",
+          "assignments": [
+            {
+              "_id": "6a1245a09a946a29a5e74aef",
+              "title": "Budgetting App"
+            }
+          ]
+        },
+        {
+          "_id": "69fb0164dff993bc248d6220",
+          "title": "HTML Forms",
+          "description": "",
+          "status": "completed",
+          "course_progress_id": "69fb0eb3dff99347818ef567",
+          "completed_at": "2026-05-06T09:49:39.454Z",
+          "assignments": [
+            {
+              "_id": "6a1245a09a946a29a5e74aef",
+              "title": "Budgetting App"
+            },
+            {
+              "_id": "699a1ca65ec94d0014a11031",
+              "title": "Landing Page Assignment"
+            }
+          ]
+        },
+        {
+          "_id": "69fb01a1dff993cf148d68bf",
+          "title": "HTML Audio/Video Tags",
+          "description": "",
+          "status": "completed",
+          "course_progress_id": "69fb0ebfdff99343cb8ef624",
+          "completed_at": "2026-05-06T09:49:51.037Z",
+          "assignments": [
+            {
+              "_id": "69e5471258184f726f80ee73",
+              "title": "NASA Landing Page"
+            }
+          ]
+        },
+        {
+          "_id": "69fb01b6dff993b31d8d6bd9",
+          "title": "HTML Links",
+          "description": "",
+          "status": "completed",
+          "course_progress_id": "69fb0ea7dff99326518ef248",
+          "completed_at": "2026-05-06T09:49:27.273Z",
+          "assignments": [
+            {
+              "_id": "6a024cb480b94258d856d5b5",
+              "title": "Amazon Clone"
+            }
+          ]
+        },
+        {
+          "_id": "686bb9d40fadd60015d25a4a",
+          "title": "Grid system",
+          "description": "",
+          "status": "completed",
+          "course_progress_id": "698dd4d70b9d690014afa3ab",
+          "completed_at": "2026-02-12T13:25:43.179Z",
+          "assignments": [
+            {
+              "_id": "6a024cb480b94258d856d5b5",
+              "title": "Amazon Clone"
+            },
+            {
+              "_id": "699a1ca65ec94d0014a11031",
+              "title": "Landing Page Assignment"
+            },
+            {
+              "_id": "698dd4be0b9d690014afa1bf",
+              "title": "Grid Assignment no 2"
+            },
+            {
+              "_id": "698dd47f0b9d690014afa00a",
+              "title": "Grid Assignment no 1"
+            }
+          ]
+        },
+        {
+          "_id": "686bba260fadd60015d25c28",
+          "title": "Font Awesome",
+          "description": "",
+          "status": "completed",
+          "course_progress_id": "698f76eb0b9d690014bc89bf",
+          "completed_at": "2026-02-13T19:09:31.455Z",
+          "assignments": [
+            {
+              "_id": "6a1245a09a946a29a5e74aef",
+              "title": "Budgetting App"
+            },
+            {
+              "_id": "6a024cb480b94258d856d5b5",
+              "title": "Amazon Clone"
+            },
+            {
+              "_id": "699a1ca65ec94d0014a11031",
+              "title": "Landing Page Assignment"
+            }
+          ]
+        },
+        {
+          "_id": "686bba263b75630015cfe9f2",
+          "title": "Bootstrap",
+          "description": "",
+          "status": "completed",
+          "course_progress_id": "6992fe1b25b3ec00136d9d56",
+          "completed_at": "2026-02-16T11:23:07.380Z",
+          "assignments": [
+            {
+              "_id": "6a024cb480b94258d856d5b5",
+              "title": "Amazon Clone"
+            }
+          ]
+        },
+        {
+          "_id": "686bb2883ce7cc5b6ae2c506",
+          "title": "Css3",
+          "description": "",
+          "status": "completed",
+          "course_progress_id": "6940236def029900157811d6",
+          "completed_at": "2025-12-15T15:04:13.826Z",
+          "assignments": [
+            {
+              "_id": "6a77b5c8c1041a41f3edc68b",
+              "title": "Furniture E-Commerce Website"
+            },
+            {
+              "_id": "6a024cb480b94258d856d5b5",
+              "title": "Amazon Clone"
+            },
+            {
+              "_id": "69e5471258184f726f80ee73",
+              "title": "NASA Landing Page"
+            },
+            {
+              "_id": "699a1ca65ec94d0014a11031",
+              "title": "Landing Page Assignment"
+            }
+          ]
+        },
+        {
+          "_id": "686bba270fadd60015d25c2d",
+          "title": "Google Fonts ",
+          "description": "",
+          "status": "completed",
+          "course_progress_id": "698dd64d0b9d690014afb50c",
+          "completed_at": "2026-02-12T13:31:57.567Z",
+          "assignments": [
+            {
+              "_id": "6a024cb480b94258d856d5b5",
+              "title": "Amazon Clone"
+            },
+            {
+              "_id": "69e5471258184f726f80ee73",
+              "title": "NASA Landing Page"
+            },
+            {
+              "_id": "699a1ca65ec94d0014a11031",
+              "title": "Landing Page Assignment"
+            }
+          ]
+        },
+        {
+          "_id": "686bb98a0fadd60015d258b7",
+          "title": "CSS Variables",
+          "description": "",
+          "status": "completed",
+          "course_progress_id": "698dd5660b9d690014afab1c",
+          "completed_at": "2026-02-12T13:28:06.678Z",
+          "assignments": []
+        },
+        {
+          "_id": "686bba273b75630015cfe9f5",
+          "title": "Netlify Hosting",
+          "description": "",
+          "status": "completed",
+          "course_progress_id": "698c36793c74da0453ae80c3",
+          "completed_at": "2026-02-11T07:57:45.847Z",
+          "assignments": []
+        },
+        {
+          "_id": "686bba280fadd60015d25c35",
+          "title": "Github",
+          "description": "",
+          "status": "completed",
+          "course_progress_id": "698c36683c74da1008ae809f",
+          "completed_at": "2026-02-11T07:57:28.335Z",
+          "assignments": [
+            {
+              "_id": "6a77b5c8c1041a41f3edc68b",
+              "title": "Furniture E-Commerce Website"
+            },
+            {
+              "_id": "6a1245a09a946a29a5e74aef",
+              "title": "Budgetting App"
+            },
+            {
+              "_id": "6a024cb480b94258d856d5b5",
+              "title": "Amazon Clone"
+            },
+            {
+              "_id": "69e5471258184f726f80ee73",
+              "title": "NASA Landing Page"
+            },
+            {
+              "_id": "699a1ca65ec94d0014a11031",
+              "title": "Landing Page Assignment"
+            }
+          ]
+        },
+        {
+          "_id": "686bba290fadd60015d25c41",
+          "title": "Github Hosting ",
+          "description": "",
+          "status": "completed",
+          "course_progress_id": "698c36773c74da3d74ae80bd",
+          "completed_at": "2026-02-11T07:57:43.113Z",
+          "assignments": [
+            {
+              "_id": "6a1245a09a946a29a5e74aef",
+              "title": "Budgetting App"
+            },
+            {
+              "_id": "6a024cb480b94258d856d5b5",
+              "title": "Amazon Clone"
+            },
+            {
+              "_id": "69e5471258184f726f80ee73",
+              "title": "NASA Landing Page"
+            },
+            {
+              "_id": "699a1ca65ec94d0014a11031",
+              "title": "Landing Page Assignment"
+            }
+          ]
+        },
+        {
+          "_id": "686bb9d23b75630015cfe7c7",
+          "title": "CSS Animations",
+          "description": "",
+          "status": "completed",
+          "course_progress_id": "698f76f00b9d690014bc89c4",
+          "completed_at": "2026-02-13T19:09:36.152Z",
+          "assignments": [
+            {
+              "_id": "6a024cb480b94258d856d5b5",
+              "title": "Amazon Clone"
+            }
+          ]
+        },
+        {
+          "_id": "686bb9d20fadd60015d25a36",
+          "title": "Media queries",
+          "description": "",
+          "status": "completed",
+          "course_progress_id": "6992fe1725b3ec00136d9d4a",
+          "completed_at": "2026-02-16T11:23:03.399Z",
+          "assignments": [
+            {
+              "_id": "6a024cb480b94258d856d5b5",
+              "title": "Amazon Clone"
+            },
+            {
+              "_id": "69e5471258184f726f80ee73",
+              "title": "NASA Landing Page"
+            },
+            {
+              "_id": "699a1ca65ec94d0014a11031",
+              "title": "Landing Page Assignment"
+            }
+          ]
+        },
+        {
+          "_id": "686bba290fadd60015d25c4a",
+          "title": "Surge hosting ",
+          "description": "",
+          "status": "completed",
+          "course_progress_id": "698c367b3c74da4340ae80d8",
+          "completed_at": "2026-02-11T07:57:47.698Z",
+          "assignments": [
+            {
+              "_id": "6a024cb480b94258d856d5b5",
+              "title": "Amazon Clone"
+            }
+          ]
+        },
+        {
+          "_id": "686bba2a0fadd60015d25c4e",
+          "title": "Domain & Hosing Subscription (Deployment)",
+          "description": "",
+          "status": "completed",
+          "course_progress_id": "699580f31db73f001460ea8a",
+          "completed_at": "2026-02-18T09:05:55.712Z",
+          "assignments": []
+        },
+        {
+          "_id": "686bb9d30fadd60015d25a3d",
+          "title": "Flex box ",
+          "description": "",
+          "status": "completed",
+          "course_progress_id": "69859f3ef0d03fdeddfe4dbf",
+          "completed_at": "2026-02-06T07:58:54.282Z",
+          "assignments": [
+            {
+              "_id": "6a1245a09a946a29a5e74aef",
+              "title": "Budgetting App"
+            },
+            {
+              "_id": "6a024cb480b94258d856d5b5",
+              "title": "Amazon Clone"
+            },
+            {
+              "_id": "69e5471258184f726f80ee73",
+              "title": "NASA Landing Page"
+            },
+            {
+              "_id": "699a1ca65ec94d0014a11031",
+              "title": "Landing Page Assignment"
+            }
+          ]
+        }
+      ],
+      "total_topics": 20,
+      "completed_topics": 20,
+      "completion_percentage": 100,
+      "_id": "6800a96c57f21b2ea2d8ec9e",
+      "title": "Web Designing"
+    },
+    {
+      "module_id": "6800a99e57f21b2ea2d8eccf",
+      "sequence": 2,
+      "module_name": "Front-End Development ",
+      "module_description": "Unassigned Module",
+      "topics": [
+        {
+          "_id": "686bbb2a3b75630015cff2a8",
+          "title": "JavaScript Introduction",
+          "description": "",
+          "status": "completed",
+          "course_progress_id": "699a1d6a5ec94d0014a11147",
+          "completed_at": "2026-02-21T21:02:34.367Z",
+          "assignments": [
+            {
+              "_id": "6a501b3504b80d390719c527",
+              "title": "JavaScript Assignment – 25 Questions"
+            }
+          ]
+        },
+        {
+          "_id": "686bbb2b0fadd60015d2653e",
+          "title": "JavaScript Chapter 1 - 10",
+          "description": "",
+          "status": "completed",
+          "course_progress_id": "69a6c1a15ec94d0014212cc9",
+          "completed_at": "2026-03-03T11:10:25.309Z",
+          "assignments": [
+            {
+              "_id": "6a501b3504b80d390719c527",
+              "title": "JavaScript Assignment – 25 Questions"
+            },
+            {
+              "_id": "6a1245a09a946a29a5e74aef",
+              "title": "Budgetting App"
+            }
+          ]
+        },
+        {
+          "_id": "686bbb2b0fadd60015d26542",
+          "title": "JavaScript Chapter 11 - 20",
+          "description": "",
+          "status": "completed",
+          "course_progress_id": "69d36204cf2110666a38a250",
+          "completed_at": "2026-04-06T07:34:28.448Z",
+          "assignments": [
+            {
+              "_id": "6a501b3504b80d390719c527",
+              "title": "JavaScript Assignment – 25 Questions"
+            },
+            {
+              "_id": "6a1245a09a946a29a5e74aef",
+              "title": "Budgetting App"
+            }
+          ]
+        },
+        {
+          "_id": "686bbb2c3b75630015cff2c9",
+          "title": "JavaScript Quiz 1",
+          "description": "",
+          "status": "completed",
+          "course_progress_id": "69e5474c58184f773280eed5",
+          "completed_at": "2026-04-19T21:21:16.775Z",
+          "assignments": []
+        },
+        {
+          "_id": "686bbb2d3b75630015cff2cf",
+          "title": "JavaScript Chapter 21 - 30",
+          "description": "",
+          "status": "completed",
+          "course_progress_id": "69f7460ed0878c25d3f2bbee",
+          "completed_at": "2026-05-03T12:56:46.809Z",
+          "assignments": [
+            {
+              "_id": "6a501b3504b80d390719c527",
+              "title": "JavaScript Assignment – 25 Questions"
+            },
+            {
+              "_id": "6a1245a09a946a29a5e74aef",
+              "title": "Budgetting App"
+            }
+          ]
+        },
+        {
+          "_id": "68a4384ea6bfe30015e180da",
+          "title": "JavaScript Chapter 31 - 40",
+          "description": "",
+          "status": "completed",
+          "course_progress_id": "69f85f4fd0878c7d51fd2d6d",
+          "completed_at": "2026-05-04T08:56:47.138Z",
+          "assignments": [
+            {
+              "_id": "6a501b3504b80d390719c527",
+              "title": "JavaScript Assignment – 25 Questions"
+            },
+            {
+              "_id": "6a1245a09a946a29a5e74aef",
+              "title": "Budgetting App"
+            }
+          ]
+        },
+        {
+          "_id": "68a43858a06203001553acfc",
+          "title": "JavaScript Quiz 2",
+          "description": "",
+          "status": "completed",
+          "course_progress_id": "6a0ac7618d07483491c70f4e",
+          "completed_at": "2026-05-18T08:01:37.173Z",
+          "assignments": []
+        },
+        {
+          "_id": "68a43865b3fef1001513760b",
+          "title": " JavaScript Chapter 41 - 50",
+          "description": "",
+          "status": "completed",
+          "course_progress_id": "6a01a99680b942b00b47f05a",
+          "completed_at": "2026-05-11T10:04:06.324Z",
+          "assignments": [
+            {
+              "_id": "6a501b3504b80d390719c527",
+              "title": "JavaScript Assignment – 25 Questions"
+            },
+            {
+              "_id": "6a1245a09a946a29a5e74aef",
+              "title": "Budgetting App"
+            },
+            {
+              "_id": "6a024cb480b94258d856d5b5",
+              "title": "Amazon Clone"
+            }
+          ]
+        },
+        {
+          "_id": "68a4386fa06203001553ad09",
+          "title": "JavaScript Chapter 51 - 60",
+          "description": "",
+          "status": "completed",
+          "course_progress_id": "6a0d896c8979c5f092733775",
+          "completed_at": "2026-05-20T10:14:04.766Z",
+          "assignments": [
+            {
+              "_id": "6a501b3504b80d390719c527",
+              "title": "JavaScript Assignment – 25 Questions"
+            },
+            {
+              "_id": "6a1245a09a946a29a5e74aef",
+              "title": "Budgetting App"
+            }
+          ]
+        },
+        {
+          "_id": "68a4387ab3fef10015137611",
+          "title": "JavaScript Quiz 3",
+          "description": "",
+          "status": "completed",
+          "course_progress_id": "6a1ff2d17ffc0420b0984b02",
+          "completed_at": "2026-06-03T09:24:33.260Z",
+          "assignments": []
+        },
+        {
+          "_id": "68a438b4b3fef10015137634",
+          "title": "JavaScript Book Completed",
+          "description": "",
+          "status": "completed",
+          "course_progress_id": "6a2b3a9f4333931b4523d8e8",
+          "completed_at": "2026-06-11T22:45:51.865Z",
+          "assignments": [
+            {
+              "_id": "6a77b5c8c1041a41f3edc68b",
+              "title": "Furniture E-Commerce Website"
+            },
+            {
+              "_id": "6a501b3504b80d390719c527",
+              "title": "JavaScript Assignment – 25 Questions"
+            }
+          ]
+        },
+        {
+          "_id": "68a438c2a06203001553ad34",
+          "title": "JavaScript Quiz 4",
+          "description": "",
+          "status": "completed",
+          "course_progress_id": "6a402f4b368de0fac3c4adf7",
+          "completed_at": "2026-06-27T20:15:07.162Z",
+          "assignments": []
+        },
+        {
+          "_id": "68a43924a06203001553ad66",
+          "title": "Var vs Let vs Const",
+          "description": "",
+          "status": "completed",
+          "course_progress_id": "6a2bdccf4333938c74287e69",
+          "completed_at": "2026-06-12T10:17:51.258Z",
+          "assignments": []
+        },
+        {
+          "_id": "68a43932b3fef10015137671",
+          "title": "Template Literals",
+          "description": "",
+          "status": "completed",
+          "course_progress_id": "6a368f64cd14837f1e5af277",
+          "completed_at": "2026-06-20T13:02:28.496Z",
+          "assignments": []
+        },
+        {
+          "_id": "68a4396ba06203001553ad93",
+          "title": "Arrow Functions",
+          "description": "",
+          "status": "completed",
+          "course_progress_id": "6a2fbe290dff4881a5b8173b",
+          "completed_at": "2026-06-15T08:56:09.591Z",
+          "assignments": []
+        },
+        {
+          "_id": "68a43991a6bfe30015e1819f",
+          "title": "Iterators & For..of",
+          "description": "",
+          "status": "completed",
+          "course_progress_id": "6a5d4211593e9a9c1b3feaab",
+          "completed_at": "2026-07-19T21:30:57.686Z",
+          "assignments": []
+        },
+        {
+          "_id": "68a439a7a06203001553adc0",
+          "title": "Array Advance Methods",
+          "description": "<p>Map</p><p>Filter</p><p>ForEach</p><p>Find</p><p>Reduce</p><p>Some</p><p>Every</p><p>Flat</p>",
+          "status": "completed",
+          "course_progress_id": "6a5d420e593e9a4a153feaa5",
+          "completed_at": "2026-07-19T21:30:54.101Z",
+          "assignments": []
+        },
+        {
+          "_id": "68a43c82a06203001553afe7",
+          "title": "JavaScript Behind the Scenes",
+          "description": "<p><br></p><p><span style=\"color: oklch(0.4809 0.0371 279.08);\">Execution Contexts and The Call Stack</span></p><p><span style=\"color: oklch(0.4809 0.0371 279.08);\">Scope and The Scope Chain</span></p><p><span style=\"color: oklch(0.4809 0.0371 279.08);\">Scoping in Practice</span></p><p><span style=\"color: oklch(0.4809 0.0371 279.08);\">Variable Environment: Hoisting and The TDZ</span></p><p><span style=\"color: oklch(0.4809 0.0371 279.08);\">Hoisting and TDZ in Practice</span></p><p><span style=\"color: oklch(0.4809 0.0371 279.08);\">The this Keyword</span></p><p><span style=\"color: oklch(0.4809 0.0371 279.08);\">The this Keyword in Practice</span></p><p><span style=\"color: oklch(0.4809 0.0371 279.08);\">Regular Functions vs. Arrow Functions</span></p><p><span style=\"color: oklch(0.4809 0.0371 279.08);\">Memory Management: Primitives vs. Objects</span></p><p><span style=\"color: oklch(0.4809 0.0371 279.08);\">Object References in Practice (Shallow vs. Deep Copies)</span></p><p><br></p>",
+          "status": "completed",
+          "course_progress_id": "6a7b494de40476482ee64f96",
+          "completed_at": "2026-08-11T16:09:49.804Z",
+          "assignments": []
+        },
+        {
+          "_id": "68a43ca5a6bfe30015e18388",
+          "title": "Destructuring, Rest & Spread Operators",
+          "description": "",
+          "status": "completed",
+          "course_progress_id": "6a328d7cddd8b2be80166435",
+          "completed_at": "2026-06-17T12:05:16.415Z",
+          "assignments": []
+        },
+        {
+          "_id": "68a43cd3a6bfe30015e1839e",
+          "title": "SET, MAP",
+          "description": "",
+          "status": "completed",
+          "course_progress_id": "6a53a8c304b80d177d2f3032",
+          "completed_at": "2026-07-12T14:46:27.972Z",
+          "assignments": []
+        },
+        {
+          "_id": "68a43cf0a6bfe30015e183a2",
+          "title": "Default Parameters",
+          "description": "",
+          "status": "completed",
+          "course_progress_id": "6a328d7cddd8b26abc166437",
+          "completed_at": "2026-06-17T12:05:16.644Z",
+          "assignments": []
+        },
+        {
+          "_id": "68a43d00b3fef10015137981",
+          "title": "First-Class and Higher-Order Functions",
+          "description": "",
+          "status": "completed",
+          "course_progress_id": "6a9c9b59348fa97678c7b743",
+          "completed_at": "2026-09-05T22:44:41.419Z",
+          "assignments": []
+        },
+        {
+          "_id": "68a43d0ea6bfe30015e183c8",
+          "title": "CallBack Functions",
+          "description": "",
+          "status": "completed",
+          "course_progress_id": "6a49137fc52e07e4f8b305ca",
+          "completed_at": "2026-07-04T14:06:55.836Z",
+          "assignments": []
+        },
+        {
+          "_id": "68a43d1fb3fef100151379c6",
+          "title": "Call, Apply, Bind",
+          "description": "",
+          "status": "pending",
+          "course_progress_id": null,
+          "completed_at": null,
+          "assignments": []
+        },
+        {
+          "_id": "68a43d2aa06203001553b0a1",
+          "title": "Closures",
+          "description": "",
+          "status": "completed",
+          "course_progress_id": "6a53a8c904b80d48b62f3041",
+          "completed_at": "2026-07-12T14:46:33.342Z",
+          "assignments": []
+        },
+        {
+          "_id": "68a43e1ea06203001553b1cd",
+          "title": "OOP with JavaScript",
+          "description": "<p>What is OOP?</p><p>OOP in JavaScript</p><p>Contructor</p><p>new Operator</p><p>Prototypes</p><p>ES6 Classes</p><p>Setters Getters</p><p><br></p>",
+          "status": "completed",
+          "course_progress_id": "6a4b7b084d60fe49c5a918bb",
+          "completed_at": "2026-07-06T09:53:12.841Z",
+          "assignments": []
+        },
+        {
+          "_id": "68a43e43a6bfe30015e18529",
+          "title": "Asynchronous JavaScript",
+          "description": "<p>CallBack Hell</p><p>Promises</p><p>Async Await</p><p>Event Loop</p>",
+          "status": "completed",
+          "course_progress_id": "6aaa1ad02f15e7259c0686fa",
+          "completed_at": "2026-09-16T04:28:00.868Z",
+          "assignments": []
+        },
+        {
+          "_id": "68a43ee8a06203001553b2ce",
+          "title": "TypeScript",
+          "description": "<ul><li class=\"ql-indent-1\">TS Compiler</li><li class=\"ql-indent-1\">Type Annotations</li><li class=\"ql-indent-1\">Interfaces</li><li class=\"ql-indent-1\">Classes</li><li class=\"ql-indent-1\">Generics</li><li class=\"ql-indent-1\">Enums</li><li class=\"ql-indent-1\">Type Inference</li><li class=\"ql-indent-1\">Union and Intersection Types</li><li class=\"ql-indent-1\">Type Guards</li><li class=\"ql-indent-1\">Decorators</li></ul>",
+          "status": "completed",
+          "course_progress_id": "6a68d46dd8415b4fe7d0048e",
+          "completed_at": "2026-07-28T16:10:21.826Z",
+          "assignments": []
+        },
+        {
+          "_id": "68a43f04a6bfe30015e185b1",
+          "title": "Advance Github",
+          "description": "<ul><li>Branches</li><li>PR</li><li>PR review</li><li>Merge</li><li>Rebase</li><li>Cherry Pick</li></ul><p><br></p>",
+          "status": "pending",
+          "course_progress_id": null,
+          "completed_at": null,
+          "assignments": []
+        },
+        {
+          "_id": "68a43f0ea6bfe30015e185c1",
+          "title": "GSAP Animations",
+          "description": "",
+          "status": "pending",
+          "course_progress_id": null,
+          "completed_at": null,
+          "assignments": []
+        },
+        {
+          "_id": "68a43f2bb3fef10015137bfd",
+          "title": "Supabase or Firebase",
+          "description": "<p><br></p><ul><li>Authentication</li><li class=\"ql-indent-2\">Email</li><li class=\"ql-indent-1\">Google</li><li class=\"ql-indent-1\">Database</li><li class=\"ql-indent-1\">Storage</li></ul><p><br></p>",
+          "status": "pending",
+          "course_progress_id": null,
+          "completed_at": null,
+          "assignments": []
+        }
+      ],
+      "total_topics": 31,
+      "completed_topics": 27,
+      "completion_percentage": 87,
+      "_id": "6800a99e57f21b2ea2d8eccf",
+      "title": "Front-End Development "
+    },
+    {
+      "module_id": "6809e10c48efa3384ddf64fa",
+      "sequence": 3,
+      "module_name": "Modern Front-End Development",
+      "module_description": "Unassigned Module",
+      "topics": [
+        {
+          "_id": "686bbba10fadd60015d26a3e",
+          "title": "ReactJS Introduction & How to Create React Project",
+          "description": "<p>React vs JavaScript</p><p>Difference between FrameWork and Library</p>",
+          "status": "completed",
+          "course_progress_id": "6a74e9045741bb4b4950e5bc",
+          "completed_at": "2026-08-06T20:05:24.950Z",
+          "assignments": [
+            {
+              "_id": "6a9a8b6b2145a6492e3bb566",
+              "title": "Admin panel (E commerce Dashboad)"
+            },
+            {
+              "_id": "6a8215d8596020da2ec57a93",
+              "title": "E-Commerce Website (React js)"
+            }
+          ]
+        },
+        {
+          "_id": "686bbba10fadd60015d26a6e",
+          "title": "Components , Props and JSX",
+          "description": "<p>How React is Rendered</p><p>What is Strict Mode</p><p>Components and its Re-useability</p><p>What is JSX</p><p>Styling in JSX</p><p>Rendering Lists</p><p>Conditional Rendering</p><p>Props Destructuring</p><p>React Fragments</p>",
+          "status": "completed",
+          "course_progress_id": "6a74e90c5741bb4cd750e5d1",
+          "completed_at": "2026-08-06T20:05:32.938Z",
+          "assignments": [
+            {
+              "_id": "6a9a8b6b2145a6492e3bb566",
+              "title": "Admin panel (E commerce Dashboad)"
+            },
+            {
+              "_id": "6a8215d8596020da2ec57a93",
+              "title": "E-Commerce Website (React js)"
+            }
+          ]
+        },
+        {
+          "_id": "686bbba20fadd60015d26a73",
+          "title": "State, Events, Forms",
+          "description": "<p>What is State?</p><p>How to handle Events in React?</p><p>UseState in Depth</p><p>State vs Props</p><p>State Management</p><p>Props Passing Parent to Child</p><p>Props Passing Child to Parent</p>",
+          "status": "completed",
+          "course_progress_id": "6a8ac426b116e718b091a60d",
+          "completed_at": "2026-08-23T09:57:58.598Z",
+          "assignments": [
+            {
+              "_id": "6a9a8b6b2145a6492e3bb566",
+              "title": "Admin panel (E commerce Dashboad)"
+            }
+          ]
+        },
+        {
+          "_id": "686bbba33b75630015cff87f",
+          "title": "React in Depth and Behind the Scenes (Components , Composition, Re-useability)",
+          "description": "<p>Splitting Components</p><p>Prop Drilling</p><p>Component Composition</p><p>How Rendering Works in Detail</p><p>Diffing</p><p>Key Props</p><p>Re-rendering Logic</p><p>What are Pure Components</p>",
+          "status": "completed",
+          "course_progress_id": "6a82bfd05960201f92c78ca0",
+          "completed_at": "2026-08-17T08:01:20.256Z",
+          "assignments": []
+        },
+        {
+          "_id": "686bbba33b75630015cff895",
+          "title": "Effects and Data Fetching in React",
+          "description": "<p>Component LifeCycle</p><p>Wrong ways of Fetching Data</p><p>UseEffect in detail and benefits</p><p>UseEffect dependency Array</p><p>Async Function handling</p><p>UseEffect Cleanup</p>",
+          "status": "completed",
+          "course_progress_id": "6a7b499be40476fa61e652e6",
+          "completed_at": "2026-08-11T16:11:07.436Z",
+          "assignments": [
+            {
+              "_id": "6a8215d8596020da2ec57a93",
+              "title": "E-Commerce Website (React js)"
+            }
+          ]
+        },
+        {
+          "_id": "68d22810ebd0da0015cd1bc9",
+          "title": "Custom Hooks, Ref, useReducer etc",
+          "description": "<p>What are React Hooks and their Rules</p><p>useRef</p><p>Custom Hook</p><p>useReducer Hook</p><p>state vs useReducer</p>",
+          "status": "pending",
+          "course_progress_id": null,
+          "completed_at": null,
+          "assignments": []
+        },
+        {
+          "_id": "68d2282febd0da0015cd1bd2",
+          "title": "Class-based React (Optional - not necessary)",
+          "description": "",
+          "status": "completed",
+          "course_progress_id": "6a9c9a43348fa90380c7b5b1",
+          "completed_at": "2026-09-05T22:40:03.599Z",
+          "assignments": []
+        },
+        {
+          "_id": "68d228e2ebd0da0015cd1d19",
+          "title": "Single Page Application (SPA) - React Router DOM",
+          "description": "",
+          "status": "completed",
+          "course_progress_id": "6a7b497ae404760a8ee6511e",
+          "completed_at": "2026-08-11T16:10:34.861Z",
+          "assignments": [
+            {
+              "_id": "6a9a8b6b2145a6492e3bb566",
+              "title": "Admin panel (E commerce Dashboad)"
+            }
+          ]
+        },
+        {
+          "_id": "68d228f3ecbd440015ef33d9",
+          "title": "State Management - Context Api",
+          "description": "",
+          "status": "completed",
+          "course_progress_id": "6a9c9a11348fa91926c7b5a7",
+          "completed_at": "2026-09-05T22:39:13.795Z",
+          "assignments": [
+            {
+              "_id": "6a9a8b6b2145a6492e3bb566",
+              "title": "Admin panel (E commerce Dashboad)"
+            }
+          ]
+        },
+        {
+          "_id": "68d22922ebd0da0015cd1d59",
+          "title": "Performance Optimization",
+          "description": "<p>memo</p><p>useMemo</p><p>useCallback</p>",
+          "status": "pending",
+          "course_progress_id": null,
+          "completed_at": null,
+          "assignments": []
+        },
+        {
+          "_id": "68d22930ebd0da0015cd1d60",
+          "title": "Redux & Redux ToolKit with Thunk",
+          "description": "",
+          "status": "completed",
+          "course_progress_id": "6aa03ddd6c1c4ef8110c2ce5",
+          "completed_at": "2026-09-08T16:54:53.809Z",
+          "assignments": []
+        },
+        {
+          "_id": "68d22972ebd0da0015cd1dd1",
+          "title": "Tailwind, Material UI, Styled Components OverView",
+          "description": "",
+          "status": "pending",
+          "course_progress_id": null,
+          "completed_at": null,
+          "assignments": [
+            {
+              "_id": "6a9a8b6b2145a6492e3bb566",
+              "title": "Admin panel (E commerce Dashboad)"
+            }
+          ]
+        },
+        {
+          "_id": "68d22995ebd0da0015cd1dfd",
+          "title": "FrontEnd Deployment through Vercel",
+          "description": "",
+          "status": "completed",
+          "course_progress_id": "6a8ac449b116e798b791a7f0",
+          "completed_at": "2026-08-23T09:58:33.381Z",
+          "assignments": [
+            {
+              "_id": "6a8215d8596020da2ec57a93",
+              "title": "E-Commerce Website (React js)"
+            }
+          ]
+        },
+        {
+          "_id": "68d2299eebd0da0015cd1e03",
+          "title": "NextJS",
+          "description": "",
+          "status": "pending",
+          "course_progress_id": null,
+          "completed_at": null,
+          "assignments": [
+            {
+              "_id": "6a9a8b6b2145a6492e3bb566",
+              "title": "Admin panel (E commerce Dashboad)"
+            }
+          ]
+        }
+      ],
+      "total_topics": 14,
+      "completed_topics": 10,
+      "completion_percentage": 71,
+      "_id": "6809e10c48efa3384ddf64fa",
+      "title": "Modern Front-End Development"
+    },
+    {
+      "module_id": "686bbab93b75630015cfee08",
+      "sequence": 4,
+      "module_name": "Back-End Development",
+      "module_description": "Unassigned Module",
+      "topics": [
+        {
+          "_id": "686bbc5a51dec50015b6fd99",
+          "title": "NodeJS",
+          "description": "What is NodeJS?\nEventLoop\nCallback queue\nMicrotask queue\nFile System\nNPM\nHTTP request creation via Node",
+          "status": "pending",
+          "course_progress_id": null,
+          "completed_at": null,
+          "assignments": []
+        },
+        {
+          "_id": "686bbc5b51dec50015b6fdc8",
+          "title": "ExpressJS",
+          "description": "Restful Apis\nArchitecture\nBasic Routes\nCRUD (without Database)",
+          "status": "pending",
+          "course_progress_id": null,
+          "completed_at": null,
+          "assignments": []
+        },
+        {
+          "_id": "686bbc5b33d2490015a3aba9",
+          "title": "MongoDB",
+          "description": "SQL vs NoSQL\nDatabase Connection\nCrud with Database\nMongoDB Atlas\nMongoDB Compass\nMongoose\nQueries",
+          "status": "pending",
+          "course_progress_id": null,
+          "completed_at": null,
+          "assignments": []
+        },
+        {
+          "_id": "686bbc5c33d2490015a3abd6",
+          "title": "Security and Authentication",
+          "description": "Authentication vs Authorization\nBcrypt\nHelmet\nJWT\nPassportJS\nCookies\nProtected Routings\nMiddlewares",
+          "status": "pending",
+          "course_progress_id": null,
+          "completed_at": null,
+          "assignments": []
+        },
+        {
+          "_id": "686bbc5d51dec50015b6fdde",
+          "title": "Multer - Media Uploading",
+          "description": "Cloudinary\nAWS S3 Bucket Overview only",
+          "status": "pending",
+          "course_progress_id": null,
+          "completed_at": null,
+          "assignments": []
+        },
+        {
+          "_id": "686bbc5e33d2490015a3abe7",
+          "title": "Sockets",
+          "description": "",
+          "status": "pending",
+          "course_progress_id": null,
+          "completed_at": null,
+          "assignments": []
+        },
+        {
+          "_id": "686bbc5e51dec50015b6fdea",
+          "title": "GraphQL",
+          "description": "",
+          "status": "pending",
+          "course_progress_id": null,
+          "completed_at": null,
+          "assignments": []
+        },
+        {
+          "_id": "686bbc5f33d2490015a3ac04",
+          "title": "PostGresSQL",
+          "description": "",
+          "status": "pending",
+          "course_progress_id": null,
+          "completed_at": null,
+          "assignments": []
+        },
+        {
+          "_id": "686bbc6051dec50015b6fe1e",
+          "title": "Sequelize",
+          "description": "",
+          "status": "pending",
+          "course_progress_id": null,
+          "completed_at": null,
+          "assignments": []
+        },
+        {
+          "_id": "686bbc6033d2490015a3ac11",
+          "title": "Payment Integration",
+          "description": "",
+          "status": "pending",
+          "course_progress_id": null,
+          "completed_at": null,
+          "assignments": []
+        },
+        {
+          "_id": "688212547431a200157e2b84",
+          "title": "Scalable System - Caching",
+          "description": "Redis\nNode-Cache",
+          "status": "pending",
+          "course_progress_id": null,
+          "completed_at": null,
+          "assignments": []
+        },
+        {
+          "_id": "688212795357550015be5322",
+          "title": "Scalable System - Messaging Queues",
+          "description": "BullMQ\nRabbitMQ (Overview)\nKafka (Overview)",
+          "status": "pending",
+          "course_progress_id": null,
+          "completed_at": null,
+          "assignments": []
+        },
+        {
+          "_id": "688212e37431a200157e2cab",
+          "title": "CI / CD",
+          "description": "Github Actions\nCI / CD complete flow\nPipeline etc",
+          "status": "pending",
+          "course_progress_id": null,
+          "completed_at": null,
+          "assignments": []
+        },
+        {
+          "_id": "68821335ccd58e0015c9aa25",
+          "title": "Node Production and Cloud Deployment",
+          "description": "Railway (or any other basic deployment platform)\nDockers (Introduction and Overview with Basic Image Creation)\nThrough Dockers Deployment on any Cloud Platform (AWS or GCP or Azure)",
+          "status": "pending",
+          "course_progress_id": null,
+          "completed_at": null,
+          "assignments": []
+        },
+        {
+          "_id": "688213597d9e180015d0d12f",
+          "title": "NodeJS Optimization",
+          "description": "PM2\nLoadBalancing\nMulti Threading",
+          "status": "pending",
+          "course_progress_id": null,
+          "completed_at": null,
+          "assignments": []
+        },
+        {
+          "_id": "68a43731a06203001553ac10",
+          "title": "Dockers - Containterization",
+          "description": "",
+          "status": "pending",
+          "course_progress_id": null,
+          "completed_at": null,
+          "assignments": []
+        }
+      ],
+      "total_topics": 16,
+      "completed_topics": 0,
+      "completion_percentage": 0,
+      "_id": "686bbab93b75630015cfee08",
+      "title": "Back-End Development"
+    }
+  ]
+}

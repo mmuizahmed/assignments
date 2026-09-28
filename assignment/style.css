@@ -215,6 +215,7 @@ h1 {
 .card-icon-furniro { color: #B88E2F; }
 .card-icon-shop { color: #f8fafc; }
 .card-icon-berry { color: #7c4dff; }
+.card-icon-lms { color: #22c55e; }
 
 .card h2 {
   font-size: 1.35rem;
@@ -298,6 +299,12 @@ h1 {
   background: rgba(124, 77, 255, 0.16);
   color: #b39ddb;
   border: 1px solid rgba(124, 77, 255, 0.38);
+}
+
+.badge.lms {
+  background: rgba(34, 197, 94, 0.14);
+  color: #86efac;
+  border: 1px solid rgba(34, 197, 94, 0.38);
 }
 
 footer {

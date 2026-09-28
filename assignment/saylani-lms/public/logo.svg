@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 140" width="240" height="140">
+  <defs>
+    <linearGradient id="cap" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3aa0d8"/>
+      <stop offset="100%" stop-color="#1d6fb8"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(28,8)">
+    <path d="M10 28 L55 12 L100 28 L55 44 Z" fill="url(#cap)"/>
+    <rect x="52" y="28" width="6" height="16" fill="#1d6fb8"/>
+    <path d="M55 44 Q70 52 72 62" fill="none" stroke="#1d6fb8" stroke-width="2"/>
+    <circle cx="74" cy="64" r="3" fill="#1d6fb8"/>
+  </g>
+  <text x="120" y="88" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-size="52" font-weight="800" fill="#2b4f8c" letter-spacing="-1">SMIT</text>
+  <g transform="translate(178,18)">
+    <circle cx="12" cy="8" r="7" fill="#7ac143"/>
+    <path d="M2 28 Q12 16 22 28 L22 36 L2 36 Z" fill="#7ac143"/>
+  </g>
+  <text x="120" y="108" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#2b4f8c" letter-spacing="1.5">SAYLANI MASS IT TRAINING</text>
+</svg>
