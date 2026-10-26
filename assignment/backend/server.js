@@ -16,11 +16,11 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
-let starting;
-
 function start() {
-  if (!starting) starting = connectDB().then(() => fillIfEmpty());
-  return starting;
+  if (!global.starting) {
+    global.starting = connectDB().then(() => fillIfEmpty());
+  }
+  return global.starting;
 }
 
 app.use((req, res, next) => {
