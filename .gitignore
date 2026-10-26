@@ -1,0 +1,11 @@
+node_modules
+dist
+assignment/shop-co/node_modules
+assignment/shop-co/dist
+assignment/saylani-lms/node_modules
+assignment/saylani-lms/dist
+assignment/berry-dashboard/node_modules
+assignment/berry-dashboard/.next
+assignment/berry-dashboard/out
+assignment/backend/node_modules
+assignment/backend/.env

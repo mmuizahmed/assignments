@@ -1,15 +1,52 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { IconSearch } from "@tabler/icons-react";
 import PageHeader from "@/components/layout/PageHeader";
 import StatusChip from "@/components/ui/StatusChip";
 import { BlockGlyph, CheckCircleGlyph, CommentGlyph } from "@/components/dashboard/glyphs";
-import { users } from "@/data/mock";
+import { api } from "@/lib/api";
+
+type UserRow = {
+  _id: string;
+  code: string;
+  id: string;
+  name: string;
+  email: string;
+  country: string;
+  friends: number;
+  followers: number;
+  status: "Active" | "Pending" | "Rejected";
+  avatar: string;
+  verified: boolean;
+};
 
 export default function UsersPage() {
+  const [users, setUsers] = useState<UserRow[]>([]);
   const [q, setQ] = useState("");
   const [page, setPage] = useState(1);
+  const [message, setMessage] = useState("");
+
+  useEffect(() => {
+    api<UserRow[]>("/api/users")
+      .then((list) => setUsers(list.map((user) => ({ ...user, id: user.code }))))
+      .catch(() => setMessage("Could not load users. Start the backend on port 5000."));
+  }, []);
+
+  async function blockUser(id: string) {
+    try {
+      const updated = await api<UserRow>("/api/users/" + id, {
+        method: "PATCH",
+        body: JSON.stringify({ status: "Rejected" }),
+      });
+      setUsers((list) =>
+        list.map((user) => (user._id === id ? { ...user, status: updated.status } : user)),
+      );
+    } catch {
+      setMessage("Could not update the user.");
+    }
+  }
+
   const filtered = useMemo(
     () =>
       users.filter(
@@ -18,12 +55,13 @@ export default function UsersPage() {
           u.email.toLowerCase().includes(q.toLowerCase()) ||
           u.country.toLowerCase().includes(q.toLowerCase()),
       ),
-    [q],
+    [q, users],
   );
 
   return (
     <>
       <PageHeader title="Style 01" crumbs={[{ label: "List" }, { label: "Style 01" }]} />
+      {message ? <p className="mb-4 text-[14px] text-berry-error">{message}</p> : null}
       <section className="overflow-hidden rounded-[8px] bg-berry-card">
         <div className="flex flex-col gap-4 p-6 sm:flex-row sm:items-center sm:justify-between">
           <h3 className="text-[20px] font-semibold leading-[23.34px] text-berry-heading">List</h3>
@@ -89,6 +127,7 @@ export default function UsersPage() {
                     <button
                       type="button"
                       aria-label="block"
+                      onClick={() => blockUser(u._id)}
                       className="inline-flex h-11 w-11 items-center justify-center rounded-[8px] p-2 text-berry-error hover:bg-[rgba(244,67,54,0.08)]"
                     >
                       <BlockGlyph />

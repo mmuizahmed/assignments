@@ -4,6 +4,7 @@ import quizzesRaw from "./quizzes.json";
 import paymentsRaw from "./payments.json";
 import assignmentsRaw from "./assignments.json";
 import classmatesRaw from "./classmates.json";
+import { publicAsset } from "../lib/utils";
 
 export const SLOT_ID = "6926fe56c74fda001503ae82";
 export const STUDENT_ID = "691b81e913837c0015af3cf1";
@@ -36,7 +37,7 @@ const teacher = {
   isTrainer: true,
   isTeacher: true,
   employee_id: TRAINER_ID,
-  image: "/assets/logo.6lrMPvRL.png",
+  image: publicAsset("assets/logo.6lrMPvRL.png"),
   description: "<p>Trainer — Modern Web Application Development, Batch 20.</p>",
   phone_number: "",
   social_links: [],
@@ -53,7 +54,7 @@ const admin = {
   full_name: "Admin User",
   name: "Admin User",
   employee_id: "SMIT-ADMIN-01",
-  image: "/assets/logo.6lrMPvRL.png",
+  image: publicAsset("assets/logo.6lrMPvRL.png"),
   phone_number: "",
   designation: "System Administrator",
 };

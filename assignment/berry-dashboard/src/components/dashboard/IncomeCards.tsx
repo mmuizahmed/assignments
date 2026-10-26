@@ -1,6 +1,10 @@
 import { StorefrontGlyph, TableChartGlyph } from "./glyphs";
 
-export function IncomeDarkCard() {
+function money(amount: number) {
+  return `$${Math.round(amount).toLocaleString("en-US")}`;
+}
+
+export function IncomeDarkCard({ amount = 0 }: { amount?: number }) {
   return (
     <article className="relative h-[80px] overflow-hidden rounded-[8px] bg-[#1e88e5] text-[#e3f2fd]">
       <span
@@ -16,7 +20,7 @@ export function IncomeDarkCard() {
           <TableChartGlyph />
         </div>
         <div>
-          <h4 className="text-[16px] font-semibold leading-[19.76px] text-white">$203k</h4>
+          <h4 className="text-[16px] font-semibold leading-[19.76px] text-white">{money(amount)}</h4>
           <p className="mt-0.5 text-[12px] leading-[18.84px] text-[#e3f2fd]">Total Income</p>
         </div>
       </div>
@@ -24,7 +28,7 @@ export function IncomeDarkCard() {
   );
 }
 
-export function IncomeLightCard() {
+export function IncomeLightCard({ amount = 0 }: { amount?: number }) {
   return (
     <article className="relative h-[82px] overflow-hidden rounded-[8px] bg-berry-card text-berry-text">
       <span
@@ -43,7 +47,7 @@ export function IncomeLightCard() {
           <StorefrontGlyph />
         </div>
         <div>
-          <h4 className="text-[16px] font-semibold leading-[19.76px] text-berry-heading">$203k</h4>
+          <h4 className="text-[16px] font-semibold leading-[19.76px] text-berry-heading">{money(amount)}</h4>
           <p className="mt-1 text-[12px] leading-[18.84px] text-berry-grey">Total Income</p>
         </div>
       </div>

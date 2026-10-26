@@ -127,7 +127,7 @@ export default function Navbar({
           className="ml-4 flex h-12 w-[90px] cursor-pointer items-center rounded-[27px] border-0 bg-[rgba(33,150,243,0.15)] p-0 text-[#2196f3] transition-all duration-200 hover:bg-[#2196f3] hover:text-[#e3f2fd]"
         >
           <img
-            src="/user-round.svg"
+            src="/assignment/berry-dashboard/user-round.svg"
             alt="user-images"
             width={34}
             height={34}

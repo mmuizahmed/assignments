@@ -1,5 +1,5 @@
 export const CATEGORY_PRICE_MIN = 50
-export const CATEGORY_PRICE_MAX = 250
+export const CATEGORY_PRICE_MAX = 300
 
 export const DEFAULT_CATEGORY_FILTERS = Object.freeze({
   productType: '',

@@ -15,6 +15,7 @@ import {
   User,
 } from "lucide-react";
 import { format } from "date-fns";
+import { publicAsset } from "../../lib/utils";
 import { useApp } from "../../context/AppContext";
 import { useTheme } from "../../context/ThemeContext";
 import { db, findStudentCourse, ROLL_NUMBER } from "../../data/db";
@@ -128,7 +129,7 @@ export function StudentCourses() {
                 className="flex items-center gap-2 rounded-full pl-1 pr-3 h-11 flex-shrink-0 border dark:border-[#2e2e2e] hover:bg-clr_blue_bg/60 dark:hover:bg-[#2a2a2a]"
               >
                 <Avatar className="h-8 w-8">
-                  <AvatarImage src={user?.image || "/placeholder.svg"} alt={user?.full_name || user?.name || "User"} />
+                  <AvatarImage src={user?.image || publicAsset("placeholder.svg")} alt={user?.full_name || user?.name || "User"} />
                   <AvatarFallback>{user?.full_name?.charAt(0) || user?.name?.charAt(0) || "U"}</AvatarFallback>
                 </Avatar>
                 <span className="text-sm font-medium max-w-[160px] truncate capitalize">
@@ -528,7 +529,7 @@ export function StudentFee() {
               </AlertDescription>
               <div className="hidden md:block shrink-0">
                 <video
-                  src="/saylani-jazzcash-guide.mp4"
+                  src={publicAsset("saylani-jazzcash-guide.mp4")}
                   controls
                   muted
                   className="rounded-lg border border-clr_blue_bg dark:border-[#2a3a4a] mx-auto"
@@ -552,7 +553,7 @@ export function StudentFee() {
                   Ã—
                 </button>
                 <video
-                  src="/saylani-jazzcash-guide.mp4"
+                  src={publicAsset("saylani-jazzcash-guide.mp4")}
                   controls
                   muted
                   className="rounded-lg mx-auto"

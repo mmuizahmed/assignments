@@ -16,6 +16,7 @@ import {
   Wallet,
 } from "lucide-react";
 import { Outlet, useLocation, useNavigate, useParams } from "react-router-dom";
+import { publicAsset } from "../lib/utils";
 import { useApp } from "../context/AppContext";
 import { useTheme } from "../context/ThemeContext";
 import { db, findStudentCourse, resolveSlotId } from "../data/db";
@@ -161,7 +162,7 @@ function StudentSidebar() {
             <DropdownMenuTrigger asChild>
               <Button variant="ghost" size="icon" className="rounded-full h-9 w-9 p-0">
                 <Avatar className="h-9 w-9">
-                  <AvatarImage src={user?.image || "/placeholder.svg"} alt={user?.full_name || user?.name || "User"} />
+                  <AvatarImage src={user?.image || publicAsset("placeholder.svg")} alt={user?.full_name || user?.name || "User"} />
                   <AvatarFallback>{user?.full_name?.charAt(0) || user?.name?.charAt(0) || "U"}</AvatarFallback>
                 </Avatar>
               </Button>
@@ -307,7 +308,7 @@ export function StudentLayout() {
             onKeyDown={(event) => event.key === "Enter" && navigate("/profile")}
             aria-label="Go to profile"
           >
-            <img src={user?.image || "/placeholder.svg"} className="h-10 w-10 rounded-3xl" alt="Profile" />
+            <img src={user?.image || publicAsset("placeholder.svg")} className="h-10 w-10 rounded-3xl" alt="Profile" />
           </button>
           <div className="flex items-center gap-2 mr-2">
             <button

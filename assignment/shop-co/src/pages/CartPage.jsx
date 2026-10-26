@@ -2,6 +2,7 @@ import React from 'react'
 import {ArrowRight, Tag, Trash2} from 'lucide-react'
 import {useNavigate} from 'react-router-dom'
 import {ASSET} from '../data/store'
+import {createOrder} from '../api'
 import {Breadcrumbs, StoreLayout} from '../components/SiteChrome'
 import {Price, QuantityControl} from '../components/Commerce'
 import {useCart} from '../context/CartContext'
@@ -10,13 +11,33 @@ export default function CartPage() {
   const {items, updateQuantity, removeItem, clearCart} = useCart()
   const navigate = useNavigate()
   const [promo, setPromo] = React.useState('')
+  const [name, setName] = React.useState('')
+  const [saving, setSaving] = React.useState(false)
   const subtotal = items.reduce((sum, item) => sum + item.price * item.quantity, 0)
   const discount = Math.round(subtotal * 0.2)
   const deliveryFee = items.length ? 15 : 0
   const total = subtotal - discount + deliveryFee
-  const checkout = () => {
-    clearCart()
-    navigate('/')
+  const checkout = async () => {
+    if (!items.length || saving) return
+    setSaving(true)
+    try {
+      await createOrder({
+        customer: name.trim() || 'Guest',
+        items: items.map(item => ({
+          name: item.name,
+          price: item.price,
+          quantity: item.quantity,
+          size: item.size,
+          color: item.color,
+          image: item.cartImage || item.image
+        }))
+      })
+      clearCart()
+      navigate('/')
+    } catch {
+      alert('Could not save the order. Make sure the backend is running.')
+      setSaving(false)
+    }
   }
 
   return <StoreLayout className="cart-page">
@@ -33,7 +54,7 @@ export default function CartPage() {
           <QuantityControl compact value={item.quantity} onDecrease={() => updateQuantity(item.cartKey, -1)} onIncrease={() => updateQuantity(item.cartKey, 1)} />
         </article>)}
         </section>
-        <section className="order-summary"><h2>Order Summary</h2><div className="summary-lines"><p>Subtotal <strong>${subtotal}</strong></p><p>Discount (-20%) <strong className="red-text">-${discount}</strong></p><p>Delivery Fee <strong>${deliveryFee}</strong></p><hr /><p>Total <b>${total}</b></p></div><div className="promo-row"><label><Tag /><input value={promo} onChange={event => setPromo(event.target.value)} placeholder="Add promo code" /></label><button>Apply</button></div><button className="button-black checkout-button" onClick={checkout}>Go to Checkout <ArrowRight /></button></section>
+        <section className="order-summary"><h2>Order Summary</h2><div className="summary-lines"><p>Subtotal <strong>${subtotal}</strong></p><p>Discount (-20%) <strong className="red-text">-${discount}</strong></p><p>Delivery Fee <strong>${deliveryFee}</strong></p><hr /><p>Total <b>${total}</b></p></div><div className="promo-row"><label><input value={name} onChange={event => setName(event.target.value)} placeholder="Your name" /></label></div><div className="promo-row"><label><Tag /><input value={promo} onChange={event => setPromo(event.target.value)} placeholder="Add promo code" /></label><button>Apply</button></div><button className="button-black checkout-button" onClick={checkout} disabled={saving || items.length === 0}>{saving ? 'Saving...' : 'Go to Checkout'} <ArrowRight /></button></section>
       </div>
     </main>
   </StoreLayout>

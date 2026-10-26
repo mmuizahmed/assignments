@@ -8,9 +8,13 @@ export function cn(...inputs) {
 export const le = cn;
 export const Zu = clsx;
 
-export const LOGO = "/assets/logo.6lrMPvRL.png";
-export const WHATSAPP = "/assets/whatsapp.DnA-7nei.png";
-export const COVER = "/cover-image.png";
+export function publicAsset(file) {
+  return `${import.meta.env.BASE_URL}${String(file).replace(/^\//, "")}`;
+}
+
+export const LOGO = publicAsset("assets/logo.6lrMPvRL.png");
+export const WHATSAPP = publicAsset("assets/whatsapp.DnA-7nei.png");
+export const COVER = publicAsset("cover-image.png");
 
 export const SESSION_KEY = "lms_user";
 export const THEME_KEY = "theme";

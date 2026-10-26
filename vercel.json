@@ -1,0 +1,53 @@
+{
+  "installCommand": "npm install",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "redirects": [
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "shop.muiz.tech" }],
+      "destination": "https://muiz.pk/assignment/shop-co/",
+      "permanent": false
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "shop.muiz.tech" }],
+      "destination": "https://muiz.pk/assignment/shop-co/:path*",
+      "permanent": false
+    },
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "berry.muiz.tech" }],
+      "destination": "https://muiz.pk/assignment/berry-dashboard/",
+      "permanent": false
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "berry.muiz.tech" }],
+      "destination": "https://muiz.pk/assignment/berry-dashboard/:path*",
+      "permanent": false
+    },
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "lms.muiz.pk" }],
+      "destination": "https://muiz.pk/assignment/saylani-lms/",
+      "permanent": false
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "lms.muiz.pk" }],
+      "destination": "https://muiz.pk/assignment/saylani-lms/:path*",
+      "permanent": false
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/assignment/shop-co/:path*",
+      "destination": "/assignment/shop-co/index.html"
+    },
+    {
+      "source": "/assignment/saylani-lms/:path*",
+      "destination": "/assignment/saylani-lms/index.html"
+    }
+  ]
+}

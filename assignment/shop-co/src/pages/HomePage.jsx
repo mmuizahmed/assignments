@@ -1,6 +1,8 @@
 import React from 'react'
 import {ArrowLeft, ArrowRight, Check} from 'lucide-react'
-import {ASSET, dressStyles, newArrivals, topSelling} from '../data/store'
+import {Link, useNavigate} from 'react-router-dom'
+import {ASSET, dressStyles} from '../data/store'
+import {getProducts} from '../api'
 import {StoreLayout} from '../components/SiteChrome'
 import {ProductCard, Rating} from '../components/Commerce'
 
@@ -9,14 +11,26 @@ function SectionTitle({children}) {
 }
 
 function ProductRow({title, items, anchor}) {
+  const navigate = useNavigate()
   return <section className="home-product-section" id={anchor}>
     <SectionTitle>{title}</SectionTitle>
     <div className="home-product-grid">{items.map(product => <ProductCard key={product.id} product={product} home />)}</div>
-    <button className="button-outline">View All</button>
+    <button className="button-outline" onClick={() => navigate('/category/casual')}>View All</button>
   </section>
 }
 
 export default function HomePage() {
+  const [products, setProducts] = React.useState([])
+  const [error, setError] = React.useState('')
+
+  React.useEffect(() => {
+    getProducts()
+      .then(setProducts)
+      .catch(() => setError('Could not load products. Start the backend on port 5000.'))
+  }, [])
+
+  const newArrivals = products.filter(product => product.home === 'new')
+  const topSelling = products.filter(product => product.home === 'top')
   const testimonials = [
     {name: 'Sarah M.', text: '"I\'m blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I\'ve bought has exceeded my expectations."'},
     {name: 'Alex K.', text: '"Finding clothes that align with my personal style used to be a challenge until I discovered Shop.co. The range of options they offer is truly remarkable, catering to a variety of tastes and occasions."'},
@@ -46,13 +60,14 @@ export default function HomePage() {
         {['versace', 'zara', 'gucci', 'prada', 'calvin-klein'].map(name => <img key={name} src={`${ASSET}brands/${name}.svg`} alt={name.replace('-', ' ')} />)}
       </section>
 
+      {error && <p style={{padding: '24px'}}>{error}</p>}
       <ProductRow title="NEW ARRIVALS" items={newArrivals} anchor="new-arrivals" />
       <ProductRow title="TOP SELLING" items={topSelling} />
 
       <section className="dress-style-section">
         <SectionTitle>BROWSE BY DRESS STYLE</SectionTitle>
         <div className="dress-style-grid">
-          {dressStyles.map(style => <a href={`/category/${style.name.toLowerCase()}`} className="dress-style-card" key={style.name}><picture><source media="(max-width: 800px)" srcSet={`${ASSET}${style.mobileImage}`} /><img src={`${ASSET}${style.image}`} alt={`${style.name} dress style`} /></picture></a>)}
+          {dressStyles.map(style => <Link to={`/category/${style.name.toLowerCase()}`} className="dress-style-card" key={style.name}><picture><source media="(max-width: 800px)" srcSet={`${ASSET}${style.mobileImage}`} /><img src={`${ASSET}${style.image}`} alt={`${style.name} dress style`} /></picture></Link>)}
         </div>
       </section>
 

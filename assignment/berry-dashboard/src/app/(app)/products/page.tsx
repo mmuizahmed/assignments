@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState, type ReactNode } from "react";
+import { useEffect, useMemo, useState, type FormEvent, type ReactNode } from "react";
 import PageHeader from "@/components/layout/PageHeader";
 import {
   AddCartGlyph,
@@ -15,7 +15,8 @@ import {
   SelectCaretGlyph,
   StarGlyph,
 } from "@/components/dashboard/glyphs";
-import { productColors, products } from "@/data/mock";
+import { productColors } from "@/data/mock";
+import { api, productImage } from "@/lib/api";
 
 const GENDERS = ["Male", "Female", "Kids"] as const;
 const CATEGORIES = ["All", "Kitchen", "Electronics", "Books", "Fashion", "Toys"] as const;
@@ -30,7 +31,50 @@ const PRICE_OPTIONS = [
 const RATING_OPTIONS = [0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5] as const;
 const SORTS = ["Price: High To Low", "Price: Low To High", "Popularity", "Discount", "Fresh Arrivals"] as const;
 
-type Product = (typeof products)[number];
+type Product = {
+  _id: string;
+  name: string;
+  description: string;
+  image: string;
+  price: number;
+  original: number | null;
+  rating: number;
+  reviews: number;
+  gender: string;
+  category: string;
+  colors: string[];
+};
+
+type SavedProduct = {
+  _id: string;
+  name: string;
+  description?: string;
+  productType?: string;
+  image?: string;
+  price: number;
+  oldPrice?: number | null;
+  rating?: number;
+  reviews?: number;
+  gender?: string;
+  category?: string;
+  colors?: string[];
+};
+
+function toCard(product: SavedProduct): Product {
+  return {
+    _id: product._id,
+    name: product.name,
+    description: product.description || product.productType || "",
+    image: productImage(product.image),
+    price: Number(product.price),
+    original: product.oldPrice || null,
+    rating: Number(product.rating) || 0,
+    reviews: Number(product.reviews) || 0,
+    gender: product.gender || "Male",
+    category: product.category || "Fashion",
+    colors: product.colors || [],
+  };
+}
 type SortKey = (typeof SORTS)[number];
 
 function formatPrice(n: number) {
@@ -149,6 +193,9 @@ function Accordion({
 }
 
 export default function ProductsPage() {
+  const [items, setItems] = useState<Product[]>([]);
+  const [message, setMessage] = useState("");
+  const [draft, setDraft] = useState({ name: "", price: "", productType: "T-shirts" });
   const [q, setQ] = useState("");
   const [filterOpen, setFilterOpen] = useState(true);
   const [sort, setSort] = useState<SortKey>("Price: Low To High");
@@ -165,7 +212,41 @@ export default function ProductsPage() {
     Price: true,
     Rating: true,
   });
-  const [cart, setCart] = useState<number[]>([]);
+  const [cart, setCart] = useState<string[]>([]);
+
+  useEffect(() => {
+    api<SavedProduct[]>("/api/products")
+      .then((list) => setItems(list.map(toCard)))
+      .catch(() => setMessage("Could not load products. Start the backend on port 5000."));
+  }, []);
+
+  async function saveProduct(event: FormEvent) {
+    event.preventDefault();
+    try {
+      const saved = await api<SavedProduct>("/api/products", {
+        method: "POST",
+        body: JSON.stringify({
+          name: draft.name,
+          price: Number(draft.price),
+          productType: draft.productType,
+        }),
+      });
+      setItems((list) => [...list, toCard(saved)]);
+      setDraft({ name: "", price: "", productType: "T-shirts" });
+    } catch {
+      setMessage("Could not save the product.");
+    }
+  }
+
+  async function removeProduct(id: string) {
+    if (!window.confirm("Delete this product?")) return;
+    try {
+      await api("/api/products/" + id, { method: "DELETE" });
+      setItems((list) => list.filter((item) => item._id !== id));
+    } catch {
+      setMessage("Could not delete the product.");
+    }
+  }
 
   const toggleAcc = (key: keyof typeof openAcc) => setOpenAcc((s) => ({ ...s, [key]: !s[key] }));
 
@@ -192,11 +273,11 @@ export default function ProductsPage() {
   const filtered = useMemo(() => {
     const term = q.trim().toLowerCase();
     const priceTest = PRICE_OPTIONS.find((p) => p.id === price)?.test;
-    const rows = products.filter((p) => {
+    const rows = items.filter((p) => {
       if (term && !`${p.name} ${p.description}`.toLowerCase().includes(term)) return false;
       if (genders.length && !genders.includes(p.gender)) return false;
       if (cats.length && !cats.includes("All") && !cats.includes(p.category)) return false;
-      if (color && !p.colors.includes(color)) return false;
+      if (color && !p.colors.some((item) => item.toLowerCase() === color.toLowerCase())) return false;
       if (priceTest && !priceTest(p.price)) return false;
       if (rating === "empty") return false;
       if (typeof rating === "number" && p.rating < rating) return false;
@@ -207,14 +288,48 @@ export default function ProductsPage() {
       if (sort === "Price: High To Low") return b.price - a.price;
       if (sort === "Popularity") return b.reviews - a.reviews;
       if (sort === "Discount") return discountOf(b) - discountOf(a);
-      return b.id - a.id;
+      return b._id.localeCompare(a._id);
     });
     return rows;
-  }, [q, genders, cats, color, price, rating, sort]);
+  }, [items, q, genders, cats, color, price, rating, sort]);
 
   return (
     <>
       <PageHeader title="Products" crumbs={[{ label: "E-commerce" }, { label: "Products" }]} />
+      {message ? <p className="mb-4 text-[14px] text-berry-error">{message}</p> : null}
+      <details className="mb-4 rounded-[8px] bg-berry-card p-4">
+        <summary className="cursor-pointer text-[14px] font-medium text-berry-heading">Add product</summary>
+        <form onSubmit={saveProduct} className="mt-4 flex flex-wrap items-center gap-3">
+          <input
+            required
+            placeholder="Name"
+            value={draft.name}
+            onChange={(e) => setDraft((d) => ({ ...d, name: e.target.value }))}
+            className="h-11 rounded-[8px] border border-berry-divider bg-berry-canvas px-3 text-[14px] text-berry-text outline-none"
+          />
+          <input
+            required
+            type="number"
+            min="1"
+            placeholder="Price"
+            value={draft.price}
+            onChange={(e) => setDraft((d) => ({ ...d, price: e.target.value }))}
+            className="h-11 w-28 rounded-[8px] border border-berry-divider bg-berry-canvas px-3 text-[14px] text-berry-text outline-none"
+          />
+          <select
+            value={draft.productType}
+            onChange={(e) => setDraft((d) => ({ ...d, productType: e.target.value }))}
+            className="h-11 rounded-[8px] border border-berry-divider bg-berry-canvas px-3 text-[14px] text-berry-text outline-none"
+          >
+            {["T-shirts", "Shirts", "Jeans", "Shorts", "Hoodie"].map((type) => (
+              <option key={type}>{type}</option>
+            ))}
+          </select>
+          <button type="submit" className="h-11 rounded-[8px] bg-berry-primary px-4 text-[14px] font-medium text-white">
+            Save product
+          </button>
+        </form>
+      </details>
 
       <div className="mb-4 flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
         <div className="flex items-center">
@@ -283,7 +398,7 @@ export default function ProductsPage() {
       <div className="flex flex-col-reverse items-stretch gap-6 xl:flex-row xl:items-start">
         <div className={`grid min-w-0 flex-1 grid-cols-1 gap-6 sm:grid-cols-2 ${filterOpen ? "xl:grid-cols-3" : "lg:grid-cols-3"}`}>
           {filtered.map((p) => (
-            <article key={p.id} className="overflow-hidden rounded-[8px] bg-berry-card">
+            <article key={p._id} className="overflow-hidden rounded-[8px] bg-berry-card">
               <a
                 href="#shop"
                 className="block h-[220px] bg-cover bg-center"
@@ -311,12 +426,15 @@ export default function ProductsPage() {
                   <button
                     type="button"
                     aria-label="product add to cart"
-                    onClick={() => setCart((prev) => [...prev, p.id])}
+                    onClick={() => setCart((prev) => [...prev, p._id])}
                     className="inline-flex h-11 w-[52px] items-center justify-center rounded-[8px] bg-berry-primary text-white"
                   >
                     <AddCartGlyph />
                   </button>
                 </div>
+                <button type="button" onClick={() => removeProduct(p._id)} className="mt-3 text-[13px] font-medium text-berry-error">
+                  Delete
+                </button>
               </div>
             </article>
           ))}

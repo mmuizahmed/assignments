@@ -13,6 +13,7 @@ import {
   UserOutlined,
   CommentOutlined,
 } from "@ant-design/icons";
+import { publicAsset } from "../lib/utils";
 import { useApp } from "../context/AppContext";
 import { useAdminTheme } from "./useAdminTheme";
 import { FeedbackModal } from "./FeedbackModal";
@@ -20,8 +21,8 @@ import "./adminTheme.css";
 
 const { Header, Sider, Content } = Layout;
 
-const SIDEBAR_LOGO = "/assets/logo-DAnq7fSg.png";
-const SIDEBAR_FAVICON = "/assets/favicon-B265vFLH.png";
+const SIDEBAR_LOGO = publicAsset("assets/logo-DAnq7fSg.png");
+const SIDEBAR_FAVICON = publicAsset("assets/favicon-B265vFLH.png");
 
 const MENU = [
   { key: "/admin", icon: <DashboardOutlined />, label: "Dashboard" },

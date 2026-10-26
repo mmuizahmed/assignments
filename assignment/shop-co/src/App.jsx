@@ -8,7 +8,7 @@ import ScrollToTop from './components/ScrollToTop'
 import {CartProvider} from './context/CartContext'
 
 export default function App() {
-  return <BrowserRouter>
+  return <BrowserRouter basename="/assignment/shop-co">
     <CartProvider>
       <ScrollToTop />
       <Routes>

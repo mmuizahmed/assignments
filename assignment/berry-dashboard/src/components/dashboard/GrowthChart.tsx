@@ -10,30 +10,21 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
-import { growthSeries } from "@/data/mock";
 import { ChartMenuGlyph } from "./glyphs";
 
-const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
-const series = [
-  { key: "Investment", color: "#1e88e5" },
-  { key: "Loss", color: "#90caf9" },
-  { key: "Profit", color: "#7c4dff" },
-  { key: "Maintenance", color: "#6200ea" },
-] as const;
-
-export default function GrowthChart() {
+export default function GrowthChart({
+  total = 0,
+  months = [],
+}: {
+  total?: number;
+  months?: number[];
+}) {
   const [period, setPeriod] = useState("Today");
   const data = useMemo(
-    () =>
-      months.map((name, i) => ({
-        name,
-        Investment: growthSeries.investment[i],
-        Loss: growthSeries.loss[i],
-        Profit: growthSeries.profit[i],
-        Maintenance: growthSeries.maintenance[i],
-      })),
-    [],
+    () => monthNames.map((name, i) => ({ name, Sales: months[i] || 0 })),
+    [months],
   );
 
   return (
@@ -41,7 +32,9 @@ export default function GrowthChart() {
       <div className="mb-2 flex items-start justify-between gap-3">
         <div>
           <h6 className="text-[12px] font-normal leading-[18.84px] text-berry-muted">Total Growth</h6>
-          <h3 className="mt-2 text-[20px] font-semibold leading-[23.34px] text-berry-heading">$2,324.00</h3>
+          <h3 className="mt-2 text-[20px] font-semibold leading-[23.34px] text-berry-heading">
+            ${Math.round(total).toLocaleString("en-US")}
+          </h3>
         </div>
         <select
           value={period}
@@ -67,40 +60,20 @@ export default function GrowthChart() {
           <BarChart data={data} barCategoryGap="28%" margin={{ top: 8, right: 8, left: 0, bottom: 8 }}>
             <CartesianGrid vertical={false} stroke="#29314f" />
             <XAxis dataKey="name" axisLine={false} tickLine={false} tick={{ fill: "#8492c4", fontSize: 12 }} />
-            <YAxis
-              domain={[0, 400]}
-              ticks={[0, 100, 200, 300, 400]}
-              axisLine={false}
-              tickLine={false}
-              tick={{ fill: "#8492c4", fontSize: 12 }}
-            />
+            <YAxis axisLine={false} tickLine={false} tick={{ fill: "#8492c4", fontSize: 12 }} />
             <Tooltip
               cursor={{ fill: "rgba(255,255,255,0.04)" }}
               contentStyle={{ background: "#212946", border: "1px solid #364152", borderRadius: 8, color: "#bdc8f0" }}
             />
-            {series.map((s, i) => (
-              <Bar
-                key={s.key}
-                dataKey={s.key}
-                stackId="a"
-                fill={s.color}
-                fillOpacity={0.85}
-                stroke={s.color}
-                strokeWidth={1}
-                maxBarSize={27}
-                radius={i === series.length - 1 ? [2, 2, 0, 0] : [0, 0, 0, 0]}
-              />
-            ))}
+            <Bar dataKey="Sales" fill="#7c4dff" maxBarSize={27} radius={[2, 2, 0, 0]} />
           </BarChart>
         </ResponsiveContainer>
       </div>
       <ul className="mt-1 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-[14px] text-berry-text">
-        {series.map((s) => (
-          <li key={s.key} className="flex items-center gap-2">
-            <span className="inline-block h-[14px] w-[14px] rounded-[2px]" style={{ background: s.color }} />
-            {s.key}
-          </li>
-        ))}
+        <li className="flex items-center gap-2">
+          <span className="inline-block h-[14px] w-[14px] rounded-[2px] bg-[#7c4dff]" />
+          Sales
+        </li>
       </ul>
     </article>
   );

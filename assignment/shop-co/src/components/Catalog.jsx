@@ -9,13 +9,13 @@ export function Pagination() {
   </div>
 }
 
-export function CatalogToolbar({sort, onSort, onOpenFilters, count}) {
+export function CatalogToolbar({title = 'Casual', sort, onSort, onOpenFilters, count}) {
   const productCount = count === 0
     ? 'Showing 0 Products'
     : `Showing 1-${Math.min(count, 10)} of ${count} Products`
 
   return <div className="catalog-toolbar">
-    <h1>Casual</h1>
+    <h1>{title}</h1>
     <span>{productCount}</span>
     <button className="mobile-filter-trigger" onClick={onOpenFilters} aria-label="Open filters"><SlidersHorizontal /></button>
     <label>Sort by: <select value={sort} onChange={event => onSort(event.target.value)}><option>Most Popular</option><option>Price: Low</option><option>Price: High</option><option>Top Rated</option></select><ChevronDown /></label>

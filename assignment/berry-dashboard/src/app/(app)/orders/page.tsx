@@ -1,8 +1,7 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import PageHeader from "@/components/layout/PageHeader";
-import StatusChip from "@/components/ui/StatusChip";
 import {
   AddGlyph,
   SelectCaretGlyph,
@@ -16,10 +15,37 @@ import {
   SearchGlyph,
   SortArrowGlyph,
 } from "@/components/dashboard/glyphs";
-import { orders } from "@/data/mock";
+import { api } from "@/lib/api";
 
 type SortKey = "id" | "customer" | "branch" | "payment" | "qty" | "date" | "status";
-type OrderRow = (typeof orders)[number];
+type OrderStatus = "Complete" | "Pending" | "Cancel" | "Hold";
+type OrderRow = {
+  _id: string;
+  id: string;
+  customer: string;
+  branch: string;
+  payment: string;
+  qty: number;
+  date: string;
+  status: OrderStatus;
+};
+
+type ApiOrder = {
+  _id: string;
+  number: string;
+  customer: string;
+  branch: string;
+  payment: string;
+  quantity: number;
+  createdAt: string;
+  status: OrderStatus;
+};
+
+function formatDate(value: string) {
+  const date = new Date(value);
+  const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  return `${date.getDate()} ${months[date.getMonth()]} ${date.getFullYear()}`;
+}
 
 const PAGE_SIZES = [10, 25, 50];
 
@@ -98,6 +124,8 @@ function SortHeader({
 }
 
 export default function OrdersPage() {
+  const [rows, setRows] = useState<OrderRow[]>([]);
+  const [message, setMessage] = useState("");
   const [q, setQ] = useState("");
   const [selected, setSelected] = useState<string[]>([]);
   const [sortKey, setSortKey] = useState<SortKey>("id");
@@ -105,22 +133,53 @@ export default function OrdersPage() {
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(10);
 
+  useEffect(() => {
+    api<ApiOrder[]>("/api/orders")
+      .then((list) =>
+        setRows(
+          list.map((order) => ({
+            _id: order._id,
+            id: order.number,
+            customer: order.customer,
+            branch: order.branch,
+            payment: order.payment,
+            qty: order.quantity,
+            date: formatDate(order.createdAt),
+            status: order.status,
+          })),
+        ),
+      )
+      .catch(() => setMessage("Could not load orders. Start the backend on port 5000."));
+  }, []);
+
+  async function changeStatus(id: string, status: OrderStatus) {
+    try {
+      await api("/api/orders/" + id, {
+        method: "PATCH",
+        body: JSON.stringify({ status }),
+      });
+      setRows((list) => list.map((order) => (order._id === id ? { ...order, status } : order)));
+    } catch {
+      setMessage("Could not update the order.");
+    }
+  }
+
   const filtered = useMemo(() => {
     const term = q.trim().toLowerCase();
-    const rows = term
-      ? orders.filter((o) =>
+    const list = term
+      ? rows.filter((o) =>
           [`#${o.id}`, o.customer, o.branch, o.payment, String(o.qty), o.date, o.status]
             .join(" ")
             .toLowerCase()
             .includes(term),
         )
-      : [...orders];
-    rows.sort((a, b) => {
+      : [...rows];
+    list.sort((a, b) => {
       const cmp = compareRows(a, b, sortKey);
       return sortDir === "asc" ? cmp : -cmp;
     });
-    return rows;
-  }, [q, sortKey, sortDir]);
+    return list;
+  }, [rows, q, sortKey, sortDir]);
 
   const pageCount = Math.max(1, Math.ceil(filtered.length / rowsPerPage));
   const safePage = Math.min(page, pageCount - 1);
@@ -152,6 +211,7 @@ export default function OrdersPage() {
   return (
     <>
       <PageHeader title="List" crumbs={[{ label: "Order" }, { label: "List" }]} />
+      {message ? <p className="mb-4 text-[14px] text-berry-error">{message}</p> : null}
       <section className="overflow-hidden rounded-[8px] bg-berry-card">
         <div className="flex flex-col gap-4 p-5 sm:flex-row sm:items-center sm:justify-between">
           <label className="relative block">
@@ -259,7 +319,16 @@ export default function OrdersPage() {
                   <td className="w-[130px] border-b border-[rgba(189,200,240,0.15)] py-3.5 pr-2 pl-4 text-right">{o.qty}</td>
                   <td className="border-b border-[rgba(189,200,240,0.15)] px-4 py-3.5">{o.date}</td>
                   <td className="border-b border-[rgba(189,200,240,0.15)] px-4 py-3.5">
-                    <StatusChip label={o.status} />
+                    <select
+                      aria-label={`Status for ${o.id}`}
+                      value={o.status}
+                      onChange={(e) => changeStatus(o._id, e.target.value as OrderStatus)}
+                      className="h-8 rounded-[8px] border border-berry-divider bg-berry-canvas px-2 text-[13px] text-berry-text outline-none"
+                    >
+                      {(["Pending", "Complete", "Hold", "Cancel"] as OrderStatus[]).map((status) => (
+                        <option key={status}>{status}</option>
+                      ))}
+                    </select>
                   </td>
                   <td className="border-b border-[rgba(189,200,240,0.15)] px-4 py-3.5 text-center">
                     <button

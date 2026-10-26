@@ -4,7 +4,7 @@ import { useState } from "react";
 import { IconDots } from "@tabler/icons-react";
 import { ArrowUpGlyph, EarningGlyph } from "./glyphs";
 
-export default function EarningCard() {
+export default function EarningCard({ amount = 0 }: { amount?: number }) {
   const [open, setOpen] = useState(false);
 
   return (
@@ -42,7 +42,7 @@ export default function EarningCard() {
           </div>
         </div>
         <div className="mt-3 flex items-center">
-          <p className="mr-2 text-[34px] font-medium leading-[45.356px]">$500.00</p>
+          <p className="mr-2 text-[34px] font-medium leading-[45.356px]">${Math.round(amount).toLocaleString("en-US")}</p>
           <span className="flex h-[22px] w-[22px] items-center justify-center rounded-full bg-[#651fff] text-[#d1c4e9]">
             <span className="flex origin-center" style={{ transform: "rotate(45deg)" }}>
               <ArrowUpGlyph />

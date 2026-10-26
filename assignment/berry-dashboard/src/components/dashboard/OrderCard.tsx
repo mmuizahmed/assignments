@@ -5,7 +5,13 @@ import { Line, LineChart, ResponsiveContainer } from "recharts";
 import { orderSparkline } from "@/data/mock";
 import { ArrowDownGlyph, ShoppingBagGlyph } from "./glyphs";
 
-export default function OrderCard() {
+export default function OrderCard({
+  yearCount = 0,
+  monthCount = 0,
+}: {
+  yearCount?: number;
+  monthCount?: number;
+}) {
   const [range, setRange] = useState<"month" | "year">("year");
   const data = useMemo(
     () => (range === "year" ? orderSparkline.year : orderSparkline.month).map((v, i) => ({ i, v })),
@@ -47,7 +53,7 @@ export default function OrderCard() {
             <div>
               <div className="flex items-center">
                 <p className="mr-2 text-[34px] font-medium leading-[45.356px]">
-                  {range === "year" ? "$961" : "$108"}
+                  {range === "year" ? yearCount : monthCount}
                 </p>
                 <span className="flex h-[22px] w-[22px] items-center justify-center rounded-full bg-[#1e88e5] text-[#e3f2fd]">
                   <span className="flex origin-center" style={{ transform: "rotate(-45deg)" }}>
