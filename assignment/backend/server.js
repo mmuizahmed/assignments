@@ -16,6 +16,22 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
+let starting;
+
+function start() {
+  if (!starting) starting = connectDB().then(() => fillIfEmpty());
+  return starting;
+}
+
+app.use((req, res, next) => {
+  start()
+    .then(() => next())
+    .catch((error) => {
+      console.log(error.message);
+      res.status(500).json({ message: "Could not connect to MongoDB Atlas." });
+    });
+});
+
 app.get("/", (req, res) => {
   res.json({ message: "Shop backend is running" });
 });
@@ -25,14 +41,17 @@ app.use("/api/orders", orders);
 app.use("/api/users", users);
 app.use("/api/dashboard", dashboard);
 
-connectDB()
-  .then(() => fillIfEmpty())
-  .then(() => {
-    app.listen(PORT, () => {
-      console.log("Backend running at http://localhost:" + PORT);
+if (!process.env.VERCEL) {
+  start()
+    .then(() => {
+      app.listen(PORT, () => {
+        console.log("Backend running at http://localhost:" + PORT);
+      });
+    })
+    .catch((error) => {
+      console.log("Could not connect to MongoDB Atlas.");
+      console.log(error.message);
     });
-  })
-  .catch((error) => {
-    console.log("Could not connect to MongoDB Atlas.");
-    console.log(error.message);
-  });
+}
+
+module.exports = app;

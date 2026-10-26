@@ -1,4 +1,4 @@
-export const API = "http://localhost:5000";
+export const API = (process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000").replace(/\/$/, "");
 
 export async function api<T>(path: string, options?: RequestInit): Promise<T> {
   const response = await fetch(API + path, {
