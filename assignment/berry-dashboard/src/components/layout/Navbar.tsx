@@ -8,12 +8,13 @@ import {
   IconAdjustmentsHorizontal,
   IconAccessPoint,
   IconBell,
-  IconSettings,
+  IconLogout,
   IconArrowsMaximize,
   IconArrowsMinimize,
 } from "@tabler/icons-react";
 import BerryLogo from "./BerryLogo";
 import { HEADER_HEIGHT } from "@/lib/tokens";
+import { logout } from "@/lib/api";
 
 export default function Navbar({
   onMenu,
@@ -123,7 +124,9 @@ export default function Navbar({
 
         <button
           type="button"
-          aria-label="user-account"
+          aria-label="Logout"
+          title="Logout"
+          onClick={logout}
           className="ml-4 flex h-12 w-[90px] cursor-pointer items-center rounded-[27px] border-0 bg-[rgba(33,150,243,0.15)] p-0 text-[#2196f3] transition-all duration-200 hover:bg-[#2196f3] hover:text-[#e3f2fd]"
         >
           <img
@@ -134,7 +137,7 @@ export default function Navbar({
             className="my-2 ml-2 h-[34px] w-[34px] rounded-full object-cover"
           />
           <span className="px-3 leading-[0]">
-            <IconSettings size={24} stroke={1.5} />
+            <IconLogout size={24} stroke={1.5} />
           </span>
         </button>
       </div>

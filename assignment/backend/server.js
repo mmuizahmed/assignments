@@ -4,6 +4,8 @@ const express = require("express");
 const cors = require("cors");
 const { connectDB } = require("./config/db");
 const { fillIfEmpty } = require("./seed");
+const auth = require("./middleware/auth");
+const authRoutes = require("./routes/auth");
 const products = require("./routes/products");
 const orders = require("./routes/orders");
 const users = require("./routes/users");
@@ -36,10 +38,11 @@ app.get("/", (req, res) => {
   res.json({ message: "Shop backend is running" });
 });
 
+app.use("/api/auth", authRoutes);
 app.use("/api/products", products);
 app.use("/api/orders", orders);
-app.use("/api/users", users);
-app.use("/api/dashboard", dashboard);
+app.use("/api/users", auth, users);
+app.use("/api/dashboard", auth, dashboard);
 
 if (!process.env.VERCEL) {
   start()
