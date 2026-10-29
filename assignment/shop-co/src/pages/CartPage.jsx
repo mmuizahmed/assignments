@@ -1,5 +1,5 @@
 import React from 'react'
-import {ArrowRight, Tag, Trash2} from 'lucide-react'
+import {ArrowRight, CircleCheck, Tag, Trash2} from 'lucide-react'
 import {useNavigate} from 'react-router-dom'
 import {ASSET} from '../data/store'
 import {createOrder} from '../api'
@@ -13,6 +13,7 @@ export default function CartPage() {
   const [promo, setPromo] = React.useState('')
   const [name, setName] = React.useState('')
   const [saving, setSaving] = React.useState(false)
+  const [ordered, setOrdered] = React.useState(false)
   const subtotal = items.reduce((sum, item) => sum + item.price * item.quantity, 0)
   const discount = Math.round(subtotal * 0.2)
   const deliveryFee = items.length ? 15 : 0
@@ -33,11 +34,16 @@ export default function CartPage() {
         }))
       })
       clearCart()
-      navigate('/')
+      setOrdered(true)
     } catch {
       alert('Could not save the order. Make sure the backend is running.')
-      setSaving(false)
     }
+    setSaving(false)
+  }
+
+  const continueShopping = () => {
+    setOrdered(false)
+    navigate('/')
   }
 
   return <StoreLayout className="cart-page">
@@ -57,5 +63,13 @@ export default function CartPage() {
         <section className="order-summary"><h2>Order Summary</h2><div className="summary-lines"><p>Subtotal <strong>${subtotal}</strong></p><p>Discount (-20%) <strong className="red-text">-${discount}</strong></p><p>Delivery Fee <strong>${deliveryFee}</strong></p><hr /><p>Total <b>${total}</b></p></div><div className="promo-row"><label><input value={name} onChange={event => setName(event.target.value)} placeholder="Your name" /></label></div><div className="promo-row"><label><Tag /><input value={promo} onChange={event => setPromo(event.target.value)} placeholder="Add promo code" /></label><button>Apply</button></div><button className="button-black checkout-button" onClick={checkout} disabled={saving || items.length === 0}>{saving ? 'Saving...' : 'Go to Checkout'} <ArrowRight /></button></section>
       </div>
     </main>
+    {ordered && <div className="order-modal-backdrop" role="dialog" aria-modal="true">
+      <div className="order-modal">
+        <CircleCheck className="order-modal-icon" />
+        <h2>Order created successfully</h2>
+        <p>Thank you for shopping with us. Your order has been saved.</p>
+        <button className="button-black" onClick={continueShopping}>Continue Shopping</button>
+      </div>
+    </div>}
   </StoreLayout>
 }
